@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eğitici Videolar - Kazanımlara ait video içerikleri">
+    <meta name="keywords" content="videolar, eğitim, öğrenme, video içerik">
+    <meta name="author" content="Serkan Site">
+    <title>Videolar - Eğitici Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 8px;
+            margin-bottom: var(--spacing-md);
+        }
+        .video-container iframe,
+        .video-container object,
+        .video-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .video-card {
+            background-color: var(--bg-color);
+            padding: var(--spacing-md);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-bottom: var(--spacing-lg);
+        }
+        .video-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+            font-family: var(--font-serif);
+        }
+        .video-description {
+            color: var(--text-color);
+            line-height: 1.8;
+            margin-bottom: var(--spacing-sm);
+        }
+        .video-meta {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: var(--spacing-sm);
+            font-family: var(--font-sans);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menüyü aç/kapat">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="logo">
+                    <h1><a href="index.html" style="text-decoration: none; color: inherit;">Eğitici Platform</a></h1>
+                </div>
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop" id="navDesktop">
+                    <ul class="nav-list-desktop">
+                        <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                        <li><a href="articles.html" class="nav-link">Yazılar</a></li>
+                        <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+                        <li><a href="quiz.html" class="nav-link">Quiz & Oyunlar</a></li>
+                        <li><a href="kazanimlar.html" class="nav-link">Kazanımlar</a></li>
+                        <li><a href="videolar.html" class="nav-link active">Videolar</a></li>
+                        <li><a href="yasantikonisi.html" class="nav-link">Yaşantı Konisi</a></li>
+                        <li><a href="about.html" class="nav-link">Hakkında</a></li>
+                        <li><a href="contact.html" class="nav-link">İletişim</a></li>
+                    </ul>
+                </nav>
+                <!-- Mobile Navigation -->
+                <nav class="nav-mobile" id="nav">
+                    <button class="nav-close" id="navClose" aria-label="Menüyü kapat">×</button>
+                    <div class="nav-content">
+                        <h3 class="nav-title">Hızlı Bağlantılar</h3>
+                        <ul class="nav-list-mobile">
+                            <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                            <li><a href="articles.html" class="nav-link">Yazılar</a></li>
+                            <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+                            <li><a href="quiz.html" class="nav-link">Quiz & Oyunlar</a></li>
+                            <li><a href="kazanimlar.html" class="nav-link">Kazanımlar</a></li>
+                            <li><a href="videolar.html" class="nav-link active">Videolar</a></li>
+                            <li><a href="yasantikonisi.html" class="nav-link">Yaşantı Konisi</a></li>
+                            <li><a href="about.html" class="nav-link">Hakkında</a></li>
+                            <li><a href="contact.html" class="nav-link">İletişim</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 40vh;">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Eğitici Videolar</h2>
+                <p class="hero-subtitle">Kazanımlara ait video içerikleri</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Video İçerikler</h2>
+                <p class="section-subtitle">Her kazanıma ait eğitici videolar</p>
+            </div>
+            
+            <!-- Video 1: Aile Değerleri -->
+            <div class="video-card" id="video-aile">
+                <h3 class="video-title">Aile Değerleri ve Aile İçi İletişim</h3>
+                <div class="video-meta">
+                    <span class="article-category">Kazanım 1: Aile Değerleri</span>
+                    <span>• Süre: 10 dakika</span>
+                </div>
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/GQAtioBBlKY?enablejsapi=1&origin=https://yourdomain.com" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        title="Aile Değerleri ve Aile İçi İletişim"
+                        style="width: 100%; height: 100%; position: absolute; top: 0; left: 0;">
+                    </iframe>
+                </div>
+                <p style="margin-top: 10px; text-align: center;">
+                    <a href="https://www.youtube.com/watch?v=GQAtioBBlKY" target="_blank" class="article-link">
+                        Video açılmıyorsa buraya tıklayın
+                    </a>
+                </p>
+                <p class="video-description">
+                    Bu video, aile bağlarının önemi, aile içi sağlıklı iletişim yöntemleri ve aile değerlerini 
+                    ele almaktadır. Aile içinde sevgi, saygı ve karşılıklı anlayışın nasıl geliştirilebileceği 
+                    konusunda pratik bilgiler sunulmaktadır.
+                </p>
+                <a href="kazanim-aile.html" class="article-link">İlgili Kazanım Sayfası →</a>
+            </div>
+
+            <!-- Video 2: Ahlaki Değerler -->
+            <div class="video-card" id="video-ahlak">
+                <h3 class="video-title">Ahlaki Değerler: Dürüstlük, Sabır ve Şükür</h3>
+                <div class="video-meta">
+                    <span class="article-category">Kazanım 2: Ahlaki Değerler</span>
+                    <span>• Süre: 12 dakika</span>
+                </div>
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/U-egpNmIqpY?enablejsapi=1" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        title="Ahlaki Değerler: Dürüstlük, Sabır ve Şükür"
+                        style="width: 100%; height: 100%; position: absolute; top: 0; left: 0;">
+                    </iframe>
+                </div>
+                <p style="margin-top: 10px; text-align: center;">
+                    <a href="https://www.youtube.com/watch?v=U-egpNmIqpY" target="_blank" class="article-link">
+                        Video açılmıyorsa buraya tıklayın
+                    </a>
+                </p>
+                <p class="video-description">
+                    Bu video, temel ahlaki değerler olan dürüstlük, sabır ve şükür kavramlarını detaylı bir şekilde 
+                    açıklamaktadır. Bu değerlerin bireysel ve toplumsal önemi, günlük hayatta nasıl uygulanabileceği 
+                    konularında bilgiler sunulmaktadır.
+                </p>
+                <a href="kazanim-ahlak.html" class="article-link">İlgili Kazanım Sayfası →</a>
+            </div>
+
+            <!-- Video 3: Eğitim ve Öğrenme -->
+            <div class="video-card" id="video-egitim">
+                <h3 class="video-title">Eğitim ve Hayat Boyu Öğrenme</h3>
+                <div class="video-meta">
+                    <span class="article-category">Kazanım 3: Eğitim ve Öğrenme</span>
+                    <span>• Süre: 15 dakika</span>
+                </div>
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/LJm3CkJwvdg?enablejsapi=1" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        title="Eğitim ve Hayat Boyu Öğrenme"
+                        style="width: 100%; height: 100%; position: absolute; top: 0; left: 0;">
+                    </iframe>
+                </div>
+                <p style="margin-top: 10px; text-align: center;">
+                    <a href="https://www.youtube.com/watch?v=LJm3CkJwvdg" target="_blank" class="article-link">
+                        Video açılmıyorsa buraya tıklayın
+                    </a>
+                </p>
+                <p class="video-description">
+                    Bu video, eğitimin önemi, hayat boyu öğrenme kavramı ve etkili öğrenme yöntemlerini ele almaktadır. 
+                    Öğrenmenin sadece okulda değil, hayatın her alanında devam eden bir süreç olduğu vurgulanmaktadır.
+                </p>
+                <a href="kazanim-egitim.html" class="article-link">İlgili Kazanım Sayfası →</a>
+            </div>
+
+            <!-- Video 4: Değerler Eğitimi -->
+            <div class="video-card" id="video-degerler">
+                <h3 class="video-title">Değerler Eğitimi ve Toplumsal Uyum</h3>
+                <div class="video-meta">
+                    <span class="article-category">Kazanım 4: Değerler Eğitimi</span>
+                    <span>• Süre: 11 dakika</span>
+                </div>
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/mxyJQEshDas?enablejsapi=1" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        title="Değerler Eğitimi ve Toplumsal Uyum"
+                        style="width: 100%; height: 100%; position: absolute; top: 0; left: 0;">
+                    </iframe>
+                </div>
+                <p style="margin-top: 10px; text-align: center;">
+                    <a href="https://www.youtube.com/watch?v=mxyJQEshDas" target="_blank" class="article-link">
+                        Video açılmıyorsa buraya tıklayın
+                    </a>
+                </p>
+                <p class="video-description">
+                    Bu video, değerler eğitiminin önemi, toplumsal ve bireysel değerlerin içselleştirilmesi ve 
+                    değerler eğitiminin toplumsal uyuma katkısını ele almaktadır.
+                </p>
+                <a href="kazanim-degerler.html" class="article-link">İlgili Kazanım Sayfası →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Eğitici Platform</h3>
+                    <p>Bilgi ve hikmet dolu içerikler, interaktif öğrenme deneyimleri</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hızlı Bağlantılar</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="articles.html">Yazılar</a></li>
+                        <li><a href="gallery.html">Galeri</a></li>
+                        <li><a href="quiz.html">Quiz & Oyunlar</a></li>
+                        <li><a href="kazanimlar.html">Kazanımlar</a></li>
+                        <li><a href="videolar.html">Videolar</a></li>
+                        <li><a href="yasantikonisi.html">Yaşantı Konisi</a></li>
+                        <li><a href="about.html">Hakkında</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Eğitici Platform. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern ve temiz tasarımlı eğitici bilgilendirme web sitesi">
+    <meta name="keywords" content="eğitim, yazılar, galeri, quiz, oyunlar, bilgi">
+    <meta name="author" content="Serkan Site">
+    <title>Ana Sayfa - Eğitici Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menüyü aç/kapat">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="logo">
+                    <h1><a href="index.html" style="text-decoration: none; color: inherit;">Eğitici Platform</a></h1>
+                </div>
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop" id="navDesktop">
+                    <ul class="nav-list-desktop">
+                        <li><a href="index.html" class="nav-link active">Ana Sayfa</a></li>
+                        <li><a href="articles.html" class="nav-link">Yazılar</a></li>
+                        <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+                        <li><a href="quiz.html" class="nav-link">Quiz & Oyunlar</a></li>
+                        <li><a href="kazanimlar.html" class="nav-link">Kazanımlar</a></li>
+                        <li><a href="videolar.html" class="nav-link">Videolar</a></li>
+                        <li><a href="yasantikonisi.html" class="nav-link">Yaşantı Konisi</a></li>
+                        <li><a href="about.html" class="nav-link">Hakkında</a></li>
+                        <li><a href="contact.html" class="nav-link">İletişim</a></li>
+                    </ul>
+                </nav>
+                <!-- Mobile Navigation -->
+                <nav class="nav-mobile" id="nav">
+                    <button class="nav-close" id="navClose" aria-label="Menüyü kapat">×</button>
+                    <div class="nav-content">
+                        <h3 class="nav-title">Hızlı Bağlantılar</h3>
+                        <ul class="nav-list-mobile">
+                            <li><a href="index.html" class="nav-link active">Ana Sayfa</a></li>
+                            <li><a href="articles.html" class="nav-link">Yazılar</a></li>
+                            <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+                            <li><a href="quiz.html" class="nav-link">Quiz & Oyunlar</a></li>
+                            <li><a href="kazanimlar.html" class="nav-link">Kazanımlar</a></li>
+                            <li><a href="videolar.html" class="nav-link">Videolar</a></li>
+                            <li><a href="yasantikonisi.html" class="nav-link">Yaşantı Konisi</a></li>
+                            <li><a href="about.html" class="nav-link">Hakkında</a></li>
+                            <li><a href="contact.html" class="nav-link">İletişim</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="ana-sayfa" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Eğitici Platforma Hoş Geldiniz</h2>
+                <p class="hero-subtitle">Bilgi, hikmet ve öğrenme dolu bir yolculuğa çıkın</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Articles Section -->
+    <section id="yazilar" class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Öne Çıkan Yazılar</h2>
+                <p class="section-subtitle">Düşünce ve bilgi paylaşımları</p>
+            </div>
+            
+            <div class="articles">
+                <a href="articles.html#article1" class="article-card">
+                    <img src="images/hayatin-anlami.jpg" alt="Hayatın Anlamı" class="article-cover" loading="lazy" onerror="this.src='https://via.placeholder.com/400x250?text=Hayatın+Anlamı'">
+                    <div class="article-meta">
+                        <span class="article-category">Ahlak</span>
+                        <span>15 Ocak 2024</span>
+                    </div>
+                    <h3 class="article-title">Hayatın Anlamı Üzerine</h3>
+                    <p class="article-excerpt">
+                        Hayat, bize verilen en değerli hediyedir. Her gün yeni bir fırsat, her an yeni bir başlangıçtır. 
+                        Hayatın anlamını bulmak, kendimizi tanımak ve çevremizdeki dünyayı anlamakla başlar...
+                    </p>
+                </a>
+
+                <a href="articles.html#article2" class="article-card">
+                    <img src="images/aile-degerleri.jpg" alt="Aile Değerleri" class="article-cover" loading="lazy" onerror="this.src='https://via.placeholder.com/400x250?text=Aile+Değerleri'">
+                    <div class="article-meta">
+                        <span class="article-category">Aile</span>
+                        <span>10 Ocak 2024</span>
+                    </div>
+                    <h3 class="article-title">Aile Bağları ve Değerleri</h3>
+                    <p class="article-excerpt">
+                        Aile, toplumun temel taşıdır. Güçlü aile bağları, sevgi, saygı ve karşılıklı anlayış üzerine kurulur. 
+                        Aile içinde paylaşılan değerler, bireylerin karakter gelişiminde kritik rol oynar...
+                    </p>
+                </a>
+
+                <a href="articles.html#article3" class="article-card">
+                    <img src="images/sabir-sukur.jpg" alt="Sabır ve Şükür" class="article-cover" loading="lazy" onerror="this.src='https://via.placeholder.com/400x250?text=Sabır+ve+Şükür'">
+                    <div class="article-meta">
+                        <span class="article-category">Değerler</span>
+                        <span>5 Ocak 2024</span>
+                    </div>
+                    <h3 class="article-title">Sabır ve Şükür</h3>
+                    <p class="article-excerpt">
+                        Sabır, zorluklar karşısında dayanma gücüdür. Şükür ise sahip olduklarımızın farkında olmak ve 
+                        bunları takdir etmektir. Bu iki erdem, hayatın zorluklarıyla başa çıkmamızda bize rehberlik eder...
+                    </p>
+                </a>
+            </div>
+            
+            <div class="text-center mt-3">
+                <a href="articles.html" class="btn btn-primary">Tüm Yazıları Gör</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educational Content Section -->
+    <section class="content-section" style="background-color: var(--bg-light);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Eğitici İçerikler</h2>
+                <p class="section-subtitle">Öğrenmeyi eğlenceli hale getirin</p>
+            </div>
+            
+            <div class="articles">
+                <div class="article-card" style="text-align: center;">
+                    <h3 class="article-title">📚 Kapsamlı Yazılar</h3>
+                    <p class="article-excerpt">
+                        Aile, ahlak, eğitim ve değerler konularında derinlemesine yazılar. 
+                        Her yazı, düşünmeye ve öğrenmeye teşvik eder.
+                    </p>
+                    <a href="articles.html" class="article-link">Yazıları Keşfet →</a>
+                </div>
+                
+                <div class="article-card" style="text-align: center;">
+                    <h3 class="article-title">🎮 İnteraktif Quiz & Oyunlar</h3>
+                    <p class="article-excerpt">
+                        Bilginizi test edin ve eğlenerek öğrenin. Çoktan seçmeli quizler ve 
+                        eğitici mini oyunlarla bilginizi pekiştirin.
+                    </p>
+                    <a href="quiz.html" class="article-link">Oyunlara Başla →</a>
+                </div>
+                
+                <div class="article-card" style="text-align: center;">
+                    <h3 class="article-title">🖼️ Görsel Galeri</h3>
+                    <p class="article-excerpt">
+                        Anlamlı görseller ve anılar. Galerimizde güzel kareler ve 
+                        öğretici görsel içerikler bulabilirsiniz.
+                    </p>
+                    <a href="gallery.html" class="article-link">Galeriyi Gör →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Hızlı Erişim</h2>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-md); text-align: center;">
+                <a href="articles.html" class="btn btn-primary" style="padding: 1.5rem; text-decoration: none; display: block;">
+                    <strong>📖 Yazılar</strong>
+                </a>
+                <a href="gallery.html" class="btn btn-primary" style="padding: 1.5rem; text-decoration: none; display: block;">
+                    <strong>🖼️ Galeri</strong>
+                </a>
+                <a href="quiz.html" class="btn btn-primary" style="padding: 1.5rem; text-decoration: none; display: block;">
+                    <strong>🎮 Quiz & Oyunlar</strong>
+                </a>
+                <a href="about.html" class="btn btn-secondary" style="padding: 1.5rem; text-decoration: none; display: block;">
+                    <strong>ℹ️ Hakkında</strong>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Eğitici Platform</h3>
+                    <p>Bilgi ve hikmet dolu içerikler, interaktif öğrenme deneyimleri</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hızlı Bağlantılar</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="articles.html">Yazılar</a></li>
+                        <li><a href="gallery.html">Galeri</a></li>
+                        <li><a href="quiz.html">Quiz & Oyunlar</a></li>
+                        <li><a href="kazanimlar.html">Kazanımlar</a></li>
+                        <li><a href="videolar.html">Videolar</a></li>
+                        <li><a href="yasantikonisi.html">Yaşantı Konisi</a></li>
+                        <li><a href="about.html">Hakkında</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Eğitici Platform. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

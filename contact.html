@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="İletişim - Bizimle iletişime geçin">
+    <meta name="keywords" content="iletişim, mesaj, geri bildirim">
+    <meta name="author" content="Serkan Site">
+    <title>İletişim - Eğitici Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menüyü aç/kapat">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="logo">
+                    <h1><a href="index.html" style="text-decoration: none; color: inherit;">Eğitici Platform</a></h1>
+                </div>
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop" id="navDesktop">
+                    <ul class="nav-list-desktop">
+                        <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                        <li><a href="articles.html" class="nav-link">Yazılar</a></li>
+                        <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+                        <li><a href="quiz.html" class="nav-link">Quiz & Oyunlar</a></li>
+                        <li><a href="kazanimlar.html" class="nav-link">Kazanımlar</a></li>
+                        <li><a href="videolar.html" class="nav-link">Videolar</a></li>
+                        <li><a href="yasantikonisi.html" class="nav-link">Yaşantı Konisi</a></li>
+                        <li><a href="about.html" class="nav-link">Hakkında</a></li>
+                        <li><a href="contact.html" class="nav-link active">İletişim</a></li>
+                    </ul>
+                </nav>
+                <!-- Mobile Navigation -->
+                <nav class="nav-mobile" id="nav">
+                    <button class="nav-close" id="navClose" aria-label="Menüyü kapat">×</button>
+                    <div class="nav-content">
+                        <h3 class="nav-title">Hızlı Bağlantılar</h3>
+                        <ul class="nav-list-mobile">
+                            <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                            <li><a href="articles.html" class="nav-link">Yazılar</a></li>
+                            <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+                            <li><a href="quiz.html" class="nav-link">Quiz & Oyunlar</a></li>
+                            <li><a href="kazanimlar.html" class="nav-link">Kazanımlar</a></li>
+                            <li><a href="videolar.html" class="nav-link">Videolar</a></li>
+                            <li><a href="yasantikonisi.html" class="nav-link">Yaşantı Konisi</a></li>
+                            <li><a href="about.html" class="nav-link">Hakkında</a></li>
+                            <li><a href="contact.html" class="nav-link active">İletişim</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 40vh;">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">İletişim</h2>
+                <p class="hero-subtitle">Bizimle iletişime geçin</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="content-section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Bize Ulaşın</h2>
+                <p class="section-subtitle">Sorularınız, önerileriniz veya görüşleriniz için mesaj gönderin</p>
+            </div>
+            <div class="contact-content">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Adınız Soyadınız</label>
+                        <input type="text" id="name" name="name" required placeholder="Adınızı ve soyadınızı girin">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefon Numaranız</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="Telefon numaranızı girin (örn: 0553 879 73 01)">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Konu</label>
+                        <input type="text" id="subject" name="subject" placeholder="Mesajınızın konusunu belirtin (isteğe bağlı)">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mesajınız</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Mesajınızı buraya yazın..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Gönder</button>
+                </form>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Eğitici Platform</h3>
+                    <p>Bilgi ve hikmet dolu içerikler, interaktif öğrenme deneyimleri</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hızlı Bağlantılar</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="articles.html">Yazılar</a></li>
+                        <li><a href="gallery.html">Galeri</a></li>
+                        <li><a href="quiz.html">Quiz & Oyunlar</a></li>
+                        <li><a href="about.html">Hakkında</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Eğitici Platform. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

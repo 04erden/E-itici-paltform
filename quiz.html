@@ -1,0 +1,1858 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="İnteraktif quiz ve eğitici oyunlar - Bilginizi test edin">
+    <meta name="keywords" content="quiz, oyunlar, eğitim, test, interaktif">
+    <meta name="author" content="Serkan Site">
+    <title>Quiz & Oyunlar - Eğitici Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menüyü aç/kapat">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="logo">
+                    <h1><a href="index.html" style="text-decoration: none; color: inherit;">Eğitici Platform</a></h1>
+                </div>
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop" id="navDesktop">
+                    <ul class="nav-list-desktop">
+                        <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                        <li><a href="articles.html" class="nav-link">Yazılar</a></li>
+                        <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+                        <li><a href="quiz.html" class="nav-link active">Quiz & Oyunlar</a></li>
+                        <li><a href="kazanimlar.html" class="nav-link">Kazanımlar</a></li>
+                        <li><a href="videolar.html" class="nav-link">Videolar</a></li>
+                        <li><a href="yasantikonisi.html" class="nav-link">Yaşantı Konisi</a></li>
+                        <li><a href="about.html" class="nav-link">Hakkında</a></li>
+                        <li><a href="contact.html" class="nav-link">İletişim</a></li>
+                    </ul>
+                </nav>
+                <!-- Mobile Navigation -->
+                <nav class="nav-mobile" id="nav">
+                    <button class="nav-close" id="navClose" aria-label="Menüyü kapat">×</button>
+                    <div class="nav-content">
+                        <h3 class="nav-title">Hızlı Bağlantılar</h3>
+                        <ul class="nav-list-mobile">
+                            <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                            <li><a href="articles.html" class="nav-link">Yazılar</a></li>
+                            <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+                            <li><a href="quiz.html" class="nav-link active">Quiz & Oyunlar</a></li>
+                            <li><a href="kazanimlar.html" class="nav-link">Kazanımlar</a></li>
+                            <li><a href="videolar.html" class="nav-link">Videolar</a></li>
+                            <li><a href="yasantikonisi.html" class="nav-link">Yaşantı Konisi</a></li>
+                            <li><a href="about.html" class="nav-link">Hakkında</a></li>
+                            <li><a href="contact.html" class="nav-link">İletişim</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 40vh;">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Quiz & Oyunlar</h2>
+                <p class="hero-subtitle">Bilginizi test edin ve eğlenerek öğrenin</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Bilgi Quiz'leri</h2>
+                <p class="section-subtitle">Kategorilere göre düzenlenmiş çoktan seçmeli quizler</p>
+            </div>
+            
+            <!-- Quiz Category Selection -->
+            <div class="quiz-categories" id="quizCategories" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-md); margin-bottom: var(--spacing-xl);">
+                <div class="quiz-category-card" data-category="genel">
+                    <div class="category-icon">📚</div>
+                    <h3 class="category-title">Genel Bilgi</h3>
+                    <p class="category-description">8 soru - Tüm konular</p>
+                    <button class="btn btn-primary category-start-btn" onclick="startQuizFromCategory('genel')">Quiz'i Başlat</button>
+                </div>
+                <div class="quiz-category-card" data-category="ahlak">
+                    <div class="category-icon">✨</div>
+                    <h3 class="category-title">Ahlak</h3>
+                    <p class="category-description">8 soru - İslami ahlak ve değerler</p>
+                    <button class="btn btn-primary category-start-btn" onclick="startQuizFromCategory('ahlak')">Quiz'i Başlat</button>
+                </div>
+                <div class="quiz-category-card" data-category="islamTarihi">
+                    <div class="category-icon">📖</div>
+                    <h3 class="category-title">İslam Tarihi</h3>
+                    <p class="category-description">8 soru - Peygamberimiz ve tarih</p>
+                    <button class="btn btn-primary category-start-btn" onclick="startQuizFromCategory('islamTarihi')">Quiz'i Başlat</button>
+                </div>
+                <div class="quiz-category-card" data-category="kuraniKerim">
+                    <div class="category-icon">🕌</div>
+                    <h3 class="category-title">Kur'an-ı Kerim</h3>
+                    <p class="category-description">8 soru - Sureler ve ayetler</p>
+                    <button class="btn btn-primary category-start-btn" onclick="startQuizFromCategory('kuraniKerim')">Quiz'i Başlat</button>
+                </div>
+            </div>
+            
+            <div class="quiz-container" id="quizContainer" style="display: none;">
+                <!-- Quiz will be rendered here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section class="content-section" style="background-color: var(--bg-light);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Eğitici Oyunlar</h2>
+                <p class="section-subtitle">Eğlenerek öğrenin</p>
+            </div>
+            
+            <!-- True/False Game -->
+            <div class="game-container">
+                <h3 class="game-title">Doğru / Yanlış Oyunu</h3>
+                <p class="game-description">Aşağıdaki ifadelerin doğru mu yanlış mı olduğunu tahmin edin.</p>
+                
+                <div class="tf-game" id="tfGame">
+                    <div class="tf-question" id="tfQuestion">Yükleniyor...</div>
+                    <div class="tf-buttons">
+                        <button class="btn-tf btn-true" onclick="checkTFAnswer(true)">Doğru</button>
+                        <button class="btn-tf btn-false" onclick="checkTFAnswer(false)">Yanlış</button>
+                    </div>
+                    <div class="tf-feedback" id="tfFeedback" style="display: none;"></div>
+                    <div class="tf-score" id="tfScore">Skor: 0 / 0</div>
+                </div>
+            </div>
+
+            <!-- Matching Game -->
+            <div class="game-container">
+                <h3 class="game-title">Eşleştirme Oyunu</h3>
+                <p class="game-description">Sol taraftaki kavramları sağ taraftaki tanımlarla eşleştirin.</p>
+                
+                <div class="matching-game" id="matchingGame">
+                    <div class="matching-column" id="leftColumn">
+                        <!-- Left column items -->
+                    </div>
+                    <div class="matching-column" id="rightColumn">
+                        <!-- Right column items -->
+                    </div>
+                </div>
+                <div class="matching-feedback" id="matchingFeedback"></div>
+            </div>
+
+            <!-- Memory Game -->
+            <div class="game-container">
+                <h3 class="game-title">Hafıza Oyunu</h3>
+                <p class="game-description">Kartları çevirerek eşleştirmeleri bulun. Hafızanızı test edin!</p>
+                
+                <!-- Difficulty Selection -->
+                <div class="memory-difficulty" id="memoryDifficulty">
+                    <h4>Zorluk Seviyesi Seçin:</h4>
+                    <div class="difficulty-buttons">
+                        <button class="btn btn-secondary difficulty-btn" data-level="easy" onclick="selectMemoryDifficulty('easy')">Kolay (4x3)</button>
+                        <button class="btn btn-secondary difficulty-btn" data-level="medium" onclick="selectMemoryDifficulty('medium')">Orta (4x4)</button>
+                        <button class="btn btn-secondary difficulty-btn" data-level="hard" onclick="selectMemoryDifficulty('hard')">Zor (6x4)</button>
+                    </div>
+                </div>
+                
+                <div class="memory-game" id="memoryGame" style="display: none;">
+                    <div class="memory-stats">
+                        <div class="memory-stat">
+                            <span class="stat-label">⏱️ Süre:</span>
+                            <span class="stat-value" id="memoryTimer">00:00</span>
+                        </div>
+                        <div class="memory-stat">
+                            <span class="stat-label">🎯 Hamle:</span>
+                            <span class="stat-value" id="memoryMoves">0</span>
+                        </div>
+                        <div class="memory-stat">
+                            <span class="stat-label">⭐ Skor:</span>
+                            <span class="stat-value" id="memoryScore">0</span>
+                        </div>
+                        <div class="memory-stat">
+                            <span class="stat-label">✅ Eşleşme:</span>
+                            <span class="stat-value" id="memoryPairs">0 / 8</span>
+                        </div>
+                    </div>
+                    <div class="memory-grid" id="memoryGrid">
+                        <!-- Memory cards will be generated here -->
+                    </div>
+                    <div class="memory-actions">
+                        <button class="btn btn-secondary" onclick="pauseMemoryGame()" id="pauseBtn">⏸️ Duraklat</button>
+                        <button class="btn btn-primary" onclick="initMemoryGame()">🔄 Yeniden Başla</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Word Search Game -->
+            <div class="game-container">
+                <h3 class="game-title">Kelime Bulmaca</h3>
+                <p class="game-description">Aşağıdaki kelimeleri bulun ve işaretleyin. Kelimeler yatay, dikey veya çapraz olabilir.</p>
+                
+                <!-- Difficulty Selection -->
+                <div class="wordsearch-difficulty" id="wordsearchDifficulty">
+                    <h4>Zorluk Seviyesi Seçin:</h4>
+                    <div class="difficulty-buttons">
+                        <button class="btn btn-secondary difficulty-btn" data-level="easy" onclick="selectWordSearchDifficulty('easy')">Kolay (10x10)</button>
+                        <button class="btn btn-secondary difficulty-btn" data-level="medium" onclick="selectWordSearchDifficulty('medium')">Orta (12x12)</button>
+                        <button class="btn btn-secondary difficulty-btn" data-level="hard" onclick="selectWordSearchDifficulty('hard')">Zor (15x15)</button>
+                    </div>
+                </div>
+                
+                <div class="wordsearch-game" id="wordsearchGame" style="display: none;">
+                    <div class="wordsearch-stats">
+                        <div class="wordsearch-stat">
+                            <span class="stat-label">⏱️ Süre:</span>
+                            <span class="stat-value" id="wordsearchTimer">00:00</span>
+                        </div>
+                        <div class="wordsearch-stat">
+                            <span class="stat-label">✅ Bulunan:</span>
+                            <span class="stat-value" id="wordsearchFound">0 / 8</span>
+                        </div>
+                        <div class="wordsearch-stat">
+                            <span class="stat-label">💡 İpucu:</span>
+                            <button class="btn btn-secondary btn-sm" onclick="showWordHint()" id="hintBtn">İpucu Al</button>
+                        </div>
+                    </div>
+                    <div class="wordsearch-words" id="wordsearchWords">
+                        <h4>Bulunacak Kelimeler:</h4>
+                        <div class="words-list" id="wordsList"></div>
+                    </div>
+                    <div class="wordsearch-grid-container">
+                        <div class="wordsearch-grid" id="wordsearchGrid">
+                            <!-- Word search grid will be generated here -->
+                        </div>
+                    </div>
+                    <div class="wordsearch-actions">
+                        <button class="btn btn-secondary" onclick="resetWordSearchSelection()">🔄 Seçimi Temizle</button>
+                        <button class="btn btn-secondary" onclick="initWordSearchGame()">🔄 Yeniden Başla</button>
+                        <button class="btn btn-primary" onclick="exitWordSearchGame()">🚪 Oyundan Çık</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fill in the Blank Game -->
+            <div class="game-container">
+                <h3 class="game-title">Boşluk Doldurma</h3>
+                <p class="game-description">Cümlelerdeki boşlukları uygun kelimelerle doldurun. Doğru cevaplar için puan kazanın!</p>
+                
+                <!-- Difficulty Selection -->
+                <div class="fillblank-difficulty" id="fillblankDifficulty">
+                    <h4>Zorluk Seviyesi Seçin:</h4>
+                    <div class="difficulty-buttons">
+                        <button class="btn btn-secondary difficulty-btn" data-level="easy" onclick="selectFillBlankDifficulty('easy')">Kolay (5 Soru)</button>
+                        <button class="btn btn-secondary difficulty-btn" data-level="medium" onclick="selectFillBlankDifficulty('medium')">Orta (8 Soru)</button>
+                        <button class="btn btn-secondary difficulty-btn" data-level="hard" onclick="selectFillBlankDifficulty('hard')">Zor (12 Soru)</button>
+                    </div>
+                </div>
+                
+                <div class="fillblank-game" id="fillblankGame" style="display: none;">
+                    <div class="fillblank-stats">
+                        <div class="fillblank-stat">
+                            <span class="stat-label">⏱️ Süre:</span>
+                            <span class="stat-value" id="fillblankTimer">00:00</span>
+                        </div>
+                        <div class="fillblank-stat">
+                            <span class="stat-label">✅ Doğru:</span>
+                            <span class="stat-value" id="fillblankCorrect">0</span>
+                        </div>
+                        <div class="fillblank-stat">
+                            <span class="stat-label">⭐ Skor:</span>
+                            <span class="stat-value" id="fillblankScore">0</span>
+                        </div>
+                        <div class="fillblank-stat">
+                            <span class="stat-label">📝 Soru:</span>
+                            <span class="stat-value" id="fillblankProgress">0 / 8</span>
+                        </div>
+                    </div>
+                    <div class="fillblank-question" id="fillblankQuestion"></div>
+                    <div class="fillblank-options" id="fillblankOptions"></div>
+                    <div class="fillblank-feedback" id="fillblankFeedback"></div>
+                    <div class="fillblank-actions">
+                        <button class="btn btn-secondary" onclick="initFillBlankGame()">🔄 Yeniden Başla</button>
+                        <button class="btn btn-primary" onclick="exitFillBlankGame()">🚪 Oyundan Çık</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Eğitici Platform</h3>
+                    <p>Bilgi ve hikmet dolu içerikler, interaktif öğrenme deneyimleri</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hızlı Bağlantılar</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="articles.html">Yazılar</a></li>
+                        <li><a href="gallery.html">Galeri</a></li>
+                        <li><a href="quiz.html">Quiz & Oyunlar</a></li>
+                        <li><a href="about.html">Hakkında</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Eğitici Platform. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/quiz.js"></script>
+    <script>
+        // True/False Game Data - Genişletilmiş
+        const tfQuestions = [
+            { question: "Aile, toplumun temel taşıdır.", answer: true },
+            { question: "Sabır sadece zor zamanlarda önemlidir.", answer: false },
+            { question: "Şükür etmek, sahip olduklarımızın farkında olmaktır.", answer: true },
+            { question: "Eğitim sadece okulda gerçekleşir.", answer: false },
+            { question: "Dürüstlük, karakterin temel taşıdır.", answer: true },
+            { question: "Aile içi iletişim önemli değildir.", answer: false },
+            { question: "Hayatın anlamını bulmak, kendimizi tanımakla başlar.", answer: true },
+            { question: "Birlikte geçirilen zaman aile bağlarını zayıflatır.", answer: false },
+            { question: "Kur'an-ı Kerim'de 114 sure vardır.", answer: true },
+            { question: "Hz. Muhammed (s.a.v.) 571 yılında doğmuştur.", answer: true },
+            { question: "Fil Suresi Medine döneminde inmiştir.", answer: false },
+            { question: "İslam'da ilim öğrenmek sadece erkeklere farzdır.", answer: false },
+            { question: "Hz. Muhammed (s.a.v.)'in lakabı 'el-Emin' idi.", answer: true },
+            { question: "Hilfu'l-Fudul ticaret için kurulmuştur.", answer: false },
+            { question: "Kur'an-ı Kerim'in ilk ayeti 'Oku!' emridir.", answer: true },
+            { question: "Şükür sadece dil ile gösterilir.", answer: false }
+        ];
+
+        let currentTFIndex = 0;
+        let tfScore = 0;
+        let tfTotal = 0;
+
+        // Initialize True/False Game
+        function initTFGame() {
+            currentTFIndex = 0;
+            tfScore = 0;
+            tfTotal = 0;
+            loadTFQuestion();
+        }
+
+        function loadTFQuestion() {
+            if (currentTFIndex >= tfQuestions.length) {
+                document.getElementById('tfQuestion').textContent = 'Tüm sorular tamamlandı!';
+                document.querySelector('.tf-buttons').style.display = 'none';
+                return;
+            }
+            
+            const question = tfQuestions[currentTFIndex];
+            document.getElementById('tfQuestion').textContent = question.question;
+            document.getElementById('tfFeedback').style.display = 'none';
+            document.querySelector('.tf-buttons').style.display = 'flex';
+        }
+
+        function checkTFAnswer(userAnswer) {
+            const question = tfQuestions[currentTFIndex];
+            const feedback = document.getElementById('tfFeedback');
+            const buttons = document.querySelectorAll('.btn-tf');
+            
+            buttons.forEach(btn => btn.disabled = true);
+            
+            tfTotal++;
+            
+            if (userAnswer === question.answer) {
+                tfScore++;
+                feedback.textContent = '✓ Doğru!';
+                feedback.className = 'tf-feedback correct';
+            } else {
+                feedback.textContent = '✗ Yanlış! Doğru cevap: ' + (question.answer ? 'Doğru' : 'Yanlış');
+                feedback.className = 'tf-feedback incorrect';
+            }
+            
+            feedback.style.display = 'block';
+            document.getElementById('tfScore').textContent = `Skor: ${tfScore} / ${tfTotal}`;
+            
+            setTimeout(() => {
+                currentTFIndex++;
+                buttons.forEach(btn => btn.disabled = false);
+                loadTFQuestion();
+            }, 2000);
+        }
+
+        // Matching Game Data - Genişletilmiş
+        const matchingPairs = [
+            { term: "Sabır", definition: "Zorluklar karşısında dayanma gücü" },
+            { term: "Şükür", definition: "Sahip olduklarımızın farkında olmak" },
+            { term: "Dürüstlük", definition: "Doğru söylemek ve doğru davranmak" },
+            { term: "Sevgi", definition: "Aile bağlarının temeli" },
+            { term: "Eğitim", definition: "Hayat boyu devam eden süreç" },
+            { term: "İlim", definition: "Bilgi öğrenmek ve öğretmek" },
+            { term: "Merhamet", definition: "Başkalarına karşı şefkat göstermek" },
+            { term: "Adalet", definition: "Hakkaniyet ve eşitlik" },
+            { term: "Tevazu", definition: "Alçakgönüllülük" },
+            { term: "Cömertlik", definition: "Başkalarına yardım etmek" }
+        ];
+
+        let selectedLeft = null;
+        let selectedRight = null;
+        let selectedLeftElement = null;
+        let selectedRightElement = null;
+        let matchedPairs = 0;
+        let matchColors = []; // Her eşleştirme için farklı renk
+        let currentColorIndex = 0;
+
+        // Renk paleti - Her eşleştirme için farklı renk
+        const colorPalette = [
+            { bg: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', text: '#ffffff' },
+            { bg: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)', text: '#ffffff' },
+            { bg: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)', text: '#ffffff' },
+            { bg: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)', text: '#ffffff' },
+            { bg: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)', text: '#ffffff' },
+            { bg: 'linear-gradient(135deg, #30cfd0 0%, #330867 100%)', text: '#ffffff' },
+            { bg: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)', text: '#2c3e50' },
+            { bg: 'linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)', text: '#ffffff' },
+            { bg: 'linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)', text: '#2c3e50' },
+            { bg: 'linear-gradient(135deg, #ff8a80 0%, #ea4c89 100%)', text: '#ffffff' }
+        ];
+
+        // Initialize Matching Game
+        function initMatchingGame() {
+            const leftColumn = document.getElementById('leftColumn');
+            const rightColumn = document.getElementById('rightColumn');
+            
+            if (!leftColumn || !rightColumn) {
+                console.error('Matching game kolonları bulunamadı!');
+                return;
+            }
+            
+            leftColumn.innerHTML = '';
+            rightColumn.innerHTML = '';
+            matchedPairs = 0;
+            selectedLeft = null;
+            selectedRight = null;
+            selectedLeftElement = null;
+            selectedRightElement = null;
+            matchColors = []; // Renk eşleştirmelerini sıfırla
+            currentColorIndex = 0; // Renk indeksini sıfırla
+            
+            // Veri sayısı kontrolü
+            if (matchingPairs.length === 0) {
+                console.error('Eşleştirme verileri bulunamadı!');
+                return;
+            }
+            
+            // Shuffle arrays - Fisher-Yates shuffle algoritması
+            const shuffledTerms = [...matchingPairs];
+            for (let i = shuffledTerms.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffledTerms[i], shuffledTerms[j]] = [shuffledTerms[j], shuffledTerms[i]];
+            }
+            
+            const shuffledDefinitions = [...matchingPairs].map(p => p.definition);
+            for (let i = shuffledDefinitions.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffledDefinitions[i], shuffledDefinitions[j]] = [shuffledDefinitions[j], shuffledDefinitions[i]];
+            }
+            
+            // Sol kolona terimleri ekle
+            shuffledTerms.forEach((pair) => {
+                const termItem = document.createElement('div');
+                termItem.className = 'matching-item';
+                termItem.textContent = pair.term;
+                termItem.dataset.term = pair.term;
+                termItem.onclick = () => selectLeft(pair.term, termItem);
+                leftColumn.appendChild(termItem);
+            });
+            
+            // Sağ kolona tanımları ekle
+            shuffledDefinitions.forEach((def) => {
+                const defItem = document.createElement('div');
+                defItem.className = 'matching-item';
+                defItem.textContent = def;
+                defItem.dataset.definition = def;
+                defItem.onclick = () => selectRight(def, defItem);
+                rightColumn.appendChild(defItem);
+            });
+            
+            // Veri sayısı kontrolü
+            const leftItems = leftColumn.querySelectorAll('.matching-item');
+            const rightItems = rightColumn.querySelectorAll('.matching-item');
+            
+            if (leftItems.length !== rightItems.length) {
+                console.error('Hata: Sol ve sağ kolonlardaki item sayıları eşit değil!', {
+                    left: leftItems.length,
+                    right: rightItems.length
+                });
+            }
+            
+            document.getElementById('matchingFeedback').textContent = '';
+        }
+
+        function selectLeft(term, element) {
+            if (element.classList.contains('matched')) return;
+            
+            // Eğer aynı item seçilirse, seçimi kaldır
+            if (selectedLeft === term && selectedLeftElement === element) {
+                element.classList.remove('selected');
+                selectedLeft = null;
+                selectedLeftElement = null;
+                return;
+            }
+            
+            // Önceki seçimi temizle
+            document.querySelectorAll('#leftColumn .matching-item').forEach(item => {
+                item.classList.remove('selected');
+            });
+            
+            // Yeni seçimi yap
+            selectedLeft = term;
+            selectedLeftElement = element;
+            element.classList.add('selected');
+            
+            // Eğer sağ tarafta da seçim varsa kontrol et
+            if (selectedRight !== null) {
+                checkMatch();
+            }
+        }
+
+        function selectRight(definition, element) {
+            if (element.classList.contains('matched')) return;
+            
+            // Eğer aynı item seçilirse, seçimi kaldır
+            if (selectedRight === definition && selectedRightElement === element) {
+                element.classList.remove('selected');
+                selectedRight = null;
+                selectedRightElement = null;
+                return;
+            }
+            
+            // Önceki seçimi temizle
+            document.querySelectorAll('#rightColumn .matching-item').forEach(item => {
+                item.classList.remove('selected');
+            });
+            
+            // Yeni seçimi yap
+            selectedRight = definition;
+            selectedRightElement = element;
+            element.classList.add('selected');
+            
+            // Eğer sol tarafta da seçim varsa kontrol et
+            if (selectedLeft !== null) {
+                checkMatch();
+            }
+        }
+
+        function checkMatch() {
+            if (selectedLeft === null || selectedRight === null || !selectedLeftElement || !selectedRightElement) {
+                return;
+            }
+            
+            // Eşleştirmeyi kontrol et
+            const correctPair = matchingPairs.find(p => p.term === selectedLeft);
+            
+            if (correctPair && correctPair.definition === selectedRight) {
+                // Doğru eşleştirme - Renk ataması yap
+                const matchColor = colorPalette[currentColorIndex % colorPalette.length];
+                currentColorIndex++;
+                
+                // Her iki kutucuğa da aynı rengi uygula
+                selectedLeftElement.classList.add('matched');
+                selectedLeftElement.style.background = matchColor.bg;
+                selectedLeftElement.style.color = matchColor.text;
+                selectedLeftElement.style.borderColor = 'transparent';
+                selectedLeftElement.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.2)';
+                
+                selectedRightElement.classList.add('matched');
+                selectedRightElement.style.background = matchColor.bg;
+                selectedRightElement.style.color = matchColor.text;
+                selectedRightElement.style.borderColor = 'transparent';
+                selectedRightElement.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.2)';
+                
+                // Eşleştirme bilgisini sakla (term ve definition için)
+                matchColors.push({
+                    term: selectedLeft,
+                    definition: selectedRight,
+                    color: matchColor
+                });
+                
+                matchedPairs++;
+                
+                document.getElementById('matchingFeedback').textContent = '✓ Doğru eşleştirme!';
+                document.getElementById('matchingFeedback').style.color = 'var(--success-color)';
+                
+                // Seçimleri temizle
+                selectedLeft = null;
+                selectedRight = null;
+                selectedLeftElement = null;
+                selectedRightElement = null;
+                
+                // Tüm eşleştirmeler tamamlandı mı?
+                if (matchedPairs === matchingPairs.length) {
+                    document.getElementById('matchingFeedback').textContent = '🎉 Tüm eşleştirmeler tamamlandı!';
+                    setTimeout(() => {
+                        initMatchingGame();
+                    }, 3000);
+                }
+            } else {
+                // Yanlış eşleştirme
+                document.getElementById('matchingFeedback').textContent = '✗ Yanlış eşleştirme, tekrar deneyin.';
+                document.getElementById('matchingFeedback').style.color = 'var(--error-color)';
+                
+                setTimeout(() => {
+                    if (selectedLeftElement) selectedLeftElement.classList.remove('selected');
+                    if (selectedRightElement) selectedRightElement.classList.remove('selected');
+                    selectedLeft = null;
+                    selectedRight = null;
+                    selectedLeftElement = null;
+                    selectedRightElement = null;
+                    document.getElementById('matchingFeedback').textContent = '';
+                }, 1500);
+            }
+        }
+
+        // Start Quiz from Category
+        function startQuizFromCategory(category) {
+            console.log('Quiz başlatılıyor:', category);
+            
+            // Update quiz category first
+            if (window.updateQuizCategory) {
+                window.updateQuizCategory(category);
+            } else {
+                console.error('updateQuizCategory fonksiyonu bulunamadı!');
+                return;
+            }
+            
+            // Hide category cards
+            const categoriesDiv = document.getElementById('quizCategories');
+            if (categoriesDiv) {
+                categoriesDiv.style.display = 'none';
+            }
+            
+            // Show quiz container
+            const quizContainer = document.getElementById('quizContainer');
+            if (!quizContainer) {
+                console.error('quizContainer bulunamadı!');
+                return;
+            }
+            
+            quizContainer.style.display = 'block';
+            
+            // Wait a bit for category to update, then initialize quiz
+            setTimeout(() => {
+                if (window.initQuiz) {
+                    window.initQuiz();
+                } else {
+                    console.error('initQuiz fonksiyonu bulunamadı!');
+                }
+            }, 50);
+        }
+
+        // Memory Game - Gelişmiş Versiyon
+        const memoryGameData = {
+            easy: {
+                rows: 3,
+                cols: 4,
+                pairs: 6,
+                cards: [
+                    { id: 1, word: "Sabır", emoji: "⏳", color: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)" },
+                    { id: 2, word: "Şükür", emoji: "🙏", color: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)" },
+                    { id: 3, word: "Sevgi", emoji: "❤️", color: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)" },
+                    { id: 4, word: "İlim", emoji: "📚", color: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)" },
+                    { id: 5, word: "Adalet", emoji: "⚖️", color: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)" },
+                    { id: 6, word: "Merhamet", emoji: "🤲", color: "linear-gradient(135deg, #30cfd0 0%, #330867 100%)" }
+                ]
+            },
+            medium: {
+                rows: 4,
+                cols: 4,
+                pairs: 8,
+                cards: [
+                    { id: 1, word: "Sabır", emoji: "⏳", color: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)" },
+                    { id: 2, word: "Şükür", emoji: "🙏", color: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)" },
+                    { id: 3, word: "Sevgi", emoji: "❤️", color: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)" },
+                    { id: 4, word: "İlim", emoji: "📚", color: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)" },
+                    { id: 5, word: "Adalet", emoji: "⚖️", color: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)" },
+                    { id: 6, word: "Merhamet", emoji: "🤲", color: "linear-gradient(135deg, #30cfd0 0%, #330867 100%)" },
+                    { id: 7, word: "Dürüstlük", emoji: "✨", color: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)" },
+                    { id: 8, word: "Eğitim", emoji: "🎓", color: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)" }
+                ]
+            },
+            hard: {
+                rows: 4,
+                cols: 6,
+                pairs: 12,
+                cards: [
+                    { id: 1, word: "Sabır", emoji: "⏳", color: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)" },
+                    { id: 2, word: "Şükür", emoji: "🙏", color: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)" },
+                    { id: 3, word: "Sevgi", emoji: "❤️", color: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)" },
+                    { id: 4, word: "İlim", emoji: "📚", color: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)" },
+                    { id: 5, word: "Adalet", emoji: "⚖️", color: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)" },
+                    { id: 6, word: "Merhamet", emoji: "🤲", color: "linear-gradient(135deg, #30cfd0 0%, #330867 100%)" },
+                    { id: 7, word: "Dürüstlük", emoji: "✨", color: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)" },
+                    { id: 8, word: "Eğitim", emoji: "🎓", color: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)" },
+                    { id: 9, word: "Tevazu", emoji: "🌱", color: "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)" },
+                    { id: 10, word: "Cömertlik", emoji: "💝", color: "linear-gradient(135deg, #ff8a80 0%, #ea4c89 100%)" },
+                    { id: 11, word: "İhsan", emoji: "🌟", color: "linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%)" },
+                    { id: 12, word: "Takva", emoji: "🕌", color: "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)" }
+                ]
+            }
+        };
+
+        let memoryCards = [];
+        let flippedCards = [];
+        let memoryMatchedPairs = 0;
+        let memoryMoves = 0;
+        let memoryScore = 0;
+        let memoryTimer = 0;
+        let memoryTimerInterval = null;
+        let currentDifficulty = 'medium';
+        let isPaused = false;
+        let gameStarted = false;
+
+        function selectMemoryDifficulty(level) {
+            currentDifficulty = level;
+            const buttons = document.querySelectorAll('.difficulty-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.level === level) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Hide difficulty selection, show game
+            document.getElementById('memoryDifficulty').style.display = 'none';
+            document.getElementById('memoryGame').style.display = 'block';
+            
+            initMemoryGame();
+        }
+
+        function initMemoryGame() {
+            const grid = document.getElementById('memoryGrid');
+            if (!grid) return;
+            
+            // Reset game state
+            grid.innerHTML = '';
+            memoryCards = [];
+            flippedCards = [];
+            memoryMatchedPairs = 0;
+            memoryMoves = 0;
+            memoryScore = 0;
+            memoryTimer = 0;
+            isPaused = false;
+            gameStarted = true;
+            
+            // Clear timer
+            if (memoryTimerInterval) {
+                clearInterval(memoryTimerInterval);
+            }
+            
+            // Get current difficulty data
+            const difficulty = memoryGameData[currentDifficulty];
+            if (!difficulty) return;
+            
+            // Set grid columns
+            grid.style.gridTemplateColumns = `repeat(${difficulty.cols}, 1fr)`;
+            
+            // Create pairs
+            const allPairs = [...difficulty.cards, ...difficulty.cards];
+            
+            // Shuffle using Fisher-Yates
+            for (let i = allPairs.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [allPairs[i], allPairs[j]] = [allPairs[j], allPairs[i]];
+            }
+            
+            // Create cards
+            allPairs.forEach((pair, index) => {
+                const card = document.createElement('div');
+                card.className = 'memory-card';
+                card.dataset.id = pair.id;
+                card.dataset.index = index;
+                card.innerHTML = `
+                    <div class="memory-card-front">
+                        <div class="card-icon">🎴</div>
+                    </div>
+                    <div class="memory-card-back" style="background: ${pair.color};">
+                        <div class="card-emoji">${pair.emoji}</div>
+                        <div class="card-word">${pair.word}</div>
+                    </div>
+                `;
+                card.onclick = () => flipCard(card);
+                grid.appendChild(card);
+                memoryCards.push(card);
+            });
+            
+            // Update UI
+            updateMemoryUI();
+            
+            // Start timer
+            startMemoryTimer();
+        }
+
+        function startMemoryTimer() {
+            memoryTimerInterval = setInterval(() => {
+                if (!isPaused && gameStarted) {
+                    memoryTimer++;
+                    updateMemoryUI();
+                }
+            }, 1000);
+        }
+
+        function pauseMemoryGame() {
+            isPaused = !isPaused;
+            const pauseBtn = document.getElementById('pauseBtn');
+            if (isPaused) {
+                pauseBtn.textContent = '▶️ Devam Et';
+                pauseBtn.classList.remove('btn-secondary');
+                pauseBtn.classList.add('btn-primary');
+            } else {
+                pauseBtn.textContent = '⏸️ Duraklat';
+                pauseBtn.classList.remove('btn-primary');
+                pauseBtn.classList.add('btn-secondary');
+            }
+        }
+
+        function updateMemoryUI() {
+            const difficulty = memoryGameData[currentDifficulty];
+            const minutes = Math.floor(memoryTimer / 60);
+            const seconds = memoryTimer % 60;
+            const timerText = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            
+            document.getElementById('memoryTimer').textContent = timerText;
+            document.getElementById('memoryMoves').textContent = memoryMoves;
+            document.getElementById('memoryScore').textContent = memoryScore;
+            document.getElementById('memoryPairs').textContent = `${memoryMatchedPairs} / ${difficulty.pairs}`;
+        }
+
+        function calculateScore() {
+            const difficulty = memoryGameData[currentDifficulty];
+            const baseScore = 100;
+            const timeBonus = Math.max(0, 300 - memoryTimer) * 2; // Time bonus
+            const moveBonus = Math.max(0, (difficulty.pairs * 2 - memoryMoves)) * 10; // Move bonus
+            const difficultyMultiplier = currentDifficulty === 'easy' ? 1 : currentDifficulty === 'medium' ? 1.5 : 2;
+            
+            return Math.floor((baseScore + timeBonus + moveBonus) * difficultyMultiplier);
+        }
+
+        function flipCard(card) {
+            if (isPaused || !gameStarted) return;
+            if (card.classList.contains('flipped') || card.classList.contains('matched') || flippedCards.length >= 2) {
+                return;
+            }
+            
+            card.classList.add('flipped');
+            flippedCards.push(card);
+            
+            if (flippedCards.length === 2) {
+                memoryMoves++;
+                updateMemoryUI();
+                
+                setTimeout(() => {
+                    checkMemoryMatch();
+                }, 1000);
+            }
+        }
+
+        function checkMemoryMatch() {
+            const [card1, card2] = flippedCards;
+            
+            if (card1.dataset.id === card2.dataset.id) {
+                // Match found - Get card color from data
+                const difficulty = memoryGameData[currentDifficulty];
+                const cardData = difficulty.cards.find(c => c.id == card1.dataset.id);
+                
+                if (cardData) {
+                    // Apply same color to both matched cards
+                    const cardBack1 = card1.querySelector('.memory-card-back');
+                    const cardBack2 = card2.querySelector('.memory-card-back');
+                    
+                    if (cardBack1 && cardBack2) {
+                        cardBack1.style.background = cardData.color;
+                        cardBack1.style.color = 'white';
+                        cardBack1.style.borderColor = 'transparent';
+                        cardBack1.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.3)';
+                        
+                        cardBack2.style.background = cardData.color;
+                        cardBack2.style.color = 'white';
+                        cardBack2.style.borderColor = 'transparent';
+                        cardBack2.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.3)';
+                    }
+                }
+                
+                card1.classList.add('matched');
+                card2.classList.add('matched');
+                memoryMatchedPairs++;
+                
+                // Calculate and add score
+                const matchScore = 50 * (currentDifficulty === 'easy' ? 1 : currentDifficulty === 'medium' ? 1.5 : 2);
+                memoryScore += matchScore;
+                
+                updateMemoryUI();
+                
+                // Check if game is complete
+                if (memoryMatchedPairs === difficulty.pairs) {
+                    // Game completed
+                    if (memoryTimerInterval) {
+                        clearInterval(memoryTimerInterval);
+                    }
+                    
+                    const finalScore = calculateScore();
+                    memoryScore = finalScore;
+                    updateMemoryUI();
+                    
+                    setTimeout(() => {
+                        showMemoryResults();
+                    }, 500);
+                }
+            } else {
+                // No match - Shake animation
+                card1.style.animation = 'incorrectShake 0.5s ease';
+                card2.style.animation = 'incorrectShake 0.5s ease';
+                
+                setTimeout(() => {
+                    card1.classList.remove('flipped');
+                    card2.classList.remove('flipped');
+                    card1.style.animation = '';
+                    card2.style.animation = '';
+                }, 500);
+            }
+            
+            flippedCards = [];
+        }
+
+        function showMemoryResults() {
+            const difficulty = memoryGameData[currentDifficulty];
+            const minutes = Math.floor(memoryTimer / 60);
+            const seconds = memoryTimer % 60;
+            const timerText = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            
+            const difficultyNames = {
+                easy: 'Kolay',
+                medium: 'Orta',
+                hard: 'Zor'
+            };
+            
+            const message = `🎉 Tebrikler! Oyunu tamamladınız!\n\n📊 Sonuçlar:\n• Zorluk: ${difficultyNames[currentDifficulty]}\n• Süre: ${timerText}\n• Hamle: ${memoryMoves}\n• Skor: ${memoryScore}\n• Eşleşme: ${memoryMatchedPairs} / ${difficulty.pairs}`;
+            
+            alert(message);
+            
+            // Reset to difficulty selection
+            document.getElementById('memoryDifficulty').style.display = 'block';
+            document.getElementById('memoryGame').style.display = 'none';
+            gameStarted = false;
+            if (memoryTimerInterval) {
+                clearInterval(memoryTimerInterval);
+            }
+        }
+
+        // Word Search Game - Gelişmiş Versiyon
+        const wordSearchData = {
+            easy: {
+                size: 10,
+                words: ["SABIR", "ŞÜKÜR", "SEVGI", "ILIM", "ADALET", "MERHAMET", "DÜRÜSTLÜK", "EĞİTİM"]
+            },
+            medium: {
+                size: 12,
+                words: ["SABIR", "ŞÜKÜR", "SEVGI", "ILIM", "ADALET", "MERHAMET", "DÜRÜSTLÜK", "EĞİTİM", "TEVAZU", "CÖMERTLİK"]
+            },
+            hard: {
+                size: 15,
+                words: ["SABIR", "ŞÜKÜR", "SEVGI", "ILIM", "ADALET", "MERHAMET", "DÜRÜSTLÜK", "EĞİTİM", "TEVAZU", "CÖMERTLİK", "İHSAN", "TAKVA"]
+            }
+        };
+
+        let wordSearchGrid = [];
+        let wordSearchPositions = {};
+        let wordSearchFound = [];
+        let wordSearchSelected = [];
+        let wordSearchStartCell = null;
+        let currentWordSearchDifficulty = 'medium';
+        let wordSearchTimer = 0;
+        let wordSearchTimerInterval = null;
+        let wordSearchGameStarted = false;
+        let hintsUsed = 0;
+        let isSelecting = false;
+
+        function selectWordSearchDifficulty(level) {
+            currentWordSearchDifficulty = level;
+            const buttons = document.querySelectorAll('#wordsearchDifficulty .difficulty-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.level === level) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Hide difficulty selection, show game
+            document.getElementById('wordsearchDifficulty').style.display = 'none';
+            document.getElementById('wordsearchGame').style.display = 'block';
+            
+            initWordSearchGame();
+        }
+
+        function initWordSearchGame() {
+            const grid = document.getElementById('wordsearchGrid');
+            const wordsList = document.getElementById('wordsList');
+            
+            if (!grid || !wordsList) return;
+            
+            // Reset game state
+            grid.innerHTML = '';
+            wordSearchGrid = [];
+            wordSearchPositions = {};
+            wordSearchFound = [];
+            wordSearchSelected = [];
+            wordSearchStartCell = null;
+            wordSearchTimer = 0;
+            wordSearchGameStarted = true;
+            hintsUsed = 0;
+            isSelecting = false;
+            
+            // Clear timer
+            if (wordSearchTimerInterval) {
+                clearInterval(wordSearchTimerInterval);
+            }
+            
+            // Get current difficulty data
+            const difficulty = wordSearchData[currentWordSearchDifficulty];
+            if (!difficulty) return;
+            
+            // Set grid size
+            grid.style.gridTemplateColumns = `repeat(${difficulty.size}, 1fr)`;
+            
+            // Initialize grid as empty (null)
+            for (let i = 0; i < difficulty.size * difficulty.size; i++) {
+                wordSearchGrid[i] = null;
+            }
+            
+            // Place words in grid FIRST
+            const directions = [
+                { row: 0, col: 1 },   // Horizontal →
+                { row: 1, col: 0 },   // Vertical ↓
+                { row: 1, col: 1 },   // Diagonal ↘
+                { row: 1, col: -1 },   // Diagonal ↙
+                { row: -1, col: 1 },  // Diagonal ↗
+                { row: -1, col: -1 }  // Diagonal ↖
+            ];
+            
+            // Shuffle words for better distribution
+            const shuffledWords = [...difficulty.words].sort(() => Math.random() - 0.5);
+            
+            shuffledWords.forEach((word) => {
+                let placed = false;
+                let attempts = 0;
+                
+                while (!placed && attempts < 500) {
+                    const direction = directions[Math.floor(Math.random() * directions.length)];
+                    
+                    // Calculate valid start positions - simpler approach
+                    let minRow = 0, maxRow = difficulty.size - 1;
+                    let minCol = 0, maxCol = difficulty.size - 1;
+                    
+                    // Adjust bounds based on direction
+                    if (direction.row > 0) {
+                        maxRow = difficulty.size - word.length;
+                    } else if (direction.row < 0) {
+                        minRow = word.length - 1;
+                    }
+                    
+                    if (direction.col > 0) {
+                        maxCol = difficulty.size - word.length;
+                    } else if (direction.col < 0) {
+                        minCol = word.length - 1;
+                    }
+                    
+                    if (minRow <= maxRow && minCol <= maxCol) {
+                        const startRow = minRow + Math.floor(Math.random() * (maxRow - minRow + 1));
+                        const startCol = minCol + Math.floor(Math.random() * (maxCol - minCol + 1));
+                        
+                        // Check if position is valid
+                        let valid = true;
+                        const positions = [];
+                        
+                        for (let i = 0; i < word.length; i++) {
+                            const row = startRow + i * direction.row;
+                            const col = startCol + i * direction.col;
+                            
+                            if (row < 0 || row >= difficulty.size || col < 0 || col >= difficulty.size) {
+                                valid = false;
+                                break;
+                            }
+                            
+                            const index = row * difficulty.size + col;
+                            const currentLetter = wordSearchGrid[index];
+                            
+                            // Check if cell is empty (null) or has same letter
+                            if (currentLetter !== null && currentLetter !== word[i]) {
+                                valid = false;
+                                break;
+                            }
+                            
+                            positions.push(index);
+                        }
+                        
+                        if (valid) {
+                            // Place word
+                            for (let i = 0; i < word.length; i++) {
+                                const index = positions[i];
+                                wordSearchGrid[index] = word[i];
+                            }
+                            
+                            // Find original word index
+                            const originalIndex = difficulty.words.indexOf(word);
+                            
+                            wordSearchPositions[originalIndex] = {
+                                word: word,
+                                positions: positions,
+                                direction: direction,
+                                startRow: startRow,
+                                startCol: startCol
+                            };
+                            
+                            placed = true;
+                        }
+                    }
+                    attempts++;
+                }
+                
+                if (!placed) {
+                    console.warn(`Kelime yerleştirilemedi: ${word}`);
+                }
+            });
+            
+            // Fill remaining empty cells with random letters
+            const letters = 'ABCÇDEFGĞHIİJKLMNOÖPRSŞTUÜVYZ';
+            for (let i = 0; i < difficulty.size * difficulty.size; i++) {
+                if (wordSearchGrid[i] === null) {
+                    wordSearchGrid[i] = letters[Math.floor(Math.random() * letters.length)];
+                }
+            }
+            
+            // Create grid cells
+            for (let i = 0; i < difficulty.size * difficulty.size; i++) {
+                const cell = document.createElement('div');
+                cell.className = 'wordsearch-cell';
+                cell.dataset.index = i;
+                cell.dataset.row = Math.floor(i / difficulty.size);
+                cell.dataset.col = i % difficulty.size;
+                cell.textContent = wordSearchGrid[i];
+                cell.onmousedown = (e) => startWordSelection(e, cell);
+                cell.onmouseenter = (e) => continueWordSelection(e, cell);
+                cell.onmouseup = () => endWordSelection();
+                cell.ontouchstart = (e) => {
+                    e.preventDefault();
+                    startWordSelection(e, cell);
+                };
+                cell.ontouchmove = (e) => {
+                    e.preventDefault();
+                    const touch = e.touches[0];
+                    const element = document.elementFromPoint(touch.clientX, touch.clientY);
+                    if (element && element.classList.contains('wordsearch-cell')) {
+                        continueWordSelection(e, element);
+                    }
+                };
+                cell.ontouchend = (e) => {
+                    e.preventDefault();
+                    endWordSelection();
+                };
+                grid.appendChild(cell);
+            }
+            
+            // Create word list
+            wordsList.innerHTML = '';
+            difficulty.words.forEach((word, index) => {
+                const wordItem = document.createElement('span');
+                wordItem.className = 'word-item';
+                wordItem.textContent = word;
+                wordItem.id = 'word-item-' + index;
+                wordsList.appendChild(wordItem);
+            });
+            
+            // Update UI
+            updateWordSearchUI();
+            
+            // Start timer
+            startWordSearchTimer();
+        }
+
+        function startWordSearchTimer() {
+            wordSearchTimerInterval = setInterval(() => {
+                if (wordSearchGameStarted) {
+                    wordSearchTimer++;
+                    updateWordSearchUI();
+                }
+            }, 1000);
+        }
+
+        function updateWordSearchUI() {
+            const difficulty = wordSearchData[currentWordSearchDifficulty];
+            const minutes = Math.floor(wordSearchTimer / 60);
+            const seconds = wordSearchTimer % 60;
+            const timerText = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            
+            const timerEl = document.getElementById('wordsearchTimer');
+            const foundEl = document.getElementById('wordsearchFound');
+            
+            if (timerEl) timerEl.textContent = timerText;
+            if (foundEl) foundEl.textContent = `${wordSearchFound.length} / ${difficulty.words.length}`;
+        }
+
+        function startWordSelection(e, cell) {
+            e.preventDefault();
+            if (cell.classList.contains('found')) return;
+            
+            isSelecting = true;
+            wordSearchSelected = [];
+            wordSearchStartCell = cell;
+            
+            const index = parseInt(cell.dataset.index);
+            wordSearchSelected.push(index);
+            cell.classList.add('selected');
+        }
+
+        function continueWordSelection(e, cell) {
+            if (!isSelecting || cell.classList.contains('found')) return;
+            
+            const index = parseInt(cell.dataset.index);
+            
+            if (!wordSearchSelected.includes(index)) {
+                // Check if cell is adjacent to last selected
+                const lastIndex = wordSearchSelected[wordSearchSelected.length - 1];
+                const difficulty = wordSearchData[currentWordSearchDifficulty];
+                const lastRow = Math.floor(lastIndex / difficulty.size);
+                const lastCol = lastIndex % difficulty.size;
+                const currentRow = Math.floor(index / difficulty.size);
+                const currentCol = index % difficulty.size;
+                
+                const rowDiff = Math.abs(currentRow - lastRow);
+                const colDiff = Math.abs(currentCol - lastCol);
+                
+                // Allow horizontal, vertical, and diagonal selection
+                if ((rowDiff <= 1 && colDiff <= 1) && (rowDiff + colDiff > 0)) {
+                    wordSearchSelected.push(index);
+                    cell.classList.add('selected');
+                }
+            }
+        }
+
+        function endWordSelection() {
+            if (!isSelecting) return;
+            isSelecting = false;
+            
+            if (wordSearchSelected.length >= 3) {
+                checkWordSelection();
+            } else {
+                resetWordSearchSelection();
+            }
+        }
+
+        function resetWordSearchSelection() {
+            // Reset selecting state
+            isSelecting = false;
+            
+            // Clear all selected cells
+            if (wordSearchSelected && wordSearchSelected.length > 0) {
+                wordSearchSelected.forEach(index => {
+                    const cell = document.querySelector(`.wordsearch-cell[data-index="${index}"]`);
+                    if (cell && !cell.classList.contains('found')) {
+                        cell.classList.remove('selected');
+                    }
+                });
+            }
+            
+            // Also clear any cells that might have 'selected' class
+            const allSelectedCells = document.querySelectorAll('.wordsearch-cell.selected');
+            allSelectedCells.forEach(cell => {
+                if (!cell.classList.contains('found')) {
+                    cell.classList.remove('selected');
+                }
+            });
+            
+            // Reset variables
+            wordSearchSelected = [];
+            wordSearchStartCell = null;
+        }
+
+        function checkWordSelection() {
+            const difficulty = wordSearchData[currentWordSearchDifficulty];
+            const selectedWord = wordSearchSelected.map(index => wordSearchGrid[index]).join('');
+            const reversedWord = selectedWord.split('').reverse().join('');
+            
+            // Check each word
+            difficulty.words.forEach((word, wordIndex) => {
+                if (wordSearchFound.includes(wordIndex)) return;
+                
+                if (selectedWord === word || reversedWord === word) {
+                    // Word found!
+                    wordSearchFound.push(wordIndex);
+                    
+                    // Mark word in list
+                    const wordItem = document.getElementById('word-item-' + wordIndex);
+                    if (wordItem) {
+                        wordItem.classList.add('found');
+                    }
+                    
+                    // Mark cells as found
+                    wordSearchSelected.forEach(index => {
+                        const cell = document.querySelector(`.wordsearch-cell[data-index="${index}"]`);
+                        if (cell) {
+                            cell.classList.remove('selected');
+                            cell.classList.add('found');
+                            cell.style.pointerEvents = 'none';
+                            
+                            // Apply color based on word index
+                            const colorPalette = [
+                                'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                                'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+                                'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+                                'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
+                                'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+                                'linear-gradient(135deg, #30cfd0 0%, #330867 100%)',
+                                'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
+                                'linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)',
+                                'linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)',
+                                'linear-gradient(135deg, #ff8a80 0%, #ea4c89 100%)',
+                                'linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%)',
+                                'linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)'
+                            ];
+                            
+                            cell.style.background = colorPalette[wordIndex % colorPalette.length];
+                            cell.style.color = 'white';
+                            cell.style.fontWeight = '700';
+                        }
+                    });
+                    
+                    // Clear selection
+                    wordSearchSelected = [];
+                    wordSearchStartCell = null;
+                    
+                    updateWordSearchUI();
+                    
+                    // Check if all words found
+                    if (wordSearchFound.length === difficulty.words.length) {
+                        if (wordSearchTimerInterval) {
+                            clearInterval(wordSearchTimerInterval);
+                        }
+                        
+                        const minutes = Math.floor(wordSearchTimer / 60);
+                        const seconds = wordSearchTimer % 60;
+                        const timerText = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+                        
+                        setTimeout(() => {
+                            alert(`🎉 Tebrikler! Tüm kelimeleri buldunuz!\n\n⏱️ Süre: ${timerText}\n💡 İpucu Kullanımı: ${hintsUsed}`);
+                            
+                            // Reset to difficulty selection
+                            document.getElementById('wordsearchDifficulty').style.display = 'block';
+                            document.getElementById('wordsearchGame').style.display = 'none';
+                            wordSearchGameStarted = false;
+                        }, 500);
+                    }
+                    
+                    return;
+                }
+            });
+            
+            // Word not found
+            setTimeout(() => {
+                resetWordSearchSelection();
+            }, 500);
+        }
+
+        function showWordHint() {
+            if (!wordSearchGameStarted) {
+                alert('Önce oyunu başlatın!');
+                return;
+            }
+            
+            const difficulty = wordSearchData[currentWordSearchDifficulty];
+            if (!difficulty) return;
+            
+            const notFoundWords = difficulty.words.filter((word, index) => !wordSearchFound.includes(index));
+            
+            if (notFoundWords.length === 0) {
+                alert('Tüm kelimeler bulundu!');
+                return;
+            }
+            
+            hintsUsed++;
+            const randomWord = notFoundWords[Math.floor(Math.random() * notFoundWords.length)];
+            const wordIndex = difficulty.words.indexOf(randomWord);
+            const wordData = wordSearchPositions[wordIndex];
+            
+            if (wordData && wordData.positions && wordData.positions.length > 0) {
+                // Highlight first letter of the word
+                const firstIndex = wordData.positions[0];
+                const cell = document.querySelector(`.wordsearch-cell[data-index="${firstIndex}"]`);
+                
+                if (cell && !cell.classList.contains('found')) {
+                    cell.style.animation = 'hintPulse 1s ease 3';
+                    setTimeout(() => {
+                        cell.style.animation = '';
+                    }, 3000);
+                }
+                
+                alert(`💡 İpucu: "${randomWord}" kelimesi ${getDirectionName(wordData.direction)} yönde başlıyor.`);
+            } else {
+                alert(`💡 İpucu: "${randomWord}" kelimesini bulmaya çalışın!`);
+            }
+        }
+
+        function getDirectionName(direction) {
+            if (direction.row === 0 && direction.col === 1) return 'yatay (→)';
+            if (direction.row === 1 && direction.col === 0) return 'dikey (↓)';
+            if (direction.row === 1 && direction.col === 1) return 'çapraz (↘)';
+            if (direction.row === 1 && direction.col === -1) return 'çapraz (↙)';
+            if (direction.row === -1 && direction.col === 1) return 'çapraz (↗)';
+            if (direction.row === -1 && direction.col === -1) return 'çapraz (↖)';
+            return 'bilinmeyen';
+        }
+
+        function exitWordSearchGame() {
+            // Stop timer
+            if (wordSearchTimerInterval) {
+                clearInterval(wordSearchTimerInterval);
+                wordSearchTimerInterval = null;
+            }
+            
+            // Reset game state
+            wordSearchGameStarted = false;
+            wordSearchTimer = 0;
+            wordSearchFound = [];
+            wordSearchSelected = [];
+            wordSearchStartCell = null;
+            isSelecting = false;
+            hintsUsed = 0;
+            
+            // Hide game, show difficulty selection
+            document.getElementById('wordsearchGame').style.display = 'none';
+            document.getElementById('wordsearchDifficulty').style.display = 'block';
+            
+            // Clear any selected cells
+            const allSelectedCells = document.querySelectorAll('.wordsearch-cell.selected');
+            allSelectedCells.forEach(cell => {
+                cell.classList.remove('selected');
+            });
+        }
+
+        // Fill in the Blank Game - Gelişmiş Versiyon
+        const fillBlankData = {
+            easy: {
+                questions: [
+                    {
+                        sentence: "Sabır, müminin en güzel ___'ıdır.",
+                        correct: "sıfatı",
+                        options: ["sıfatı", "özelliği", "davranışı", "alışkanlığı"]
+                    },
+                    {
+                        sentence: "Şükür, nimetin ___'ıdır.",
+                        correct: "artması",
+                        options: ["artması", "azalması", "kaybolması", "değişmesi"]
+                    },
+                    {
+                        sentence: "İlim öğrenmek, her Müslüman'a ___'dır.",
+                        correct: "farzdır",
+                        options: ["farzdır", "müstehaptır", "sünnettir", "mubahtır"]
+                    },
+                    {
+                        sentence: "Adalet, toplumun ___'ıdır.",
+                        correct: "temelidir",
+                        options: ["temelidir", "sonucudur", "nedenidir", "etkisidir"]
+                    },
+                    {
+                        sentence: "Merhamet, Allah'ın en güzel ___'lerindendir.",
+                        correct: "isimlerinden",
+                        options: ["isimlerinden", "sıfatlarından", "özelliklerinden", "davranışlarından"]
+                    }
+                ]
+            },
+            medium: {
+                questions: [
+                    {
+                        sentence: "Sabır, müminin en güzel ___'ıdır.",
+                        correct: "sıfatı",
+                        options: ["sıfatı", "özelliği", "davranışı", "alışkanlığı"]
+                    },
+                    {
+                        sentence: "Şükür, nimetin ___'ıdır.",
+                        correct: "artması",
+                        options: ["artması", "azalması", "kaybolması", "değişmesi"]
+                    },
+                    {
+                        sentence: "İlim öğrenmek, her Müslüman'a ___'dır.",
+                        correct: "farzdır",
+                        options: ["farzdır", "müstehaptır", "sünnettir", "mubahtır"]
+                    },
+                    {
+                        sentence: "Adalet, toplumun ___'ıdır.",
+                        correct: "temelidir",
+                        options: ["temelidir", "sonucudur", "nedenidir", "etkisidir"]
+                    },
+                    {
+                        sentence: "Merhamet, Allah'ın en güzel ___'lerindendir.",
+                        correct: "isimlerinden",
+                        options: ["isimlerinden", "sıfatlarından", "özelliklerinden", "davranışlarından"]
+                    },
+                    {
+                        sentence: "Dürüstlük, kişinin ___'ıdır.",
+                        correct: "karakteridir",
+                        options: ["karakteridir", "kişiliğidir", "davranışıdır", "özelliğidir"]
+                    },
+                    {
+                        sentence: "Eğitim, insanın ___'ıdır.",
+                        correct: "gelişimidir",
+                        options: ["gelişimidir", "değişimidir", "dönüşümüdür", "evrimidir"]
+                    },
+                    {
+                        sentence: "Tevazu, büyüklüğün ___'ıdır.",
+                        correct: "işaretidir",
+                        options: ["işaretidir", "göstergesidir", "belirtisidir", "kanıtıdır"]
+                    }
+                ]
+            },
+            hard: {
+                questions: [
+                    {
+                        sentence: "Sabır, müminin en güzel ___'ıdır.",
+                        correct: "sıfatı",
+                        options: ["sıfatı", "özelliği", "davranışı", "alışkanlığı"]
+                    },
+                    {
+                        sentence: "Şükür, nimetin ___'ıdır.",
+                        correct: "artması",
+                        options: ["artması", "azalması", "kaybolması", "değişmesi"]
+                    },
+                    {
+                        sentence: "İlim öğrenmek, her Müslüman'a ___'dır.",
+                        correct: "farzdır",
+                        options: ["farzdır", "müstehaptır", "sünnettir", "mubahtır"]
+                    },
+                    {
+                        sentence: "Adalet, toplumun ___'ıdır.",
+                        correct: "temelidir",
+                        options: ["temelidir", "sonucudur", "nedenidir", "etkisidir"]
+                    },
+                    {
+                        sentence: "Merhamet, Allah'ın en güzel ___'lerindendir.",
+                        correct: "isimlerinden",
+                        options: ["isimlerinden", "sıfatlarından", "özelliklerinden", "davranışlarından"]
+                    },
+                    {
+                        sentence: "Dürüstlük, kişinin ___'ıdır.",
+                        correct: "karakteridir",
+                        options: ["karakteridir", "kişiliğidir", "davranışıdır", "özelliğidir"]
+                    },
+                    {
+                        sentence: "Eğitim, insanın ___'ıdır.",
+                        correct: "gelişimidir",
+                        options: ["gelişimidir", "değişimidir", "dönüşümüdür", "evrimidir"]
+                    },
+                    {
+                        sentence: "Tevazu, büyüklüğün ___'ıdır.",
+                        correct: "işaretidir",
+                        options: ["işaretidir", "göstergesidir", "belirtisidir", "kanıtıdır"]
+                    },
+                    {
+                        sentence: "Cömertlik, kalbin ___'ıdır.",
+                        correct: "genişliğidir",
+                        options: ["genişliğidir", "derinliğidir", "yüksekliğidir", "uzunluğudur"]
+                    },
+                    {
+                        sentence: "İhsan, ibadetin en ___'dır.",
+                        correct: "üstünüdür",
+                        options: ["üstünüdür", "güzelidir", "mükemmelidir", "yükseğidir"]
+                    },
+                    {
+                        sentence: "Takva, Allah'tan ___'dır.",
+                        correct: "korkmaktır",
+                        options: ["korkmaktır", "çekinmektir", "sakınmaktır", "kaçınmaktır"]
+                    },
+                    {
+                        sentence: "İhlas, amelin ___'ıdır.",
+                        correct: "ruhudur",
+                        options: ["ruhudur", "bedenidir", "kalbidir", "aklıdır"]
+                    }
+                ]
+            }
+        };
+
+        let fillBlankCurrentQuestion = 0;
+        let fillBlankQuestions = [];
+        let fillBlankCorrect = 0;
+        let fillBlankScore = 0;
+        let fillBlankTimer = 0;
+        let fillBlankTimerInterval = null;
+        let fillBlankGameStarted = false;
+        let currentFillBlankDifficulty = 'medium';
+        let fillBlankSelectedAnswer = null;
+
+        function selectFillBlankDifficulty(level) {
+            currentFillBlankDifficulty = level;
+            const buttons = document.querySelectorAll('#fillblankDifficulty .difficulty-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.level === level) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Hide difficulty selection, show game
+            document.getElementById('fillblankDifficulty').style.display = 'none';
+            document.getElementById('fillblankGame').style.display = 'block';
+            
+            initFillBlankGame();
+        }
+
+        function initFillBlankGame() {
+            const difficulty = fillBlankData[currentFillBlankDifficulty];
+            if (!difficulty) return;
+            
+            // Reset game state
+            fillBlankCurrentQuestion = 0;
+            fillBlankCorrect = 0;
+            fillBlankScore = 0;
+            fillBlankTimer = 0;
+            fillBlankGameStarted = true;
+            fillBlankSelectedAnswer = null;
+            
+            // Shuffle questions
+            fillBlankQuestions = [...difficulty.questions].sort(() => Math.random() - 0.5);
+            
+            // Clear timer
+            if (fillBlankTimerInterval) {
+                clearInterval(fillBlankTimerInterval);
+            }
+            
+            // Load first question
+            loadFillBlankQuestion();
+            
+            // Start timer
+            startFillBlankTimer();
+            
+            // Update UI
+            updateFillBlankUI();
+        }
+
+        function startFillBlankTimer() {
+            fillBlankTimerInterval = setInterval(() => {
+                if (fillBlankGameStarted) {
+                    fillBlankTimer++;
+                    updateFillBlankUI();
+                }
+            }, 1000);
+        }
+
+        function updateFillBlankUI() {
+            const difficulty = fillBlankData[currentFillBlankDifficulty];
+            const minutes = Math.floor(fillBlankTimer / 60);
+            const seconds = fillBlankTimer % 60;
+            const timerText = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            
+            document.getElementById('fillblankTimer').textContent = timerText;
+            document.getElementById('fillblankCorrect').textContent = fillBlankCorrect;
+            document.getElementById('fillblankScore').textContent = fillBlankScore;
+            document.getElementById('fillblankProgress').textContent = `${fillBlankCurrentQuestion} / ${fillBlankQuestions.length}`;
+        }
+
+        function loadFillBlankQuestion() {
+            if (fillBlankCurrentQuestion >= fillBlankQuestions.length) {
+                // Game completed
+                endFillBlankGame();
+                return;
+            }
+            
+            const question = fillBlankQuestions[fillBlankCurrentQuestion];
+            const questionDiv = document.getElementById('fillblankQuestion');
+            const optionsDiv = document.getElementById('fillblankOptions');
+            const feedbackDiv = document.getElementById('fillblankFeedback');
+            
+            // Clear previous state
+            feedbackDiv.textContent = '';
+            feedbackDiv.className = 'fillblank-feedback';
+            fillBlankSelectedAnswer = null;
+            
+            // Display sentence with blank
+            const sentenceParts = question.sentence.split('___');
+            questionDiv.innerHTML = `
+                <div class="fillblank-sentence">
+                    ${sentenceParts[0]}<span class="fillblank-blank" id="fillblankBlank">___</span>${sentenceParts[1] || ''}
+                </div>
+            `;
+            
+            // Shuffle options
+            const shuffledOptions = [...question.options].sort(() => Math.random() - 0.5);
+            
+            // Display options
+            optionsDiv.innerHTML = '';
+            shuffledOptions.forEach((option, index) => {
+                const optionBtn = document.createElement('button');
+                optionBtn.className = 'btn btn-secondary fillblank-option';
+                optionBtn.textContent = option;
+                optionBtn.onclick = () => selectFillBlankAnswer(option, optionBtn);
+                optionsDiv.appendChild(optionBtn);
+            });
+            
+            updateFillBlankUI();
+        }
+
+        function selectFillBlankAnswer(answer, buttonElement) {
+            if (fillBlankSelectedAnswer !== null) return; // Already answered
+            
+            fillBlankSelectedAnswer = answer;
+            const question = fillBlankQuestions[fillBlankCurrentQuestion];
+            const blankSpan = document.getElementById('fillblankBlank');
+            const feedbackDiv = document.getElementById('fillblankFeedback');
+            const options = document.querySelectorAll('.fillblank-option');
+            
+            // Disable all options
+            options.forEach(btn => {
+                btn.disabled = true;
+                btn.style.pointerEvents = 'none';
+            });
+            
+            // Fill blank
+            blankSpan.textContent = answer;
+            blankSpan.classList.add('filled');
+            
+            // Check answer
+            if (answer === question.correct) {
+                // Correct
+                blankSpan.classList.add('correct');
+                buttonElement.classList.add('correct');
+                buttonElement.style.background = 'linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%)';
+                buttonElement.style.color = '#155724';
+                buttonElement.style.borderColor = '#27ae60';
+                
+                feedbackDiv.textContent = '✅ Doğru! Harika!';
+                feedbackDiv.className = 'fillblank-feedback correct';
+                
+                fillBlankCorrect++;
+                
+                // Calculate score based on time and difficulty
+                const baseScore = 100;
+                const timeBonus = Math.max(0, 30 - fillBlankTimer) * 2;
+                const difficultyMultiplier = currentFillBlankDifficulty === 'easy' ? 1 : currentFillBlankDifficulty === 'medium' ? 1.5 : 2;
+                const questionScore = Math.floor((baseScore + timeBonus) * difficultyMultiplier);
+                fillBlankScore += questionScore;
+            } else {
+                // Incorrect
+                blankSpan.classList.add('incorrect');
+                buttonElement.classList.add('incorrect');
+                buttonElement.style.background = 'linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%)';
+                buttonElement.style.color = '#721c24';
+                buttonElement.style.borderColor = '#e74c3c';
+                
+                // Highlight correct answer
+                options.forEach(btn => {
+                    if (btn.textContent === question.correct) {
+                        btn.classList.add('correct');
+                        btn.style.background = 'linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%)';
+                        btn.style.color = '#155724';
+                        btn.style.borderColor = '#27ae60';
+                    }
+                });
+                
+                feedbackDiv.textContent = `❌ Yanlış! Doğru cevap: "${question.correct}"`;
+                feedbackDiv.className = 'fillblank-feedback incorrect';
+            }
+            
+            updateFillBlankUI();
+            
+            // Move to next question after delay
+            setTimeout(() => {
+                fillBlankCurrentQuestion++;
+                loadFillBlankQuestion();
+            }, 2000);
+        }
+
+        function endFillBlankGame() {
+            if (fillBlankTimerInterval) {
+                clearInterval(fillBlankTimerInterval);
+            }
+            
+            const difficulty = fillBlankData[currentFillBlankDifficulty];
+            const minutes = Math.floor(fillBlankTimer / 60);
+            const seconds = fillBlankTimer % 60;
+            const timerText = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            
+            const difficultyNames = {
+                easy: 'Kolay',
+                medium: 'Orta',
+                hard: 'Zor'
+            };
+            
+            const percentage = Math.round((fillBlankCorrect / fillBlankQuestions.length) * 100);
+            
+            const message = `🎉 Oyun Tamamlandı!\n\n📊 Sonuçlar:\n• Zorluk: ${difficultyNames[currentFillBlankDifficulty]}\n• Süre: ${timerText}\n• Doğru: ${fillBlankCorrect} / ${fillBlankQuestions.length} (${percentage}%)\n• Skor: ${fillBlankScore}`;
+            
+            alert(message);
+            
+            // Reset to difficulty selection
+            document.getElementById('fillblankDifficulty').style.display = 'block';
+            document.getElementById('fillblankGame').style.display = 'none';
+            fillBlankGameStarted = false;
+        }
+
+        function exitFillBlankGame() {
+            // Stop timer
+            if (fillBlankTimerInterval) {
+                clearInterval(fillBlankTimerInterval);
+                fillBlankTimerInterval = null;
+            }
+            
+            // Reset game state
+            fillBlankGameStarted = false;
+            fillBlankTimer = 0;
+            fillBlankCurrentQuestion = 0;
+            fillBlankCorrect = 0;
+            fillBlankScore = 0;
+            fillBlankSelectedAnswer = null;
+            
+            // Hide game, show difficulty selection
+            document.getElementById('fillblankGame').style.display = 'none';
+            document.getElementById('fillblankDifficulty').style.display = 'block';
+            
+            // Clear UI
+            document.getElementById('fillblankQuestion').innerHTML = '';
+            document.getElementById('fillblankOptions').innerHTML = '';
+            document.getElementById('fillblankFeedback').textContent = '';
+            document.getElementById('fillblankFeedback').className = 'fillblank-feedback';
+        }
+
+        // Initialize games on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            initTFGame();
+            initMatchingGame();
+        });
+
+        window.checkTFAnswer = checkTFAnswer;
+        window.startQuizFromCategory = startQuizFromCategory;
+        window.initMemoryGame = initMemoryGame;
+        window.selectMemoryDifficulty = selectMemoryDifficulty;
+        window.pauseMemoryGame = pauseMemoryGame;
+        window.initWordSearchGame = initWordSearchGame;
+        window.selectWordSearchDifficulty = selectWordSearchDifficulty;
+        window.resetWordSearchSelection = resetWordSearchSelection;
+        window.showWordHint = showWordHint;
+        window.exitWordSearchGame = exitWordSearchGame;
+        window.initFillBlankGame = initFillBlankGame;
+        window.selectFillBlankDifficulty = selectFillBlankDifficulty;
+        window.selectFillBlankAnswer = selectFillBlankAnswer;
+        window.exitFillBlankGame = exitFillBlankGame;
+    </script>
+</body>
+</html>
+

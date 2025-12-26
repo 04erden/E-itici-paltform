@@ -1,0 +1,1733 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eğitici yazılar ve makaleler - Aile, Ahlak, Eğitim ve Değerler">
+    <meta name="keywords" content="yazılar, makaleler, aile, ahlak, eğitim, değerler">
+    <meta name="author" content="Serkan Site">
+    <title>Yazılar - Eğitici Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menüyü aç/kapat">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="logo">
+                    <h1><a href="index.html" style="text-decoration: none; color: inherit;">Eğitici Platform</a></h1>
+                </div>
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop" id="navDesktop">
+                    <ul class="nav-list-desktop">
+                        <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                        <li><a href="articles.html" class="nav-link active">Yazılar</a></li>
+                        <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+                        <li><a href="quiz.html" class="nav-link">Quiz & Oyunlar</a></li>
+                        <li><a href="kazanimlar.html" class="nav-link">Kazanımlar</a></li>
+                        <li><a href="videolar.html" class="nav-link">Videolar</a></li>
+                        <li><a href="yasantikonisi.html" class="nav-link">Yaşantı Konisi</a></li>
+                        <li><a href="about.html" class="nav-link">Hakkında</a></li>
+                        <li><a href="contact.html" class="nav-link">İletişim</a></li>
+                    </ul>
+                </nav>
+                <!-- Mobile Navigation -->
+                <nav class="nav-mobile" id="nav">
+                    <button class="nav-close" id="navClose" aria-label="Menüyü kapat">×</button>
+                    <div class="nav-content">
+                        <h3 class="nav-title">Hızlı Bağlantılar</h3>
+                        <ul class="nav-list-mobile">
+                            <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                            <li><a href="articles.html" class="nav-link active">Yazılar</a></li>
+                            <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+                            <li><a href="quiz.html" class="nav-link">Quiz & Oyunlar</a></li>
+                            <li><a href="kazanimlar.html" class="nav-link">Kazanımlar</a></li>
+                            <li><a href="videolar.html" class="nav-link">Videolar</a></li>
+                            <li><a href="yasantikonisi.html" class="nav-link">Yaşantı Konisi</a></li>
+                            <li><a href="about.html" class="nav-link">Hakkında</a></li>
+                            <li><a href="contact.html" class="nav-link">İletişim</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 40vh;">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Yazılar</h2>
+                <p class="hero-subtitle">Bilgi ve düşünce dolu içerikler</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles List -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tüm Yazılar</h2>
+                <p class="section-subtitle">Kategorilere göre düzenlenmiş içerikler</p>
+            </div>
+            
+            <!-- Category Filter -->
+            <div style="display: flex; gap: var(--spacing-sm); flex-wrap: wrap; justify-content: center; margin-bottom: var(--spacing-lg);">
+                <button class="btn btn-primary" onclick="filterCategory('all')">Tümü</button>
+                <button class="btn btn-secondary" onclick="filterCategory('aile')">Aile</button>
+                <button class="btn btn-secondary" onclick="filterCategory('ahlak')">Ahlak</button>
+                <button class="btn btn-secondary" onclick="filterCategory('egitim')">Eğitim</button>
+                <button class="btn btn-secondary" onclick="filterCategory('degerler')">Değerler</button>
+            </div>
+            
+            <div class="articles" id="articlesList">
+                <!-- Article 1 -->
+                <a href="#article1" class="article-card" data-category="ahlak">
+                    <img src="images/hayatin-anlami.jpg" alt="Hayatın Anlamı" class="article-cover" loading="lazy" onerror="this.src='https://via.placeholder.com/400x250?text=Hayatın+Anlamı'">
+                    <div class="article-meta">
+                        <span class="article-category">Ahlak</span>
+                        <span>15 Ocak 2024</span>
+                    </div>
+                    <h3 class="article-title">Hayatın Anlamı Üzerine</h3>
+                    <p class="article-excerpt">
+                        Hayat, bize verilen en değerli hediyedir. Her gün yeni bir fırsat, her an yeni bir başlangıçtır...
+                    </p>
+                </a>
+
+                <!-- Article 2 -->
+                <a href="#article2" class="article-card" data-category="aile">
+                    <img src="images/aile-degerleri.jpg" alt="Aile Değerleri" class="article-cover" loading="lazy" onerror="this.src='https://via.placeholder.com/400x250?text=Aile+Değerleri'">
+                    <div class="article-meta">
+                        <span class="article-category">Aile</span>
+                        <span>10 Ocak 2024</span>
+                    </div>
+                    <h3 class="article-title">Aile Bağları ve Değerleri</h3>
+                    <p class="article-excerpt">
+                        Aile, toplumun temel taşıdır. Güçlü aile bağları, sevgi, saygı ve karşılıklı anlayış üzerine kurulur...
+                    </p>
+                </a>
+
+                <!-- Article 3 -->
+                <a href="#article3" class="article-card" data-category="degerler">
+                    <img src="images/sabir-sukur.jpg" alt="Sabır ve Şükür" class="article-cover" loading="lazy" onerror="this.src='https://via.placeholder.com/400x250?text=Sabır+ve+Şükür'">
+                    <div class="article-meta">
+                        <span class="article-category">Değerler</span>
+                        <span>5 Ocak 2024</span>
+                    </div>
+                    <h3 class="article-title">Sabır ve Şükür</h3>
+                    <p class="article-excerpt">
+                        Sabır, zorluklar karşısında dayanma gücüdür. Şükür ise sahip olduklarımızın farkında olmak ve bunları takdir etmektir...
+                    </p>
+                </a>
+
+                <!-- Article 4 -->
+                <a href="#article4" class="article-card" data-category="egitim">
+                    <img src="images/egitim.jpg" alt="Eğitim ve Öğrenme" class="article-cover" loading="lazy" onerror="this.src='https://via.placeholder.com/400x250?text=Eğitim+ve+Öğrenme'">
+                    <div class="article-meta">
+                        <span class="article-category">Eğitim</span>
+                        <span>1 Ocak 2024</span>
+                    </div>
+                    <h3 class="article-title">Eğitim ve Öğrenmenin Önemi</h3>
+                    <p class="article-excerpt">
+                        Eğitim, hayat boyu devam eden bir süreçtir. Öğrenmek, kendimizi geliştirmek ve dünyayı anlamak için en önemli araçtır...
+                    </p>
+                </a>
+
+                <!-- Article 5 -->
+                <a href="#article5" class="article-card" data-category="ahlak">
+                    <img src="images/durustluk.jpg" alt="Dürüstlük" class="article-cover" loading="lazy" onerror="this.src='https://via.placeholder.com/400x250?text=Dürüstlük'">
+                    <div class="article-meta">
+                        <span class="article-category">Ahlak</span>
+                        <span>28 Aralık 2023</span>
+                    </div>
+                    <h3 class="article-title">Dürüstlük ve Doğruluk</h3>
+                    <p class="article-excerpt">
+                        Dürüstlük, karakterin temel taşıdır. Doğru söylemek ve doğru davranmak, güven ve saygıyı oluşturur...
+                    </p>
+                </a>
+
+                <!-- Article 6 -->
+                <a href="#article6" class="article-card" data-category="aile">
+                    <img src="images/aile.jpg" alt="İletişim" class="article-cover" loading="lazy" onerror="this.src='https://via.placeholder.com/400x250?text=İletişim'">
+                    <div class="article-meta">
+                        <span class="article-category">Aile</span>
+                        <span>25 Aralık 2023</span>
+                    </div>
+                    <h3 class="article-title">Aile İçi İletişim</h3>
+                    <p class="article-excerpt">
+                        Sağlıklı iletişim, güçlü aile bağlarının temelidir. Dinlemek, anlamak ve saygılı bir şekilde ifade etmek önemlidir...
+                    </p>
+                </a>
+
+                <!-- Article 7 -->
+                <a href="#article7" class="article-card" data-category="degerler">
+                    <img src="images/peygamberimizin-hayati.jpg" alt="Hz. Muhammed (s.a.v.)" class="article-cover" loading="lazy" onerror="this.src='https://via.placeholder.com/400x250?text=Hz.+Muhammed'">
+                    <div class="article-meta">
+                        <span class="article-category">Değerler</span>
+                        <span>20 Ocak 2024</span>
+                    </div>
+                    <h3 class="article-title">Peygamberliğinden Önce Hz. Muhammed (s.a.v.)'in Hayatı</h3>
+                    <p class="article-excerpt">
+                        Hz. Muhammed (s.a.v.), 571 yılında Mekke'de doğdu. Erken yaşta hem babasız hem de annesiz kalması, onun hayatında derin izler bıraktı...
+                    </p>
+                </a>
+
+                <!-- Article 8 -->
+                <a href="#article8" class="article-card" data-category="degerler">
+                    <img src="images/fil.jpg" alt="Fil Suresi" class="article-cover" loading="lazy" onerror="this.src='https://via.placeholder.com/400x250?text=Fil+Suresi'">
+                    <div class="article-meta">
+                        <span class="article-category">Değerler</span>
+                        <span>25 Ocak 2024</span>
+                    </div>
+                    <h3 class="article-title">Fil Suresi ve Fil Vakası</h3>
+                    <p class="article-excerpt">
+                        Fil Suresi, Kur'an-ı Kerim'in 105. suresidir ve Mekke döneminde inmiştir. Toplam 5 ayetten oluşur. Sure, İslam dünyasında çok bilinen tarihi bir olayı, "Fil Vakası"nı anlattığı için bu adı almıştır...
+                    </p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Details -->
+    <section class="content-section" style="background-color: var(--bg-light);">
+        <div class="container">
+            <!-- Article 1 Detail -->
+            <article id="article1" class="article-detail">
+                <div class="article-detail-header">
+                    <h2 class="article-detail-title">Hayatın Anlamı Üzerine</h2>
+                    <div class="article-meta">
+                        <span class="article-category">Ahlak</span>
+                        <span>15 Ocak 2024</span>
+                    </div>
+                </div>
+                <img src="images/hayatin-anlami.jpg" alt="Hayatın Anlamı" class="article-detail-cover" loading="lazy" onerror="this.src='https://via.placeholder.com/800x400?text=Hayatın+Anlamı'">
+                <div class="article-detail-content">
+                    <h2>Giriş: Hayatın Anlamına İslami Bakış</h2>
+                    <p>
+                        Hayat, Allah'ın insana verdiği en değerli emanettir. Kur'an-ı Kerim'de hayatın anlamı ve amacı 
+                        üzerine pek çok ayet bulunmaktadır. İslam düşüncesinde hayatın anlamı, sadece dünyevi bir varoluş 
+                        değil, aynı zamanda ahiret hayatına hazırlık sürecidir. Bu bakış açısı, hayatın her anına derin bir 
+                        anlam kazandırır.
+                    </p>
+                    <p>
+                        <strong>"Biz gökleri, yeri ve ikisi arasındakileri oyun olsun diye yaratmadık."</strong> (Enbiya, 21:16) 
+                        ayeti, hayatın boş ve anlamsız olmadığını, her şeyin bir amacı olduğunu vurgular. İnsan, yaratılış 
+                        amacını anladığında hayatının gerçek anlamını keşfeder.
+                    </p>
+                    <p>
+                        İslam alimleri, hayatın anlamını üç temel boyutta ele almışlardır: <em>ibadet</em> (Allah'a kulluk), 
+                        <em>imaret</em> (dünyayı imar etme) ve <em>hilafet</em> (Allah'ın yeryüzündeki halifesi olma). 
+                        Bu üç boyut, insanın hayatına derin bir anlam kazandırır.
+                    </p>
+                    <h2>Kur'an-ı Kerim'de Hayatın Anlamı</h2>
+                    <p>
+                        Kur'an-ı Kerim, hayatın anlamını açıklayan pek çok ayet içerir. <strong>"Ben cinleri ve insanları, 
+                        ancak bana ibadet etsinler diye yarattım."</strong> (Zariyat, 51:56) ayeti, insanın yaratılış 
+                        amacının Allah'a ibadet olduğunu belirtir. Ancak bu ibadet, sadece namaz, oruç gibi ritüellerden 
+                        ibaret değildir. Hayatın her anını Allah'ın rızasına uygun yaşamak da bir ibadettir.
+                    </p>
+                    <p>
+                        <strong>"Ölümü ve hayatı, hanginizin daha iyi amel işleyeceğini denemek için yaratan O'dur."</strong> 
+                        (Mülk, 67:2) ayeti, hayatın bir imtihan olduğunu ve her anın değerli olduğunu vurgular. Bu imtihan, 
+                        insanın karakterini, sabrını, şükrünü ve Allah'a olan bağlılığını test eder.
+                    </p>
+                    <p>
+                        <strong>"Dünya hayatı bir oyun ve eğlenceden başka bir şey değildir. Ahiret yurdu ise, takva sahipleri 
+                        için daha hayırlıdır. Hâlâ akıl erdiremiyor musunuz?"</strong> (En'am, 6:32) ayeti, dünya hayatının 
+                        geçici olduğunu ve asıl hayatın ahirette olduğunu hatırlatır. Bu bakış açısı, hayatın anlamını 
+                        ahiret perspektifinden değerlendirmemizi sağlar.
+                    </p>
+                    <h2>Hadislerde Hayatın Anlamı</h2>
+                    <p>
+                        Hz. Muhammed (s.a.v.), hayatın anlamı ve amacı hakkında pek çok hadis buyurmuştur. 
+                        <strong>"İnsanların en hayırlısı, insanlara en çok faydalı olandır."</strong> hadisi, hayatın 
+                        anlamının başkalarına hizmet etmek olduğunu vurgular. Bu hadis, hayatın anlamını toplumsal 
+                        fayda açısından ele alır.
+                    </p>
+                    <p>
+                        <strong>"Dünya ahiretin tarlasıdır."</strong> hadisi, dünya hayatının ahiret için bir hazırlık 
+                        dönemi olduğunu belirtir. Bu hadis, hayatın her anının değerli olduğunu ve ahiret için yatırım 
+                        yapılması gerektiğini hatırlatır.
+                    </p>
+                    <p>
+                        <strong>"İlim öğrenmek, her Müslüman erkek ve kadına farzdır."</strong> hadisi, hayatın anlamının 
+                        sürekli öğrenmek ve kendini geliştirmek olduğunu vurgular. İlim, sadece dini bilgiler değil, 
+                        hayatın her alanındaki bilgidir.
+                    </p>
+                    <h2>İslam Düşüncesinde Hayatın Anlamı</h2>
+                    <p>
+                        İslam düşünürleri, hayatın anlamını farklı açılardan ele almışlardır. İmam Gazali, hayatın anlamını 
+                        <em>ma'rifetullah</em> (Allah'ı tanıma) olarak görür. Ona göre, insanın hayattaki asıl amacı, 
+                        Allah'ı tanımak ve O'na yakınlaşmaktır.
+                    </p>
+                    <p>
+                        Mevlana Celaleddin Rumi, hayatın anlamını <em>aşk</em> ve <em>vuslat</em> (kavuşma) olarak 
+                        ele alır. Ona göre, hayat bir arayıştır ve asıl amaç, Allah'a ulaşmaktır. Bu arayış, hayatın 
+                        her anına anlam kazandırır.
+                    </p>
+                    <p>
+                        İbn Sina gibi filozoflar ise, hayatın anlamını <em>kemal</em> (mükemmellik) arayışı olarak görürler. 
+                        İnsan, hayatı boyunca kendini geliştirerek mükemmelliğe ulaşmaya çalışır. Bu mükemmellik arayışı, 
+                        hayatın anlamını oluşturur.
+                    </p>
+                    <h2>Pratik Hayatta Hayatın Anlamı</h2>
+                    <p>
+                        Hayatın anlamı, sadece teorik bir kavram değildir. Günlük hayatta, hayatın anlamını bulmak için 
+                        yapabileceğimiz pek çok şey vardır. İbadetler, hayatın anlamını bulmamıza yardımcı olur. Namaz, 
+                        oruç, zekat ve hac gibi ibadetler, hayatımıza ritim ve anlam katar.
+                    </p>
+                    <p>
+                        Aile ve toplumsal ilişkiler de hayatın anlamını oluşturur. Ailemize karşı sorumluluklarımızı 
+                        yerine getirmek, topluma faydalı olmak, hayatımıza derin bir anlam katar. 
+                        <strong>"Müminler birbirlerini sevmekte, birbirlerine acımakta ve birbirlerini korumakta bir 
+                        vücut gibidir."</strong> (Buhari, Müslim) hadisi, toplumsal bağların önemini vurgular.
+                    </p>
+                    <p>
+                        İlim öğrenmek ve öğretmek de hayatın anlamını oluşturur. <strong>"İlim öğrenmek, her Müslüman 
+                        erkek ve kadına farzdır."</strong> hadisi, ilmin önemini vurgular. İlim, sadece dini bilgiler 
+                        değil, hayatın her alanındaki bilgidir. İlim öğrenmek ve öğretmek, hayatımıza anlam katar.
+                    </p>
+                    <h2>Zorluklar Karşısında Hayatın Anlamı</h2>
+                    <p>
+                        Hayat, her zaman kolay değildir. Zorluklar, engeller ve hayal kırıklıklarıyla karşılaşabiliriz. 
+                        Ancak İslam düşüncesinde, zorluklar da hayatın anlamının bir parçasıdır. 
+                        <strong>"Allah, kimi severse onu imtihan eder."</strong> hadisi, zorlukların bir imtihan olduğunu 
+                        ve sabırla karşılanması gerektiğini vurgular.
+                    </p>
+                    <p>
+                        <strong>"Muhakkak ki zorlukla beraber kolaylık vardır."</strong> (İnşirah, 94:5) ayeti, zorlukların 
+                        geçici olduğunu ve her zorluğun bir kolaylığı olduğunu hatırlatır. Bu bakış açısı, zorluklar karşısında 
+                        umudumuzu korumamızı sağlar.
+                    </p>
+                    <p>
+                        Sabır, zorluklar karşısında hayatın anlamını bulmamıza yardımcı olur. 
+                        <strong>"Sabır, imanın yarısıdır."</strong> hadisi, sabrın önemini vurgular. Sabırlı olmak, 
+                        zorlukları aşmamıza ve hayatın anlamını bulmamıza yardımcı olur.
+                    </p>
+                    <h2>Şükür ve Hayatın Anlamı</h2>
+                    <p>
+                        Şükür, hayatın anlamını bulmamızda önemli bir rol oynar. Sahip olduklarımıza şükretmek, 
+                        hayatın güzelliklerini görmemizi sağlar. <strong>"Eğer şükrederseniz, elbette size (nimetimi) 
+                        artıracağım."</strong> (İbrahim, 14:7) ayeti, şükrün önemini vurgular.
+                    </p>
+                    <p>
+                        Şükür, sadece maddi varlıklarımıza değil, aynı zamanda manevi değerlerimize de yöneliktir. 
+                        Sağlığımız, ailemiz, arkadaşlarımız, eğitimimiz ve daha fazlası, şükretmemiz gereken nimetlerdir. 
+                        Bu nimetlerin farkında olmak, hayatımızı daha anlamlı kılar.
+                    </p>
+                    <p>
+                        <strong>"Allah'ın nimetlerini saymaya kalksanız, onları sayamazsınız."</strong> (İbrahim, 14:34) 
+                        ayeti, sahip olduğumuz nimetlerin çokluğunu hatırlatır. Bu nimetlerin farkında olmak ve şükretmek, 
+                        hayatımıza derin bir anlam katar.
+                    </p>
+                    <h2>Sonuç: Anlamlı Bir Yaşam İçin</h2>
+                    <p>
+                        Hayatın anlamı, İslam düşüncesinde çok boyutlu bir kavramdır. Allah'a ibadet etmek, dünyayı imar 
+                        etmek, Allah'ın halifesi olmak, ilim öğrenmek, topluma faydalı olmak, sabırlı olmak ve şükretmek, 
+                        hayatın anlamını oluşturan temel unsurlardır.
+                    </p>
+                    <p>
+                        Hayatın anlamı, bir kez bulunup unutulacak bir şey değildir. Sürekli bir arayış, sürekli bir keşif 
+                        sürecidir. Her gün yeni bir şey öğrenir, her gün yeni bir deneyim yaşarız. Bu süreç, hayatımızı 
+                        zenginleştirir ve anlamlı kılar.
+                    </p>
+                    <p>
+                        <strong>"Kim Allah'a ve Resulüne itaat ederse, işte onlar, Allah'ın kendilerine nimet verdiği 
+                        peygamberler, sıddıklar, şehitler ve salihlerle beraberdir. Ne güzel arkadaştır onlar!"</strong> 
+                        (Nisa, 4:69) ayeti, hayatın anlamını Allah'a ve Resulüne itaat etmek olarak özetler. Bu itaat, 
+                        hayatın her anına anlam kazandırır ve bizi salihlerle beraber kılar.
+                    </p>
+                    <p>
+                        Sonuç olarak, hayatın anlamını bulmak, kendimizi tanımakla, Allah'ı tanımakla, çevremizi anlamakla, 
+                        sabırlı olmakla, şükretmekle ve Allah'a itaat etmekle mümkündür. Bu yolculuk, hayat boyu devam eder 
+                        ve her adımda bize yeni bir şey öğretir. Hayatın anlamı, bu sürekli öğrenme ve gelişme sürecinde 
+                        kendini gösterir.
+                    </p>
+                    <h2>Kendini Tanımak: İlk Adım</h2>
+                    <p>
+                        Hayatın anlamını bulmanın ilk adımı, kendimizi tanımaktır. Kim olduğumuzu, ne istediğimizi, 
+                        değerlerimizi ve amaçlarımızı anlamak, hayatımıza yön verir. Kendimizi tanıdıkça, 
+                        hayatımızın anlamını da daha iyi kavrarız.
+                    </p>
+                    <p>
+                        Kendini tanımak, sadece zayıf ve güçlü yönlerimizi bilmek değildir. Aynı zamanda, 
+                        neye değer verdiğimizi, neyin bizi mutlu ettiğini ve neyin bizi üzdüğünü anlamaktır. 
+                        Bu farkındalık, hayatımızda doğru kararlar vermemize ve anlamlı bir yaşam sürmemize yardımcı olur.
+                    </p>
+                    <p>
+                        Kendini tanıma süreci, hayat boyu devam eden bir yolculuktur. Çünkü insan, sürekli değişen 
+                        ve gelişen bir varlıktır. Her yeni deneyim, her yeni karşılaşma, bize kendimiz hakkında 
+                        yeni şeyler öğretir. Bu öğrenme süreci, hayatın anlamını bulmamızda bize rehberlik eder.
+                    </p>
+                    <h2>Çevremizi Anlamak: Bağlantı Kurmak</h2>
+                    <p>
+                        Hayatın anlamı sadece kendimizle ilgili değildir. Çevremizdeki insanları, 
+                        doğayı ve dünyayı anlamak da önemlidir. Başkalarına yardım etmek, doğayı korumak 
+                        ve dünyaya pozitif bir katkı sağlamak, hayatımıza anlam katar.
+                    </p>
+                    <p>
+                        İnsan, sosyal bir varlıktır. Başkalarıyla kurduğumuz ilişkiler, hayatımıza anlam katar. 
+                        Ailemiz, arkadaşlarımız, toplumumuz ve hatta tanımadığımız insanlarla kurduğumuz bağlantılar, 
+                        hayatımızı zenginleştirir. Bu bağlantılar, bize ait olma duygusu verir ve hayatın anlamını 
+                        bulmamıza yardımcı olur.
+                    </p>
+                    <p>
+                        Doğayı anlamak ve korumak da hayatın anlamını bulmamızda önemli bir rol oynar. 
+                        Doğa, bize yaşam kaynağımızı sağlar ve bizi hayatın güzellikleriyle buluşturur. 
+                        Doğayı korumak, gelecek nesillere daha iyi bir dünya bırakmak anlamına gelir. 
+                        Bu sorumluluk, hayatımıza derin bir anlam katar.
+                    </p>
+                    <h2>Sabır ve Şükür: İç Huzur</h2>
+                    <p>
+                        Hayatın zorlukları karşısında sabırlı olmak ve sahip olduklarımıza şükretmek, 
+                        hayatın anlamını bulmamıza yardımcı olur. Her zorluk bir öğrenme fırsatı, 
+                        her nimet bir şükür vesilesidir.
+                    </p>
+                    <p>
+                        Sabır, zorluklar karşısında dayanma gücüdür. Hayat, her zaman kolay değildir. 
+                        Zorluklar, engeller ve hayal kırıklıklarıyla karşılaşabiliriz. Ancak sabırlı olmak, 
+                        bu zorlukların üstesinden gelmemize yardımcı olur. Sabır, bize güç verir ve 
+                        hayatın anlamını bulmamızda bize rehberlik eder.
+                    </p>
+                    <p>
+                        Şükür, sahip olduklarımızın farkında olmak ve bunları takdir etmektir. 
+                        Hayatımızda birçok nimet vardır: sağlığımız, ailemiz, arkadaşlarımız, 
+                        eğitimimiz ve daha fazlası. Bu nimetlere şükretmek, hayatımıza anlam katar 
+                        ve bizi mutlu eder. Şükür, bize hayatın güzelliklerini görmemizi sağlar.
+                    </p>
+                    <h2>Hedefler ve Hayaller: Yön Belirleme</h2>
+                    <p>
+                        Hayatın anlamını bulmak, hedeflerimizi ve hayallerimizi belirlemekle de ilgilidir. 
+                        Ne istediğimizi bilmek ve bu hedeflere ulaşmak için çaba göstermek, hayatımıza yön verir. 
+                        Hedeflerimiz, bize motivasyon sağlar ve hayatımızı anlamlı kılar.
+                    </p>
+                    <p>
+                        Ancak hedeflerimiz, sadece maddi başarılar olmamalıdır. Manevi değerler, 
+                        ilişkiler ve kişisel gelişim de önemli hedefler olabilir. Bu hedefler, 
+                        hayatımıza derin bir anlam katar ve bizi mutlu eder.
+                    </p>
+                    <h2>Sonuç: Anlamlı Bir Yaşam</h2>
+                    <p>
+                        Hayatın anlamı, her insan için farklı olabilir. Ancak ortak nokta, 
+                        anlamlı bir yaşam sürmektir. Kendimizi tanımak, çevremizi anlamak, 
+                        sabırlı olmak, şükretmek ve hedeflerimize ulaşmak için çaba göstermek, 
+                        hayatımıza anlam katar.
+                    </p>
+                    <p>
+                        Hayatın anlamı, bir kez bulunup unutulacak bir şey değildir. Sürekli bir arayış, 
+                        sürekli bir keşif sürecidir. Her gün yeni bir şey öğrenir, her gün yeni bir deneyim yaşarız. 
+                        Bu süreç, hayatımızı zenginleştirir ve anlamlı kılar.
+                    </p>
+                    <p>
+                        Sonuç olarak, hayatın anlamını bulmak, kendimizi tanımakla, çevremizi anlamakla, 
+                        sabırlı olmakla, şükretmekle ve hedeflerimize ulaşmak için çaba göstermekle mümkündür. 
+                        Bu yolculuk, hayat boyu devam eder ve her adımda bize yeni bir şey öğretir.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Article 2 Detail -->
+            <article id="article2" class="article-detail" style="margin-top: var(--spacing-xl);">
+                <div class="article-detail-header">
+                    <h2 class="article-detail-title">Aile Bağları ve Değerleri</h2>
+                    <div class="article-meta">
+                        <span class="article-category">Aile</span>
+                        <span>10 Ocak 2024</span>
+                    </div>
+                </div>
+                <img src="images/aile-degerleri.jpg" alt="Aile Değerleri" class="article-detail-cover" loading="lazy" onerror="this.src='https://via.placeholder.com/800x400?text=Aile+Değerleri'">
+                <div class="article-detail-content">
+                    <h2>Giriş: İslam'da Ailenin Yeri ve Önemi</h2>
+                    <p>
+                        Aile, İslam dininde toplumun temel taşı ve en önemli kurumdur. Kur'an-ı Kerim ve hadislerde 
+                        aileye büyük önem verilmiş, aile bağlarının korunması ve güçlendirilmesi emredilmiştir. 
+                        İslam'da aile, sadece bir sosyal kurum değil, aynı zamanda manevi bir müessese ve 
+                        Allah'ın rızasını kazanmanın yollarından biridir.
+                    </p>
+                    <p>
+                        <strong>"Allah'ın ayetlerinden biri de, kendileri ile huzur bulasınız diye sizin için 
+                        türünüzden eşler yaratması ve aranızda bir sevgi ve merhamet var etmesidir. Şüphesiz 
+                        bunda düşünen bir toplum için ibretler vardır."</strong> (Rum, 30:21) ayeti, ailenin 
+                        Allah'ın bir nimeti olduğunu ve eşler arasında sevgi ve merhametin yaratıldığını vurgular.
+                    </p>
+                    <p>
+                        İslam'da aile, <em>nikah</em> akdi ile kurulur ve bu akit, Allah'ın emri ve Resulünün 
+                        sünnetidir. <strong>"Nikah benim sünnetimdir. Kim benim sünnetimden yüz çevirirse, benden değildir."</strong> 
+                        (İbn Mace) hadisi, evliliğin önemini vurgular.
+                    </p>
+                    <h2>Kur'an-ı Kerim'de Aile</h2>
+                    <p>
+                        Kur'an-ı Kerim'de aile ile ilgili pek çok ayet bulunmaktadır. Bu ayetler, aile üyelerinin 
+                        birbirlerine karşı hak ve sorumluluklarını, aile içi ilişkilerin nasıl olması gerektiğini 
+                        ve aile bağlarının önemini açıklar.
+                    </p>
+                    <p>
+                        <strong>"Ana-babaya iyilik edin."</strong> (İsra, 17:23) ayeti, anne-babaya karşı 
+                        sorumluluklarımızı vurgular. Bu ayet, aile içinde saygı ve hürmetin önemini gösterir. 
+                        Anne-babaya iyilik etmek, sadece maddi yardım değil, aynı zamanda sevgi, saygı ve 
+                        hürmet göstermektir.
+                    </p>
+                    <p>
+                        <strong>"Ey iman edenler! Kendinizi ve ailenizi, yakıtı insanlar ve taşlar olan 
+                        cehennem ateşinden koruyun."</strong> (Tahrim, 66:6) ayeti, aile üyelerinin birbirlerine 
+                        karşı sorumluluklarını vurgular. Bu sorumluluk, sadece dünyevi değil, aynı zamanda 
+                        uhrevi bir sorumluluktur.
+                    </p>
+                    <p>
+                        <strong>"Mallarınız ve çocuklarınız sizin için bir imtihandır."</strong> (Teğabün, 64:15) 
+                        ayeti, aile üyelerinin bir imtihan olduğunu hatırlatır. Bu imtihan, aile üyelerine karşı 
+                        sorumluluklarımızı yerine getirmemiz ve Allah'ın rızasını kazanmamız için bir fırsattır.
+                    </p>
+                    <h2>Hadislerde Aile</h2>
+                    <p>
+                        Hz. Muhammed (s.a.v.), aile ile ilgili pek çok hadis buyurmuştur. Bu hadisler, aile 
+                        içi ilişkilerin nasıl olması gerektiğini, aile üyelerinin birbirlerine karşı hak ve 
+                        sorumluluklarını ve aile bağlarının önemini açıklar.
+                    </p>
+                    <p>
+                        <strong>"En hayırlınız, ailesine karşı en hayırlı olanınızdır."</strong> (Tirmizi) 
+                        hadisi, aileye karşı sorumluluklarımızın önemini vurgular. Bu hadis, aile üyelerine 
+                        karşı iyi davranmanın, hayırlı bir Müslüman olmanın göstergesi olduğunu belirtir.
+                    </p>
+                    <p>
+                        <strong>"Cennet annelerin ayakları altındadır."</strong> (Nesai) hadisi, annelere karşı 
+                        sorumluluklarımızın önemini vurgular. Bu hadis, annelere saygı ve hürmet göstermenin, 
+                        cennete girmenin yollarından biri olduğunu belirtir.
+                    </p>
+                    <p>
+                        <strong>"Baba, evin cennetidir."</strong> (İbn Mace) hadisi, babaya karşı sorumluluklarımızın 
+                        önemini vurgular. Bu hadis, babaya saygı ve hürmet göstermenin, aile huzurunun temeli 
+                        olduğunu belirtir.
+                    </p>
+                    <h2>İslam'da Aile Hukuku</h2>
+                    <p>
+                        İslam'da aile hukuku, aile üyelerinin birbirlerine karşı hak ve sorumluluklarını düzenler. 
+                        Bu hukuk, Kur'an-ı Kerim ve hadislerde detaylı bir şekilde açıklanmıştır.
+                    </p>
+                    <p>
+                        <strong>Eşlerin Hak ve Sorumlulukları:</strong> İslam'da eşler, birbirlerine karşı hak ve 
+                        sorumluluklara sahiptir. Erkek, eşinin nafakasını (geçimini) sağlamakla yükümlüdür. 
+                        Kadın ise, ev işlerini yapmak ve eşine itaat etmekle yükümlüdür. Ancak bu itaat, 
+                        Allah'ın emirlerine aykırı olmamak şartıyla geçerlidir.
+                    </p>
+                    <p>
+                        <strong>Çocukların Hak ve Sorumlulukları:</strong> İslam'da çocuklar, anne-babalarına 
+                        karşı saygı ve hürmet göstermekle yükümlüdür. Anne-babalar ise, çocuklarının eğitimi, 
+                        bakımı ve geçimi ile yükümlüdür. <strong>"Çocuklarınıza iyi davranın ve onları güzel 
+                        terbiye edin."</strong> (İbn Mace) hadisi, çocuklara karşı sorumluluklarımızı vurgular.
+                    </p>
+                    <p>
+                        <strong>Akrabalık Bağları:</strong> İslam'da akrabalık bağları, önemli bir yere sahiptir. 
+                        <strong>"Akrabalık bağlarını koruyun."</strong> (Nisa, 4:1) ayeti, akrabalık bağlarının 
+                        önemini vurgular. Akrabalara karşı sorumluluklarımız, sadece maddi yardım değil, aynı 
+                        zamanda ziyaret, ilgi ve sevgi göstermektir.
+                    </p>
+                    <h2>Aile İçi İlişkiler: Sevgi, Saygı ve Merhamet</h2>
+                    <p>
+                        İslam'da aile içi ilişkiler, sevgi, saygı ve merhamet üzerine kurulur. Bu değerler, 
+                        aile bağlarını güçlendirir ve aile huzurunu sağlar.
+                    </p>
+                    <p>
+                        <strong>Sevgi:</strong> Aile içinde sevgi, en önemli bağdır. <strong>"Müminler birbirlerini 
+                        sevmekte, birbirlerine acımakta ve birbirlerini korumakta bir vücut gibidir."</strong> 
+                        (Buhari, Müslim) hadisi, aile üyeleri arasındaki sevginin önemini vurgular. Bu sevgi, 
+                        koşulsuz ve sınırsızdır.
+                    </p>
+                    <p>
+                        <strong>Saygı:</strong> Aile içinde saygı, her üyenin birbirine karşı saygı göstermesi 
+                        anlamına gelir. Bu saygı, yaş, cinsiyet veya statü farkı gözetmeksizin tüm aile üyelerine 
+                        gösterilir. <strong>"Büyüğümüze saygı, küçüğümüze merhamet göstermeyen bizden değildir."</strong> 
+                        (Tirmizi) hadisi, saygının önemini vurgular.
+                    </p>
+                    <p>
+                        <strong>Merhamet:</strong> Aile içinde merhamet, özellikle çocuklara ve yaşlılara karşı 
+                        gösterilir. <strong>"Merhamet etmeyene merhamet edilmez."</strong> (Buhari, Müslim) hadisi, 
+                        merhametin önemini vurgular. Bu merhamet, aile içinde huzur ve mutluluk sağlar.
+                    </p>
+                    <h2>Aile İçi İletişim ve Anlayış</h2>
+                    <p>
+                        İslam'da aile içi iletişim, açık, dürüst ve saygılı olmalıdır. Bu iletişim, aile üyeleri 
+                        arasındaki anlayışı artırır ve çatışmaları önler.
+                    </p>
+                    <p>
+                        <strong>Dinleme:</strong> Aile içinde dinleme, önemli bir iletişim becerisidir. 
+                        <strong>"İyi bir dinleyici olmak, iyi bir konuşmacı olmaktan daha önemlidir."</strong> 
+                        hadisi, dinlemenin önemini vurgular. Aile üyelerini dinlemek, onların duygularını ve 
+                        düşüncelerini anlamamızı sağlar.
+                    </p>
+                    <p>
+                        <strong>Anlayış:</strong> Aile içinde anlayış, karşılıklı hoşgörü ve sabır gerektirir. 
+                        <strong>"Kolaylaştırın, zorlaştırmayın; müjdeleyin, nefret ettirmeyin."</strong> 
+                        (Buhari, Müslim) hadisi, anlayışın önemini vurgular. Bu anlayış, aile içinde huzur 
+                        ve mutluluk sağlar.
+                    </p>
+                    <p>
+                        <strong>Çatışma Çözümü:</strong> Aile içinde çatışmalar kaçınılmazdır. Ancak bu çatışmalar, 
+                        saygılı ve yapıcı bir şekilde çözülmelidir. <strong>"Mümin, kardeşiyle üç günden fazla 
+                        küs durmaz."</strong> (Buhari, Müslim) hadisi, çatışmaların çözülmesinin önemini vurgular.
+                    </p>
+                    <h2>Aile İçi Eğitim ve Terbiye</h2>
+                    <p>
+                        İslam'da aile, çocukların eğitimi ve terbiyesi için en önemli kurumdur. Aile içinde 
+                        verilen eğitim, çocukların karakter gelişiminde kritik rol oynar.
+                    </p>
+                    <p>
+                        <strong>Dini Eğitim:</strong> Aile içinde dini eğitim, çocukların İslam'ı öğrenmesi 
+                        ve yaşaması için önemlidir. <strong>"Çocuklarınıza yedi yaşına geldiklerinde namaz kılmayı 
+                        öğretin."</strong> (Ebu Davud) hadisi, dini eğitimin önemini vurgular. Bu eğitim, 
+                        sadece teorik değil, aynı zamanda pratik olmalıdır.
+                    </p>
+                    <p>
+                        <strong>Ahlaki Eğitim:</strong> Aile içinde ahlaki eğitim, çocukların karakter gelişiminde 
+                        kritik rol oynar. Dürüstlük, saygı, sevgi, merhamet gibi değerler, aile içinde öğrenilir. 
+                        <strong>"Çocuklarınıza güzel isimler verin ve onları güzel terbiye edin."</strong> 
+                        (İbn Mace) hadisi, ahlaki eğitimin önemini vurgular.
+                    </p>
+                    <p>
+                        <strong>Örnek Olma:</strong> Aile içinde ebeveynler, çocukları için en önemli örneklerdir. 
+                        Çocuklar, ebeveynlerinin davranışlarını taklit ederler. Bu nedenle, ebeveynler, 
+                        çocuklarına iyi örnek olmalıdırlar. <strong>"Her çocuk İslam fıtratı üzere doğar. 
+                        Sonra anne-babası onu Yahudi, Hristiyan veya Mecusi yapar."</strong> (Buhari, Müslim) 
+                        hadisi, ebeveynlerin etkisinin önemini vurgular.
+                    </p>
+                    <h2>Sonuç: Güçlü Aile Bağları İçin</h2>
+                    <p>
+                        İslam'da aile, toplumun temel taşı ve en önemli kurumdur. Güçlü aile bağları, sevgi, 
+                        saygı, merhamet, açık iletişim ve karşılıklı anlayış üzerine kurulur. Bu bağlar, 
+                        aile üyelerinin birbirlerine karşı hak ve sorumluluklarını yerine getirmeleriyle 
+                        güçlenir.
+                    </p>
+                    <p>
+                        Aile içinde verilen eğitim ve terbiye, çocukların karakter gelişiminde kritik rol oynar. 
+                        Bu eğitim, sadece dini ve ahlaki değerleri içermez, aynı zamanda hayatın her alanındaki 
+                        bilgi ve becerileri de kapsar.
+                    </p>
+                    <p>
+                        <strong>"Aile, cennetin bir parçasıdır."</strong> hadisi, ailenin önemini özetler. 
+                        Güçlü aile bağları, hem dünyada hem de ahirette mutluluğu sağlar. Bu nedenle, aile 
+                        bağlarını korumak ve güçlendirmek, her Müslümanın sorumluluğudur.
+                    </p>
+                    <p>
+                        Sonuç olarak, İslam'da aile, sadece bir sosyal kurum değil, aynı zamanda manevi bir 
+                        müessese ve Allah'ın rızasını kazanmanın yollarından biridir. Güçlü aile bağları, 
+                        sevgi, saygı, merhamet, açık iletişim ve karşılıklı anlayışla oluşur. Bu bağlar, 
+                        hayatımızı anlamlı kılar ve bize mutluluk verir.
+                    </p>
+                    <h2>Sevgi ve Saygı: Temel Değerler</h2>
+                    <p>
+                        Aile içinde sevgi ve saygı, her şeyin temelidir. Birbirimizi sevmek ve saymak, 
+                        aile bağlarını güçlendirir. Her aile üyesinin fikirlerine, duygularına ve 
+                        tercihlerine saygı göstermek önemlidir.
+                    </p>
+                    <p>
+                        Sevgi, aile bağlarının en güçlü yapıştırıcısıdır. Aile üyeleri arasındaki sevgi, 
+                        koşulsuz ve sınırsızdır. Bu sevgi, zor zamanlarda bize güç verir ve hayatımızı 
+                        anlamlı kılar. Sevgi, aile içinde paylaşılan en değerli duygudur.
+                    </p>
+                    <p>
+                        Saygı ise, aile içinde karşılıklı anlayışın temelidir. Her aile üyesinin, 
+                        diğerlerinin fikirlerine, duygularına ve tercihlerine saygı göstermesi gerekir. 
+                        Bu saygı, aile içinde sağlıklı bir iletişim kurulmasını sağlar ve çatışmaları önler.
+                    </p>
+                    <h2>Birlikte Zaman Geçirmek: Bağları Güçlendirmek</h2>
+                    <p>
+                        Birlikte geçirilen kaliteli zaman, aile bağlarını güçlendirir. Yemek yemek, 
+                        sohbet etmek, oyun oynamak veya birlikte bir aktivite yapmak, aile üyeleri 
+                        arasındaki bağı kuvvetlendirir.
+                    </p>
+                    <p>
+                        Günümüzde, yoğun iş hayatı ve teknolojik gelişmeler, aile üyelerinin birlikte 
+                        zaman geçirmesini zorlaştırmaktadır. Ancak, birlikte geçirilen kaliteli zaman, 
+                        aile bağlarını güçlendirmek için çok önemlidir. Bu zaman, sadece fiziksel olarak 
+                        birlikte olmak değil, aynı zamanda birbirimizle gerçekten ilgilenmek ve 
+                        birbirimizi dinlemektir.
+                    </p>
+                    <p>
+                        Aile yemekleri, birlikte yapılan aktiviteler, sohbetler ve oyunlar, aile 
+                        üyeleri arasındaki bağı güçlendirir. Bu anlar, hayatımızın en değerli anıları 
+                        olur ve bize mutluluk verir.
+                    </p>
+                    <h2>Karşılıklı Destek: Zor Zamanlarda Yan Yana</h2>
+                    <p>
+                        Zor zamanlarda birbirimize destek olmak, aile bağlarının en önemli özelliklerinden biridir. 
+                        Birbirimizin yanında olmak, sorunları birlikte çözmek ve sevinçleri birlikte paylaşmak, 
+                        aileyi güçlü kılar.
+                    </p>
+                    <p>
+                        Hayat, her zaman kolay değildir. Zorluklar, engeller ve hayal kırıklıklarıyla 
+                        karşılaşabiliriz. Ancak aile, bu zor zamanlarda bize destek olur ve yanımızda olur. 
+                        Aile üyeleri, birbirlerinin zorluklarını paylaşır ve birlikte çözüm arar.
+                    </p>
+                    <p>
+                        Aynı şekilde, mutluluk anlarını da birlikte paylaşmak önemlidir. Başarılar, 
+                        kutlamalar ve mutlu anlar, aile üyeleri arasında paylaşıldığında daha anlamlı olur. 
+                        Bu paylaşım, aile bağlarını güçlendirir ve bize mutluluk verir.
+                    </p>
+                    <h2>Değerler ve Gelenekler: Kültürel Miras</h2>
+                    <p>
+                        Aile içinde paylaşılan değerler ve gelenekler, aile bağlarını güçlendirir ve 
+                        kültürel mirasımızı korur. Bu değerler ve gelenekler, aile üyeleri arasında 
+                        ortak bir kimlik oluşturur ve bize ait olma duygusu verir.
+                    </p>
+                    <p>
+                        Aile içinde öğrendiğimiz değerler, hayatımızın geri kalanında bize rehberlik eder. 
+                        Dürüstlük, saygı, sevgi, yardımlaşma gibi değerler, aile içinde öğrenilir ve 
+                        topluma yayılır. Bu değerler, toplumun temel taşlarını oluşturur.
+                    </p>
+                    <h2>İletişim: Sağlıklı İlişkilerin Temeli</h2>
+                    <p>
+                        Aile içinde sağlıklı bir iletişim, aile bağlarını güçlendirmek için çok önemlidir. 
+                        Açık, dürüst ve saygılı bir iletişim, aile üyeleri arasındaki anlayışı artırır ve 
+                        çatışmaları önler.
+                    </p>
+                    <p>
+                        İletişim, sadece konuşmak değil, aynı zamanda dinlemektir. Aile üyelerinin 
+                        birbirlerini dinlemesi ve anlamaya çalışması, sağlıklı bir iletişimin temelidir. 
+                        Bu iletişim, aile içinde güven oluşturur ve bağları güçlendirir.
+                    </p>
+                    <h2>Sonuç: Güçlü Aile Bağları</h2>
+                    <p>
+                        Güçlü aile bağları, sevgi, saygı, karşılıklı destek, birlikte zaman geçirme ve 
+                        sağlıklı iletişimle oluşur. Bu bağlar, hayatımızı anlamlı kılar ve bize güç verir. 
+                        Aile, hayatımızın en değerli varlığıdır ve bu bağları korumak, her birimizin sorumluluğudur.
+                    </p>
+                    <p>
+                        Aile bağlarını güçlendirmek için, birbirimize zaman ayırmalı, birbirimizi dinlemeli, 
+                        birbirimize saygı göstermeli ve birbirimizi sevmeliyiz. Bu çabalar, aile bağlarını 
+                        güçlendirir ve hayatımızı daha anlamlı kılar.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Article 3 Detail -->
+            <article id="article3" class="article-detail" style="margin-top: var(--spacing-xl);">
+                <div class="article-detail-header">
+                    <h2 class="article-detail-title">Sabır ve Şükür</h2>
+                    <div class="article-meta">
+                        <span class="article-category">Değerler</span>
+                        <span>5 Ocak 2024</span>
+                    </div>
+                </div>
+                <img src="images/sabir-sukur.jpg" alt="Sabır ve Şükür" class="article-detail-cover" loading="lazy" onerror="this.src='https://via.placeholder.com/800x400?text=Sabır+ve+Şükür'">
+                <div class="article-detail-content">
+                    <h2>Giriş: İslam'da Sabır ve Şükür</h2>
+                    <p>
+                        Sabır ve şükür, İslam dininin temel erdemlerinden ikisidir. Bu iki erdem, hayatın zorluklarıyla 
+                        başa çıkmamızda ve mutluluğu bulmamızda bize rehberlik eder. Kur'an-ı Kerim ve hadislerde sabır 
+                        ve şükür üzerine pek çok ayet ve hadis bulunmaktadır.
+                    </p>
+                    <p>
+                        <strong>"Sabır ve namaz ile Allah'tan yardım isteyin. Şüphesiz bu, Allah'a saygılı olanlardan 
+                        başkasına ağır gelir."</strong> (Bakara, 2:45) ayeti, sabrın önemini vurgular. Sabır, sadece 
+                        zorluklara katlanmak değil, aynı zamanda Allah'a olan güven ve teslimiyettir.
+                    </p>
+                    <p>
+                        <strong>"Eğer şükrederseniz, elbette size (nimetimi) artıracağım."</strong> (İbrahim, 14:7) 
+                        ayeti, şükrün önemini vurgular. Şükür, sadece sözle değil, aynı zamanda fiille de gösterilir. 
+                        Sahip olduğumuz nimetleri Allah'ın rızası doğrultusunda kullanmak, şükrün bir parçasıdır.
+                    </p>
+                    <h2>Kur'an-ı Kerim'de Sabır</h2>
+                    <p>
+                        Kur'an-ı Kerim'de sabır, pek çok ayette geçer ve farklı bağlamlarda ele alınır. Sabır, zorluklar 
+                        karşısında dayanma gücü, Allah'a olan güven ve teslimiyet, ve hedeflere ulaşmak için gösterilen 
+                        çaba anlamına gelir.
+                    </p>
+                    <p>
+                        <strong>"Ey iman edenler! Sabır ve namaz ile yardım isteyin. Şüphesiz Allah, sabredenlerle beraberdir."</strong> 
+                        (Bakara, 2:153) ayeti, sabrın Allah'ın yardımını kazanmanın yollarından biri olduğunu vurgular. 
+                        Sabırlı olanlar, Allah'ın yardımını hak ederler.
+                    </p>
+                    <p>
+                        <strong>"Sabredenlere mükafatları hesapsız olarak verilecektir."</strong> (Zümer, 39:10) ayeti, 
+                        sabrın ödülünün büyük olduğunu belirtir. Sabırlı olanlar, hem dünyada hem de ahirette ödüllendirilirler.
+                    </p>
+                    <p>
+                        <strong>"Muhakkak ki zorlukla beraber kolaylık vardır. Evet, muhakkak ki zorlukla beraber kolaylık vardır."</strong> 
+                        (İnşirah, 94:5-6) ayeti, zorlukların geçici olduğunu ve her zorluğun bir kolaylığı olduğunu hatırlatır. 
+                        Bu bakış açısı, sabırlı olmamızı sağlar.
+                    </p>
+                    <h2>Hadislerde Sabır</h2>
+                    <p>
+                        Hz. Muhammed (s.a.v.), sabır hakkında pek çok hadis buyurmuştur. Bu hadisler, sabrın önemini, 
+                        çeşitlerini ve ödüllerini açıklar.
+                    </p>
+                    <p>
+                        <strong>"Sabır, imanın yarısıdır."</strong> (Tirmizi) hadisi, sabrın iman kadar önemli olduğunu 
+                        vurgular. Sabır olmadan, iman eksik kalır.
+                    </p>
+                    <p>
+                        <strong>"Sabır, aydınlığın anahtarıdır."</strong> (Müslim) hadisi, sabrın zorlukları aşmanın 
+                        yolu olduğunu belirtir. Sabırlı olanlar, zorlukları aşar ve aydınlığa ulaşırlar.
+                    </p>
+                    <p>
+                        <strong>"Allah, kimi severse onu imtihan eder."</strong> (Buhari) hadisi, zorlukların bir imtihan 
+                        olduğunu ve sabırla karşılanması gerektiğini vurgular. Bu imtihan, Allah'ın sevgisinin bir göstergesidir.
+                    </p>
+                    <h2>Sabrın Çeşitleri</h2>
+                    <p>
+                        İslam alimleri, sabrı üç ana kategoride ele almışlardır: <em>ibadet üzerinde sabır</em>, 
+                        <em>günahlardan kaçınmada sabır</em> ve <em>musibetlere karşı sabır</em>.
+                    </p>
+                    <p>
+                        <strong>İbadet Üzerinde Sabır:</strong> İbadetleri düzenli bir şekilde yapmak, sabır gerektirir. 
+                        Namaz, oruç, zekat gibi ibadetler, sürekli ve düzenli bir şekilde yapıldığında anlam kazanır. 
+                        Bu sabır, Allah'ın rızasını kazanmanın yollarından biridir.
+                    </p>
+                    <p>
+                        <strong>Günahlardan Kaçınmada Sabır:</strong> Günahlardan kaçınmak, büyük bir sabır gerektirir. 
+                        Nefsin isteklerine karşı direnmek, sabırlı olmayı gerektirir. Bu sabır, takvanın bir göstergesidir.
+                    </p>
+                    <p>
+                        <strong>Musibetlere Karşı Sabır:</strong> Hayatın zorluklarına, hastalıklara, kayıplara karşı 
+                        sabır göstermek, en zor sabır türlerinden biridir. Ancak bu sabır, Allah'ın rızasını kazanmanın 
+                        en önemli yollarından biridir.
+                    </p>
+                    <h2>Kur'an-ı Kerim'de Şükür</h2>
+                    <p>
+                        Kur'an-ı Kerim'de şükür, pek çok ayette geçer ve farklı bağlamlarda ele alınır. Şükür, sahip 
+                        olduğumuz nimetlerin farkında olmak, bunları takdir etmek ve Allah'a teşekkür etmek anlamına gelir.
+                    </p>
+                    <p>
+                        <strong>"Eğer şükrederseniz, elbette size (nimetimi) artıracağım. Eğer nankörlük ederseniz, 
+                        şüphesiz azabım çok şiddetlidir."</strong> (İbrahim, 14:7) ayeti, şükrün önemini ve ödülünü 
+                        vurgular. Şükredenler, daha fazla nimet alırlar.
+                    </p>
+                    <p>
+                        <strong>"Allah'ın nimetlerini saymaya kalksanız, onları sayamazsınız."</strong> (İbrahim, 14:34) 
+                        ayeti, sahip olduğumuz nimetlerin çokluğunu hatırlatır. Bu nimetlerin farkında olmak ve şükretmek, 
+                        hayatımıza anlam katar.
+                    </p>
+                    <p>
+                        <strong>"Şükredenleri mükafatlandıracağım."</strong> (Nisa, 4:147) ayeti, şükrün ödülünün büyük 
+                        olduğunu belirtir. Şükredenler, hem dünyada hem de ahirette ödüllendirilirler.
+                    </p>
+                    <h2>Hadislerde Şükür</h2>
+                    <p>
+                        Hz. Muhammed (s.a.v.), şükür hakkında pek çok hadis buyurmuştur. Bu hadisler, şükrün önemini, 
+                        çeşitlerini ve ödüllerini açıklar.
+                    </p>
+                    <p>
+                        <strong>"Kim Allah'a şükrederse, Allah ona daha fazlasını verir."</strong> (Tirmizi) hadisi, 
+                        şükrün ödülünü vurgular. Şükredenler, daha fazla nimet alırlar.
+                    </p>
+                    <p>
+                        <strong>"Şükür, nimetin artmasına sebeptir."</strong> (İbn Mace) hadisi, şükrün nimetleri 
+                        artırdığını belirtir. Şükredenler, sahip oldukları nimetleri korur ve daha fazlasını alırlar.
+                    </p>
+                    <p>
+                        <strong>"Sabah uyandığında sağlıklı olan, evinde barınacak yeri olan ve günlük yiyeceği olan 
+                        kimse, sanki dünyanın tüm nimetlerine sahip olmuş gibidir."</strong> (Tirmizi) hadisi, sahip 
+                        olduğumuz nimetlerin değerini hatırlatır. Bu nimetlere şükretmek, hayatımıza anlam katar.
+                    </p>
+                    <h2>Şükrün Çeşitleri</h2>
+                    <p>
+                        İslam alimleri, şükrü üç ana kategoride ele almışlardır: <em>kalp ile şükür</em>, 
+                        <em>dil ile şükür</em> ve <em>organlar ile şükür</em>.
+                    </p>
+                    <p>
+                        <strong>Kalp ile Şükür:</strong> Kalp ile şükür, sahip olduğumuz nimetlerin Allah'tan geldiğini 
+                        bilmek ve bunu kalben kabul etmektir. Bu şükür, şükrün temelidir.
+                    </p>
+                    <p>
+                        <strong>Dil ile Şükür:</strong> Dil ile şükür, sahip olduğumuz nimetler için Allah'a teşekkür 
+                        etmektir. "Elhamdülillah" demek, dil ile şükrün bir örneğidir.
+                    </p>
+                    <p>
+                        <strong>Organlar ile Şükür:</strong> Organlar ile şükür, sahip olduğumuz nimetleri Allah'ın 
+                        rızası doğrultusunda kullanmaktır. Gözümüzü haramdan korumak, elimizi haramdan uzak tutmak, 
+                        organlar ile şükrün örnekleridir.
+                    </p>
+                    <h2>Sabır ve Şükrün Birlikteliği</h2>
+                    <p>
+                        Sabır ve şükür, birbirini tamamlayan iki erdemdir. Sabır, zorluklar karşısında bize güç verirken, 
+                        şükür ise hayatın güzelliklerini görmemizi sağlar. Bu iki erdem birlikte, hayatın zorluklarıyla 
+                        başa çıkmamızda ve mutluluğu bulmamızda bize rehberlik eder.
+                    </p>
+                    <p>
+                        Zor zamanlarda sabır gösterirken, aynı zamanda sahip olduklarımıza şükretmek, zorlukları daha 
+                        kolay aşmamızı sağlar. Çünkü şükür, bize hayatın güzelliklerini hatırlatır ve bize güç verir.
+                    </p>
+                    <p>
+                        <strong>"Sabır ve şükür, iki kanat gibidir. Biri olmadan diğeri uçamaz."</strong> sözü, 
+                        sabır ve şükrün birlikteliğinin önemini vurgular. Bu iki erdem birlikte, hayatımızı anlamlı 
+                        kılar ve bize mutluluk verir.
+                    </p>
+                    <h2>Pratik Hayatta Sabır ve Şükür</h2>
+                    <p>
+                        Sabır ve şükür, günlük hayatımızda uygulayabileceğimiz erdemlerdir. Her gün, zorluklar karşısında 
+                        sabır gösterebilir ve sahip olduklarımıza şükredebiliriz. Bu uygulama, hayatımızı daha anlamlı 
+                        kılar ve bize mutluluk verir.
+                    </p>
+                    <p>
+                        Sabır ve şükür, aynı zamanda ibadetlerimizde de kendini gösterir. Namaz kılarken sabırlı olmak, 
+                        oruç tutarken sabırlı olmak, zekat verirken şükretmek, sabır ve şükrün pratik örnekleridir.
+                    </p>
+                    <p>
+                        Sabır ve şükür, ilişkilerimizi de güçlendirir. Sabırlı ve şükür dolu bir insan, çevresindeki 
+                        insanlarla daha iyi ilişkiler kurar ve hayatını daha anlamlı yaşar.
+                    </p>
+                    <h2>Sonuç: Sabır ve Şükürle Anlamlı Bir Yaşam</h2>
+                    <p>
+                        Sabır ve şükür, İslam dininin temel erdemlerinden ikisidir. Bu iki erdem, hayatın zorluklarıyla 
+                        başa çıkmamızda ve mutluluğu bulmamızda bize rehberlik eder. Sabır, bize güç verir; şükür ise 
+                        hayatın güzelliklerini görmemizi sağlar.
+                    </p>
+                    <p>
+                        <strong>"Sabredenlere mükafatları hesapsız olarak verilecektir."</strong> (Zümer, 39:10) ve 
+                        <strong>"Eğer şükrederseniz, elbette size (nimetimi) artıracağım."</strong> (İbrahim, 14:7) 
+                        ayetleri, sabır ve şükrün ödüllerini vurgular. Bu erdemler, hem dünyada hem de ahirette 
+                        ödüllendirilir.
+                    </p>
+                    <p>
+                        Hayatımızda sabır ve şükürü uygulayarak, zorlukları daha kolay aşabilir, hayatın güzelliklerini 
+                        görebilir ve mutlu bir yaşam sürebiliriz. Bu erdemler, hayatımızın her alanında bize rehberlik 
+                        eder ve bizi başarıya ulaştırır.
+                    </p>
+                    <p>
+                        Sabır, sadece beklemek değildir. Aynı zamanda, zorluklar karşısında çaba göstermek ve 
+                        hedeflerimize ulaşmak için mücadele etmektir. Sabırlı bir insan, zorluklar karşısında 
+                        pes etmez, aksine daha fazla çaba gösterir ve hedefine ulaşmak için mücadele eder.
+                    </p>
+                    <p>
+                        Sabır, aynı zamanda iç huzur sağlar. Sabırlı bir insan, zorluklar karşısında sakin kalır 
+                        ve doğru kararlar verir. Bu sakinlik, hayatın zorluklarıyla başa çıkmamızda bize yardımcı olur.
+                    </p>
+                    <p>
+                        Hayatımızda sabır gösterebileceğimiz birçok alan vardır: iş hayatında, eğitimde, 
+                        ilişkilerde ve kişisel gelişimde. Her alanda sabır göstermek, başarıya ulaşmamızı sağlar.
+                    </p>
+                    <h2>Şükrün Önemi: Farkındalık ve Mutluluk</h2>
+                    <p>
+                        Şükür etmek, sahip olduklarımızın farkında olmak ve bunları takdir etmektir. 
+                        Şükür, mutluluğu artırır ve hayata olumlu bir bakış açısı kazandırır. 
+                        Sahip olduklarımıza şükretmek, daha fazlasına sahip olmamıza da yardımcı olur.
+                    </p>
+                    <p>
+                        Şükür, sadece maddi varlıklarımıza değil, aynı zamanda manevi değerlerimize de yöneliktir. 
+                        Sağlığımız, ailemiz, arkadaşlarımız, eğitimimiz ve daha fazlası, şükretmemiz gereken 
+                        nimetlerdir. Bu nimetlerin farkında olmak, hayatımızı daha anlamlı kılar.
+                    </p>
+                    <p>
+                        Şükür, aynı zamanda mutluluğu artırır. Sahip olduklarımıza şükrettiğimizde, 
+                        hayatın güzelliklerini görürüz ve mutlu oluruz. Bu mutluluk, hayatımızı daha 
+                        anlamlı kılar ve bize güç verir.
+                    </p>
+                    <p>
+                        Şükür, aynı zamanda daha fazlasına sahip olmamıza yardımcı olur. Çünkü şükür, 
+                        pozitif bir enerji yaratır ve hayatımıza olumlu şeyler çeker. Sahip olduklarımıza 
+                        şükrettiğimizde, daha fazlasına sahip olma fırsatı buluruz.
+                    </p>
+                    <h2>Sabır ve Şükrün Birlikteliği</h2>
+                    <p>
+                        Sabır ve şükür, birbirini tamamlayan iki erdemdir. Sabır, zorluklar karşısında 
+                        bize güç verirken, şükür ise hayatın güzelliklerini görmemizi sağlar. Bu iki erdem 
+                        birlikte, hayatın zorluklarıyla başa çıkmamızda ve mutluluğu bulmamızda bize rehberlik eder.
+                    </p>
+                    <p>
+                        Zor zamanlarda sabır gösterirken, aynı zamanda sahip olduklarımıza şükretmek, 
+                        zorlukları daha kolay aşmamızı sağlar. Çünkü şükür, bize hayatın güzelliklerini 
+                        hatırlatır ve bize güç verir.
+                    </p>
+                    <h2>Günlük Hayatta Sabır ve Şükür</h2>
+                    <p>
+                        Sabır ve şükür, günlük hayatımızda uygulayabileceğimiz erdemlerdir. Her gün, 
+                        zorluklar karşısında sabır gösterebilir ve sahip olduklarımıza şükredebiliriz. 
+                        Bu uygulama, hayatımızı daha anlamlı kılar ve bize mutluluk verir.
+                    </p>
+                    <p>
+                        Sabır ve şükür, aynı zamanda ilişkilerimizi de güçlendirir. Sabırlı ve şükür dolu 
+                        bir insan, çevresindeki insanlarla daha iyi ilişkiler kurar ve hayatını daha 
+                        anlamlı yaşar.
+                    </p>
+                    <h2>Sonuç: İç Huzur ve Mutluluk</h2>
+                    <p>
+                        Sabır ve şükür, hayatın zorluklarıyla başa çıkmamızda ve mutluluğu bulmamızda 
+                        bize rehberlik eden iki önemli erdemdir. Sabır, bize güç verir; şükür ise 
+                        hayatın güzelliklerini görmemizi sağlar. Bu iki erdem birlikte, hayatımızı 
+                        daha anlamlı kılar ve bize iç huzur verir.
+                    </p>
+                    <p>
+                        Hayatımızda sabır ve şükürü uygulayarak, zorlukları daha kolay aşabilir, 
+                        hayatın güzelliklerini görebilir ve mutlu bir yaşam sürebiliriz. Bu erdemler, 
+                        hayatımızın her alanında bize rehberlik eder ve bizi başarıya ulaştırır.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Article 4 Detail -->
+            <article id="article4" class="article-detail" style="margin-top: var(--spacing-xl);">
+                <div class="article-detail-header">
+                    <h2 class="article-detail-title">Eğitim ve Öğrenmenin Önemi</h2>
+                    <div class="article-meta">
+                        <span class="article-category">Eğitim</span>
+                        <span>1 Ocak 2024</span>
+                    </div>
+                </div>
+                <img src="images/egitim.jpg" alt="Eğitim ve Öğrenme" class="article-detail-cover" loading="lazy" onerror="this.src='https://via.placeholder.com/800x400?text=Eğitim+ve+Öğrenme'">
+                <div class="article-detail-content">
+                    <p>
+                        Eğitim, hayat boyu devam eden bir süreçtir. Öğrenmek, kendimizi geliştirmek ve dünyayı anlamak için en önemli araçtır. 
+                        Eğitim sadece okulda değil, hayatın her alanında gerçekleşir. Her gün yeni bir şey öğrenme fırsatı vardır ve 
+                        bu öğrenme süreci, bireyin kişisel gelişimini ve toplumsal katkısını artırır.
+                    </p>
+                    <p>
+                        Eğitim, insanın doğumundan ölümüne kadar devam eden bir yolculuktur. Bu yolculuk, sadece okulda değil, 
+                        hayatın her alanında gerçekleşir. Ailede, toplumda, iş hayatında ve kişisel gelişimde, sürekli öğreniriz. 
+                        Bu öğrenme süreci, bizi geliştirir ve hayatımızı anlamlı kılar.
+                    </p>
+                    <h2>Hayat Boyu Öğrenme: Sürekli Gelişim</h2>
+                    <p>
+                        Öğrenme, yaşam boyu devam eden bir yolculuktur. Her gün yeni bir şey öğrenme fırsatı vardır. 
+                        Bu süreç, bireyin kişisel gelişimini ve toplumsal katkısını artırır.
+                    </p>
+                    <p>
+                        Hayat boyu öğrenme, sadece akademik bilgileri öğrenmek değildir. Aynı zamanda, yaşam becerileri, 
+                        değerler, kültür ve sanat gibi birçok alanda öğrenmeyi içerir. Bu çeşitlilik, bireyin 
+                        gelişimini zenginleştirir ve hayatını anlamlı kılar.
+                    </p>
+                    <p>
+                        Günümüzde, teknolojik gelişmeler ve bilgi çağı, hayat boyu öğrenmeyi daha da önemli hale getirmiştir. 
+                        Sürekli değişen dünyada, kendimizi geliştirmek ve yeni bilgiler öğrenmek, başarılı olmak için 
+                        gereklidir. Bu nedenle, hayat boyu öğrenme, modern dünyada vazgeçilmez bir gerekliliktir.
+                    </p>
+                    <h2>Eğitimin Değeri: Bilgi ve Karakter</h2>
+                    <p>
+                        Eğitim, sadece bilgi edinmek değil, aynı zamanda karakter gelişimi, değerler eğitimi ve 
+                        toplumsal uyum için de kritik öneme sahiptir.
+                    </p>
+                    <p>
+                        Eğitim, bireyin sadece akademik başarısını değil, aynı zamanda karakter gelişimini de etkiler. 
+                        Değerler eğitimi, ahlaki gelişim ve sosyal beceriler, eğitimin önemli parçalarıdır. Bu gelişim, 
+                        bireyin toplumda saygın bir yer edinmesini sağlar.
+                    </p>
+                    <p>
+                        Eğitim, aynı zamanda toplumsal uyum için de kritik öneme sahiptir. Eğitimli bireyler, 
+                        toplumun değerlerini anlar, saygı gösterir ve toplumsal sorumluluklarını yerine getirir. 
+                        Bu uyum, toplumun huzur ve refahı için gereklidir.
+                    </p>
+                    <h2>Eğitimin Farklı Boyutları</h2>
+                    <p>
+                        Eğitim, sadece okulda gerçekleşen bir süreç değildir. Aile, toplum, medya ve kişisel 
+                        deneyimler, eğitimin önemli parçalarıdır. Bu çeşitlilik, bireyin gelişimini zenginleştirir.
+                    </p>
+                    <p>
+                        Aile, bireyin ilk eğitim kurumudur. Ailede öğrenilen değerler, davranışlar ve kültür, 
+                        bireyin hayatının geri kalanında büyük bir rol oynar. Bu nedenle, aile eğitimi, 
+                        eğitimin en önemli parçalarından biridir.
+                    </p>
+                    <p>
+                        Toplum da eğitimin önemli bir parçasıdır. Toplumda öğrenilen sosyal beceriler, 
+                        kültürel değerler ve toplumsal normlar, bireyin gelişimini etkiler. Bu öğrenme, 
+                        bireyin topluma uyum sağlamasını ve toplumsal sorumluluklarını yerine getirmesini sağlar.
+                    </p>
+                    <h2>Eğitimin Bireysel ve Toplumsal Faydaları</h2>
+                    <p>
+                        Eğitim, hem bireysel hem de toplumsal faydalar sağlar. Bireysel olarak, eğitim, 
+                        kişisel gelişimi, kariyer fırsatlarını ve yaşam kalitesini artırır. Toplumsal olarak ise, 
+                        eğitim, toplumun gelişimini, refahını ve huzurunu sağlar.
+                    </p>
+                    <p>
+                        Eğitimli bireyler, daha iyi iş fırsatlarına sahip olur, daha yüksek gelir elde eder ve 
+                        daha kaliteli bir yaşam sürer. Bu faydalar, bireyin mutluluğunu ve yaşam kalitesini artırır.
+                    </p>
+                    <p>
+                        Toplumsal olarak, eğitim, toplumun gelişimini, refahını ve huzurunu sağlar. Eğitimli toplumlar, 
+                        daha gelişmiş, daha adil ve daha huzurlu bir yaşam sürer. Bu nedenle, eğitim, toplumun 
+                        geleceği için kritik öneme sahiptir.
+                    </p>
+                    <h2>Sonuç: Eğitimli Bir Gelecek</h2>
+                    <p>
+                        Eğitim, hayat boyu devam eden bir süreçtir ve bireyin gelişimi için kritik öneme sahiptir. 
+                        Hayat boyu öğrenme, karakter gelişimi ve toplumsal uyum, eğitimin önemli parçalarıdır. 
+                        Bu süreç, bireyin hem kişisel hem de toplumsal gelişimini sağlar.
+                    </p>
+                    <p>
+                        Eğitimin değerini anlamak ve hayat boyu öğrenmeye devam etmek, başarılı ve anlamlı bir 
+                        yaşam sürmek için gereklidir. Bu çaba, bireyin kendisini geliştirmesini ve topluma 
+                        katkı sağlamasını sağlar.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Article 5 Detail -->
+            <article id="article5" class="article-detail" style="margin-top: var(--spacing-xl);">
+                <div class="article-detail-header">
+                    <h2 class="article-detail-title">Dürüstlük ve Doğruluk</h2>
+                    <div class="article-meta">
+                        <span class="article-category">Ahlak</span>
+                        <span>28 Aralık 2023</span>
+                    </div>
+                </div>
+                <img src="images/durustluk.jpg" alt="Dürüstlük" class="article-detail-cover" loading="lazy" onerror="this.src='https://via.placeholder.com/800x400?text=Dürüstlük'">
+                <div class="article-detail-content">
+                    <p>
+                        Dürüstlük, karakterin temel taşıdır. Doğru söylemek ve doğru davranmak, güven ve saygıyı oluşturur. 
+                        Dürüst bir kişi, toplumda saygı görür ve güvenilir olur. Dürüstlük, sadece bireysel bir erdem değil, 
+                        aynı zamanda toplumsal ilişkilerin de temelidir.
+                    </p>
+                    <p>
+                        Dürüstlük, insanın en temel değerlerinden biridir. Dürüst olmak, sadece başkalarına karşı değil, 
+                        aynı zamanda kendimize karşı da doğru olmaktır. Bu dürüstlük, bireyin karakterini şekillendirir ve 
+                        toplumda saygın bir yer edinmesini sağlar.
+                    </p>
+                    <h2>Dürüstlüğün Önemi: Güven ve Saygı</h2>
+                    <p>
+                        Dürüstlük, bireysel ve toplumsal ilişkilerin temelidir. Dürüst olmak, güven oluşturur ve 
+                        sağlıklı ilişkilerin kurulmasını sağlar.
+                    </p>
+                    <p>
+                        Dürüstlük, ilişkilerin temelidir. Dürüst bir insan, çevresindeki insanların güvenini kazanır. 
+                        Bu güven, sağlıklı ve uzun süreli ilişkilerin kurulmasını sağlar. Dürüstlük olmadan, 
+                        gerçek bir ilişki kurmak mümkün değildir.
+                    </p>
+                    <p>
+                        Dürüstlük, aynı zamanda toplumsal uyum için de kritik öneme sahiptir. Dürüst bir toplum, 
+                        güven ve huzur içinde yaşar. Bu güven, toplumun gelişimini ve refahını sağlar. 
+                        Dürüstlük olmadan, toplumsal düzen kurulamaz.
+                    </p>
+                    <h2>Doğruluk ve Güven: Toplumsal Temel</h2>
+                    <p>
+                        Doğru davranışlar, toplumda güven oluşturur. Dürüst insanlar, çevrelerinde saygı görür ve 
+                        örnek alınır.
+                    </p>
+                    <p>
+                        Doğruluk, sadece sözlerimizde değil, aynı zamanda davranışlarımızda da kendini gösterir. 
+                        Doğru davranışlar, toplumda güven oluşturur ve saygı kazandırır. Bu güven ve saygı, 
+                        bireyin toplumda saygın bir yer edinmesini sağlar.
+                    </p>
+                    <p>
+                        Dürüst insanlar, çevrelerinde örnek alınır. Bu örnek alınma, toplumun değerlerini 
+                        şekillendirir ve toplumsal gelişimi sağlar. Dürüst insanlar, toplumun liderleri ve 
+                        rehberleri olur.
+                    </p>
+                    <h2>Dürüstlüğün Farklı Boyutları</h2>
+                    <p>
+                        Dürüstlük, sadece başkalarına karşı değil, aynı zamanda kendimize karşı da doğru olmaktır. 
+                        Kendimize karşı dürüst olmak, kendi zayıf ve güçlü yönlerimizi bilmek ve kabul etmektir. 
+                        Bu farkındalık, kişisel gelişimimiz için kritik öneme sahiptir.
+                    </p>
+                    <p>
+                        Dürüstlük, aynı zamanda sözlerimizde ve davranışlarımızda da kendini gösterir. 
+                        Sözlerimizde dürüst olmak, doğru söylemek ve yalan söylememektir. Davranışlarımızda 
+                        dürüst olmak ise, doğru davranmak ve haksızlık yapmamaktır.
+                    </p>
+                    <h2>Dürüstlüğün Zorlukları ve Ödülleri</h2>
+                    <p>
+                        Dürüst olmak, bazen zor olabilir. Dürüstlük, bazen kısa vadede zorluklar yaratabilir, 
+                        ancak uzun vadede büyük ödüller sağlar. Dürüst bir insan, çevresindeki insanların 
+                        güvenini kazanır ve saygın bir yer edinir.
+                    </p>
+                    <p>
+                        Dürüstlüğün ödülleri, sadece bireysel değil, aynı zamanda toplumsal da olabilir. 
+                        Dürüst bir toplum, güven ve huzur içinde yaşar ve gelişir. Bu gelişim, toplumun 
+                        tüm üyelerine fayda sağlar.
+                    </p>
+                    <h2>Sonuç: Dürüst Bir Yaşam</h2>
+                    <p>
+                        Dürüstlük, karakterin temel taşıdır ve toplumsal ilişkilerin temelidir. Dürüst olmak, 
+                        güven oluşturur, saygı kazandırır ve toplumda saygın bir yer edinmemizi sağlar. 
+                        Bu erdem, hayatımızın her alanında bize rehberlik eder.
+                    </p>
+                    <p>
+                        Dürüstlüğü hayatımızın her alanında uygulayarak, hem kendimizi hem de toplumumuzu 
+                        geliştirebiliriz. Bu çaba, bireyin karakterini şekillendirir ve toplumun gelişimini sağlar. 
+                        Dürüstlük, başarılı ve anlamlı bir yaşam sürmek için vazgeçilmez bir erdemdir.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Article 6 Detail -->
+            <article id="article6" class="article-detail" style="margin-top: var(--spacing-xl);">
+                <div class="article-detail-header">
+                    <h2 class="article-detail-title">Aile İçi İletişim</h2>
+                    <div class="article-meta">
+                        <span class="article-category">Aile</span>
+                        <span>25 Aralık 2023</span>
+                    </div>
+                </div>
+                <img src="images/aile.jpg" alt="İletişim" class="article-detail-cover" loading="lazy" onerror="this.src='https://via.placeholder.com/800x400?text=İletişim'">
+                <div class="article-detail-content">
+                    <p>
+                        Sağlıklı iletişim, güçlü aile bağlarının temelidir. Dinlemek, anlamak ve saygılı bir şekilde ifade etmek önemlidir. 
+                        Aile içinde açık ve dürüst iletişim, sorunların çözülmesine yardımcı olur. İletişim, sadece konuşmak değil, 
+                        aynı zamanda dinlemek ve anlamaktır.
+                    </p>
+                    <p>
+                        Aile içi iletişim, aile bağlarını güçlendirmek için kritik öneme sahiptir. Sağlıklı bir iletişim, 
+                        aile üyeleri arasındaki anlayışı artırır, çatışmaları önler ve sorunların çözülmesini sağlar. 
+                        Bu iletişim, aile içinde güven oluşturur ve bağları güçlendirir.
+                    </p>
+                    <h2>Dinleme Sanatı: Anlama ve Empati</h2>
+                    <p>
+                        İyi bir iletişim, öncelikle iyi bir dinleyici olmakla başlar. Aile üyelerini dinlemek, 
+                        onların duygularını ve düşüncelerini anlamak, sağlıklı ilişkilerin temelidir.
+                    </p>
+                    <p>
+                        Dinlemek, sadece sözleri duymak değildir. Aynı zamanda, karşımızdaki kişinin duygularını, 
+                        düşüncelerini ve ihtiyaçlarını anlamaktır. Bu anlama, empati kurmamızı sağlar ve 
+                        sağlıklı bir iletişim kurmamıza yardımcı olur.
+                    </p>
+                    <p>
+                        Aile içinde dinlemek, aile üyelerinin birbirlerini anlamasını sağlar. Bu anlama, 
+                        çatışmaları önler ve sorunların çözülmesini kolaylaştırır. Dinlemek, aile içinde 
+                        güven oluşturur ve bağları güçlendirir.
+                    </p>
+                    <h2>Saygılı İfade: Düşünce ve Duygu Paylaşımı</h2>
+                    <p>
+                        Düşüncelerimizi ve duygularımızı saygılı bir şekilde ifade etmek, aile içi uyumu artırır. 
+                        Karşılıklı saygı, güçlü aile bağlarının oluşmasını sağlar.
+                    </p>
+                    <p>
+                        Saygılı ifade, sadece ne söylediğimiz değil, aynı zamanda nasıl söylediğimizle de ilgilidir. 
+                        Düşüncelerimizi ve duygularımızı saygılı bir şekilde ifade etmek, karşımızdaki kişiyi 
+                        incitmeden kendimizi ifade etmektir. Bu ifade, aile içinde sağlıklı bir iletişim kurmamızı sağlar.
+                    </p>
+                    <p>
+                        Saygılı ifade, aynı zamanda açık ve dürüst olmayı da içerir. Aile içinde açık ve dürüst 
+                        bir iletişim, sorunların çözülmesini kolaylaştırır ve güven oluşturur. Bu iletişim, 
+                        aile bağlarını güçlendirir.
+                    </p>
+                    <h2>İletişim Engelleri ve Çözümleri</h2>
+                    <p>
+                        Aile içi iletişimde, bazen engellerle karşılaşabiliriz. Öfke, kıskançlık, yanlış anlama 
+                        ve iletişim eksikliği, bu engellerden bazılarıdır. Bu engelleri aşmak için, sabırlı olmak, 
+                        empati kurmak ve açık bir iletişim kurmak gerekir.
+                    </p>
+                    <p>
+                        Öfke ve kızgınlık, iletişimi engelleyen en önemli faktörlerden biridir. Bu duygular, 
+                        sağlıklı bir iletişim kurmamızı zorlaştırır. Bu nedenle, öfke ve kızgınlık anlarında, 
+                        sakin kalmak ve düşünceli bir şekilde iletişim kurmak önemlidir.
+                    </p>
+                    <p>
+                        Yanlış anlama, iletişimde sık karşılaşılan bir sorundur. Bu sorunu aşmak için, 
+                        açık ve net bir şekilde iletişim kurmak ve karşımızdaki kişinin ne demek istediğini 
+                        anlamaya çalışmak gerekir. Bu çaba, yanlış anlamaları önler ve sağlıklı bir iletişim kurmamızı sağlar.
+                    </p>
+                    <h2>İletişim Teknikleri: Etkili İletişim</h2>
+                    <p>
+                        Etkili bir iletişim kurmak için, bazı teknikler kullanabiliriz. Aktif dinleme, 
+                        empati kurma, açık ve net ifade, ve geri bildirim verme, bu tekniklerden bazılarıdır.
+                    </p>
+                    <p>
+                        Aktif dinleme, karşımızdaki kişiyi dikkatle dinlemek ve anlamaya çalışmaktır. 
+                        Bu dinleme, aile içinde sağlıklı bir iletişim kurmamızı sağlar. Empati kurma ise, 
+                        karşımızdaki kişinin duygularını ve düşüncelerini anlamaya çalışmaktır. Bu anlama, 
+                        sağlıklı bir iletişim kurmamızı kolaylaştırır.
+                    </p>
+                    <h2>Sonuç: Sağlıklı Aile İletişimi</h2>
+                    <p>
+                        Sağlıklı iletişim, güçlü aile bağlarının temelidir. Dinlemek, anlamak ve saygılı bir şekilde 
+                        ifade etmek, sağlıklı bir iletişim kurmamızı sağlar. Bu iletişim, aile içinde güven oluşturur, 
+                        çatışmaları önler ve sorunların çözülmesini kolaylaştırır.
+                    </p>
+                    <p>
+                        Aile içi iletişimi geliştirerek, aile bağlarını güçlendirebilir ve daha mutlu bir aile 
+                        yaşamı sürebiliriz. Bu çaba, aile üyelerinin birbirlerini anlamasını ve birbirlerine 
+                        destek olmasını sağlar. Sağlıklı iletişim, güçlü aile bağlarının oluşması için vazgeçilmezdir.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Article 7 Detail -->
+            <article id="article7" class="article-detail" style="margin-top: var(--spacing-xl);">
+                <div class="article-detail-header">
+                    <h2 class="article-detail-title">Peygamberliğinden Önce Hz. Muhammed (s.a.v.)'in Hayatı</h2>
+                    <div class="article-meta">
+                        <span class="article-category">Değerler</span>
+                        <span>20 Ocak 2024</span>
+                    </div>
+                </div>
+                <img src="images/peygamberimizin-hayati.jpg" alt="Hz. Muhammed (s.a.v.)" class="article-detail-cover" loading="lazy" onerror="this.src='https://via.placeholder.com/800x400?text=Hz.+Muhammed+(s.a.v.)'">
+                <div class="article-detail-content">
+                    <p>
+                        Hz. Muhammed (s.a.v.), 571 yılında Mekke'de doğdu. Babası Abdullah, o doğmadan kısa bir süre önce vefat etmişti. 
+                        Annesi Amine ise o altı yaşındayken vefat etti. Bu erken yaşta hem babasız hem de annesiz kalması, 
+                        onun hayatında derin izler bıraktı.
+                    </p>
+                    <h2>Aile Kökeni ve Soy</h2>
+                    <p>
+                        Amine ve Abdullah'ın evliliği, Kureyş'in soylu ailelerinden Haşimoğulları'nın saygınlığını pekiştiriyordu. 
+                        Haşimoğulları, Mekke'nin en saygın ailelerinden biriydi ve Hz. Muhammed (s.a.v.) bu soylu aileden geliyordu.
+                    </p>
+                    <div style="text-align: center; margin: var(--spacing-lg) 0;">
+                        <img src="images/ilk.png" alt="Mekke Şehri - Tarihi Hava Fotoğrafı" class="article-detail-cover" 
+                             style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow);" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/800x600?text=Mekke+Şehri';">
+                        <p style="font-size: 0.9rem; color: var(--text-light); margin-top: var(--spacing-xs); font-style: italic;">
+                            Mekke Şehri - Tarihi Hava Fotoğrafı (19. yüzyıl sonları)
+                        </p>
+                        <p style="font-size: 0.95rem; color: var(--text-color); margin-top: var(--spacing-sm); line-height: 1.7; max-width: 800px; margin-left: auto; margin-right: auto;">
+                            Fotoğraflar, 19. yüzyılın sonlarında çekilmiş olsa da, o dönemdeki taş binalar, şehrin çevresindeki çıplak dağlar ve Kabe'nin çevresindeki sade yerleşim, Hz. Muhammed dönemindeki coğrafi yapıyı ve atmosferi anlamamıza yardımcı olan en gerçekçi belgelerdir.
+                        </p>
+                        <p style="font-size: 0.95rem; color: var(--text-color); margin-top: var(--spacing-sm); line-height: 1.7; max-width: 800px; margin-left: auto; margin-right: auto;">
+                            Bu görsellerde şunları fark edebilirsiniz: <strong>Safa ve Merve Tepeleri:</strong> Fotoğraflarda bu tepelerin orijinal hallerini, üzerindeki yerleşim birimlerini ve aralarındaki yolu görebilirsiniz. <strong>Şehir Yerleşimi:</strong> Evlerin Kabe'ye ne kadar yakın olduğunu ve şehrin "Bekke" vadisi boyunca nasıl uzandığını gözlemlemek mümkündür. <strong>Dar Sokaklar:</strong> Hz. Muhammed'in çocukluğunda yürüdüğü, ticaret kervanlarının geçtiği o dar ve taşlı yolların 100-150 yıl önceki hali, binlerce yıl öncesinin izlerini taşımaktadır. O dönemdeki yaşamın ne kadar yalın ve doğayla iç içe olduğunu bu siyah-beyaz kareler üzerinden çok daha iyi hissedebilirsiniz.
+                        </p>
+                    </div>
+                    <h2>Çölde Sütanne Dönemi</h2>
+                    <p>
+                        Hz. Muhammed (s.a.v.), bebekken Arap geleneklerine uygun olarak çölde sütanneye verildi. 
+                        Bu, çocukların daha sağlıklı büyümesi ve fasih Arapça öğrenmesi için yaygın bir uygulamaydı. 
+                        Sütannesi Halime bint Ebi Zu'eyb, onu kendi çocukları gibi büyüttü ve onunla geçirdiği dönemde 
+                        evlerine bereket geldiğine inanılırdı.
+                    </p>
+                    <p>
+                        Hz. Muhammed, iki yaşına kadar Halime'nin yanında kaldı ve sonrasında annesinin yanına döndü. 
+                        Bu dönem, Hz. Muhammed (s.a.v.)'in karakterinin şekillenmesinde önemli bir rol oynadı. 
+                        Çöl hayatının zorlukları, doğa ile iç içe yaşama ve bedevi kültürünün değerleri, 
+                        onun erdemli kişiliğinin gelişmesine katkıda bulundu.
+                    </p>
+                    <h2>Erken Yaşta Kayıplar ve Himaye Dönemleri</h2>
+                    <p>
+                        Altı yaşında annesini kaybetmesi, Hz. Muhammed (s.a.v.) için büyük bir acıydı. 
+                        Annesinin vefatından sonra dedesi Abdülmuttalib'in himayesine girdi. Abdülmuttalib, 
+                        torununa büyük sevgi gösterdi ve ona özel bir ilgi gösterdi. Mekke'nin saygın liderlerinden 
+                        biri olan Abdülmuttalib, Hz. Muhammed (s.a.v.)'e karşı büyük bir şefkat ve koruma gösterdi.
+                    </p>
+                    <p>
+                        Ancak Abdülmuttalib de iki yıl sonra vefat edince, Hz. Muhammed sekiz yaşındayken 
+                        amcası Ebu Talib'in himayesine geçti. Ebu Talib, o dönemde maddi durumu çok iyi olmasa da 
+                        yeğenine büyük bir şefkatle baktı ve onu kendi çocuklarından ayırmadı. Ebu Talib, Hz. Muhammed (s.a.v.)'i 
+                        kendi çocukları gibi büyüttü ve ona büyük bir sevgi ve saygı gösterdi.
+                    </p>
+                    <h2>Çobanlıktan Ticarete: Hayat Okulu</h2>
+                    <p>
+                        Hz. Muhammed, çocukluk ve gençlik yıllarında çobanlık yaptığını bizzat ifade etmiştir. Amcasının yanında, 
+                        hayatın zorluklarını küçük yaşta tecrübe etti. Çobanlık yaparak ailesine yardımcı oldu.
+                    </p>
+                    <p>
+                        <strong>Neden Önemli?</strong> Çobanlık; sabır, doğayı gözlemleme, koruma içgüdüsü ve yalnız kalarak derin düşünme 
+                        (tefekkür) yeteneği kazandırır. Bu dönemde sorumluluk bilinci, sabır ve tevazu gibi erdemleri pekişti.
+                    </p>
+                    <p>
+                        <strong>Ticarete Geçiş:</strong> Gençlik yıllarında ise ticaretle uğraşmaya başladı. Amcası Ebu Talib ile Suriye'ye ilk ticari yolculuğunu yaptı. 
+                        Bu yolculuklar, ona farklı kültürleri tanıma ve ticaretin inceliklerini öğrenme fırsatı sundu. Daha sonra amcasıyla başladığı ticaret hayatında, 
+                        dürüstlüğü sayesinde Mekke'nin en zengin kadını Hz. Hatice'nin dikkatini çekmiştir. Ticaret ona; insan psikolojisini tanıma, dürüst bir finansal sistem kurma ve 
+                        farklı coğrafyaları (Şam, Busra) tanıma imkanı sağlamıştır.
+                    </p>
+                    <h2>Ticari Hayatı ve Yetkinliği</h2>
+                    <p>
+                        Amcası Ebu Talib'in yanında başladığı ticaret hayatında, sadece dürüstlüğüyle değil, zekası ve yönetim becerisiyle de öne çıktı.
+                    </p>
+                    <p>
+                        <strong>Geniş Vizyon:</strong> Suriye, Yemen ve Habeşistan gibi bölgelere yapılan kervan yolculuklarına katılarak farklı inançları 
+                        (Hristiyanlık, Yahudilik, Mecusilik) ve farklı devlet yönetimlerini gözlemleme şansı buldu.
+                    </p>
+                    <p>
+                        <strong>Hz. Hatice ile İş Ortaklığı:</strong> Hz. Hatice'nin kervanlarını yönetirken gösterdiği dürüstlük, kârı hakkaniyetle paylaştırması 
+                        ve yanındaki yardımcılarına (örneğin Meysere) karşı nazik tutumu, onun profesyonel ahlakını simgeler.
+                    </p>
+                    <h2>"Muhammedü'l-Emin" ve Toplumsal Güven</h2>
+                    <p>
+                        Hz. Muhammed'in en belirgin özelliklerinden biri, genç yaşından itibaren sahip olduğu "el-Emin" (güvenilir) lakabıdır. 
+                        Mekke halkı, onun dürüstlüğüne ve doğruluğuna o kadar güveniyordu ki, en değerli eşyalarını ona emanet ederlerdi. 
+                        Herhangi bir anlaşmazlıkta hakem olarak ona başvurulurdu. Onun dürüstlüğü sadece bir lakap değil, Mekke gibi ticaretin kalbi olan bir şehirde en önemli "sosyal sermaye" idi. 
+                        İnsanlar, aralarında kan davası olan düşmanlarına bile güvenmezken, en kıymetli eşyalarını Hz. Muhammed'e emanet ederlerdi.
+                    </p>
+                    <p>
+                        Bu güvenin iki ana sebebi vardı:
+                    </p>
+                    <ul>
+                        <li><strong>Asla Yalan Söylememesi:</strong> Çocukluğundan itibaren şaka amacıyla bile olsa yalan söylediği görülmemiştir.</li>
+                        <li><strong>Ahde Vefa:</strong> Verdiği sözleri ne pahasına olursa olsun tutardı.</li>
+                    </ul>
+                    <h2>Büyük Hakemlik: Hacerü'l-Esved Hadisesi (Stratejik Zeka)</h2>
+                    <p>
+                        Hz. Muhammed 35 yaşındayken Kabe sel ve yangın nedeniyle hasar görmüş ve yeniden inşa edilmişti. 
+                        Sıra kutsal siyah taşın (Hacerü'l-Esved) yerine konulmasına gelince kabileler arasında savaşın eşiğine gelindi. 
+                        Çünkü bu taşı yerine koymak büyük bir onurdu.
+                    </p>
+                    <div style="text-align: center; margin: var(--spacing-lg) 0;">
+                        <img src="images/ikinci.png" alt="Kabe ve Mescid-i Haram, Mekke - Tarihi Gravür" class="article-detail-cover" 
+                             style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: var(--shadow);" 
+                             loading="lazy"
+                             onerror="this.src='https://via.placeholder.com/800x600?text=Kabe+ve+Mescid-i+Haram';">
+                        <p style="font-size: 0.9rem; color: var(--text-light); margin-top: var(--spacing-xs); font-style: italic;">
+                            Kabe ve Mescid-i Haram, Mekke - Tarihi Gravür
+                        </p>
+                        <p style="font-size: 0.95rem; color: var(--text-color); margin-top: var(--spacing-sm); line-height: 1.7; max-width: 800px; margin-left: auto; margin-right: auto;">
+                            Fotoğraflar, 19. yüzyılın sonlarında çekilmiş olsa da, o dönemdeki taş binalar, şehrin çevresindeki çıplak dağlar ve Kabe'nin çevresindeki sade yerleşim, Hz. Muhammed dönemindeki coğrafi yapıyı ve atmosferi anlamamıza yardımcı olan en gerçekçi belgelerdir.
+                        </p>
+                    </div>
+                    <p>
+                        <strong>Çözümü:</strong> Herkesin güvendiği bir kişi olarak hakem seçildiğinde, hırkasını yere serip taşı üzerine koydu. 
+                        Her kabileden bir temsilciye hırkanın ucundan tutturtarak taşı hep beraber yukarı kaldırdılar.
+                    </p>
+                    <p>
+                        <strong>Analiz:</strong> Bu olay, onun sadece dürüst değil, aynı zamanda kriz yönetimi ve diplomatik dehası yüksek bir lider 
+                        olduğunu kanıtlar. Kan dökülmesini engelleyen bu barışçıl çözüm, onun toplumdaki otoritesini perçinlemiştir. 
+                        Bu olay, onun ne kadar saygın ve güvenilir bir kişi olduğunun açık bir göstergesidir.
+                    </p>
+                    <h2>Ficar Savaşları ve Barış Yanlısı Tutumu</h2>
+                    <p>
+                        Gençlik döneminde Kureyş ile Hevazin kabileleri arasında "Ficar Savaşları" adı verilen çatışmalar yaşanmıştır.
+                    </p>
+                    <p>
+                        Hz. Muhammed bu savaşlara fiilen bizzat saldırarak katılmamış, sadece amcalarına ok toplamak veya lojistik destek vermek 
+                        gibi geri planda görevler almıştır. Bu, onun genç yaştan itibaren kan dökülmesine karşı olan mesafeli duruşunu gösterir.
+                    </p>
+                    <h2>Hilfu'l-Fudul: Erdemliler Cemiyeti - Sosyal Adalet Mücadelesi</h2>
+                    <p>
+                        Mekke, o dönemde kabileciliğin ve paranın hüküm sürdüğü bir yerdi. Korunması olmayan (kimsesiz, yabancı veya fakir) birinin 
+                        malı gasp edildiğinde, hakkını arayacağı hiçbir merci yoktu.
+                    </p>
+                    <p>
+                        <strong>Olay:</strong> Yemenli bir tüccarın malı, Mekke'nin ileri gelenlerinden As bin Vail tarafından gasp edilince, 
+                        Hz. Muhammed'in de içinde bulunduğu bir grup "Erdemli" bir araya geldi. Bu cemiyet, Mekke'ye dışarıdan gelen tüccarların 
+                        mallarının gasp edilmesi ve zayıf insanların ezilmesi üzerine kurulmuştur.
+                    </p>
+                    <p>
+                        <strong>Önemi:</strong> Bu sadece bir yardımlaşma derneği değildi; bu, hukukun üstünlüğünü kabile asabiyetinin önüne koyan 
+                        devrimsel bir hareketti. Hz. Muhammed, henüz 20'li yaşlarındayken bu oluşuma katılmıştır. Onun genç yaşta bu oluşumda yer alması, 
+                        onun evrensel insan haklarına olan doğuştan gelen hassasiyetini gösterir.
+                    </p>
+                    <p>
+                        Peygamber olduktan yıllar sonra bile bu cemiyet hakkında: "İslamiyet döneminde de çağrılsaydım yine katılırdım" diyerek, 
+                        adaletin din ve inanç üstü bir değer olduğunu vurgulamıştır. Bu durum, onun peygamberliğinden çok önce bile adalet ve 
+                        hakkaniyet anlayışına ne kadar önem verdiğini gösterir.
+                    </p>
+                    <h2>Hz. Hatice ile Evliliği</h2>
+                    <p>
+                        Hz. Hatice ile evliliği de bu dönemin önemli olaylarındandır. Hz. Hatice, Mekke'nin zengin ve 
+                        saygın tüccar kadınlarından biriydi. Hz. Muhammed'in dürüstlüğünü, çalışkanlığını ve güvenilirliğini 
+                        fark ederek ona iş ortaklığı teklif etti. Hz. Muhammed, onun kervanlarını yönetti ve ticarette 
+                        büyük başarılar elde etti.
+                    </p>
+                    <p>
+                        Hz. Hatice, onun karakterinden o kadar etkilendi ki, ona evlenme teklif etti. O zamanlar 25 yaşında olan 
+                        Hz. Muhammed ile 40 yaşında olan Hz. Hatice'nin evliliği, karşılıklı sevgi, saygı ve sadakat temelinde kuruldu.
+                    </p>
+                    <h2>Hz. Hatice ile Olan Evliliği: Bir Dayanak Noktası</h2>
+                    <p>
+                        Bu evlilik sadece romantik bir bağ değil, aynı zamanda entelektüel ve ruhsal bir ortaklıktı.
+                    </p>
+                    <p>
+                        <strong>Kadına Verilen Değer:</strong> Hz. Muhammed, eşine her zaman danışır, onun fikirlerine değer verirdi. 
+                        Hz. Hatice ile olan 25 yıllık evliliği, o dönemin çok eşli toplum yapısında bile örnek bir "sadakat ve sevgi" tablosudur. 
+                        Hz. Hatice ona sadece bir eş değil, en büyük dert ortağı ve destekçi olmuştur.
+                    </p>
+                    <p>
+                        <strong>İnziva Dönemi:</strong> Hz. Muhammed, 30'lu yaşlarının sonuna doğru toplumdaki adaletsizliklerden bunalıp 
+                        Hira Mağarası'na çekilmeye başladığında, Hz. Hatice ona her zaman destek olmuş, yiyeceğini hazırlamış ve onun bu ruhsal 
+                        arayışını saygıyla karşılamıştır. Bu, peygamberlik yükü gelmeden önceki en büyük moral desteğiydi.
+                    </p>
+                    <h2>Aile Hayatı ve Çocukları</h2>
+                    <p>
+                        Bu evlilikten altı çocukları oldu: Kasım, Zeynep, Rukiyye, Ümmü Gülsüm, Fatıma ve Abdullah. 
+                        Oğulları Kasım ve Abdullah küçük yaşta vefat edince Mekkelilerin bazıları onunla alay etmiş, 
+                        ancak o bu büyük acıları büyük bir sabırla karşılamıştır.
+                    </p>
+                    <p>
+                        Bu evlilik, Hz. Muhammed (s.a.v.)'in hayatında önemli bir dönüm noktasıydı. Hz. Hatice, onun en büyük destekçisi 
+                        ve güvenilir bir eşi oldu. Peygamberlik geldiğinde de ilk inanan ve en büyük destekçisi olacaktı.
+                    </p>
+                    <h2>"Hanif" İnancı ve Putperestliğe Karşı Duruşu</h2>
+                    <p>
+                        Hz. Muhammed hiçbir zaman bir puta el sürmemiş, onlar adına sunulan sunaklardan uzak durmuştur. 
+                        Mekke halkı putlara taparken, o hiçbir zaman putlar adına kesilen kurbanlardan yememiş, putlara tazimde bulunmamıştır.
+                    </p>
+                    <p>
+                        O dönemde sayıları çok az olan ve Hz. İbrahim'in dini üzere yaşayan "Hanifler" ile temas halindeydi. 
+                        İbrahim Peygamber'den kalan tek tanrı inancını (Haniflik) benimseyen bazı kişilerle (Varaka bin Nevfel, Zeyd bin Amr gibi) 
+                        dostlukları olmuştur.
+                    </p>
+                    <p>
+                        Ancak o, sadece mevcut bir inancı takip etmiyor, bizzat gökyüzünü, yıldızları ve insanın yaratılışını inceleyerek 
+                        "Tek Bir Yaratıcı" olması gerektiğini mantıksal ve ruhsal olarak kavrıyordu.
+                    </p>
+                    <h2>Tefekkür ve Hira Mağarası</h2>
+                    <p>
+                        Peygamberliğinden önceki hayatında Hz. Muhammed, Mekke'deki putperestlik ve ahlaki yozlaşmadan uzak durarak, 
+                        sürekli tefekkür halinde bulunurdu. Yalnız kalmayı sever, zaman zaman Hira Mağarası'na çekilerek derin düşüncelere dalardı.
+                    </p>
+                    <p>
+                        Hira Mağarası, Mekke'nin yakınında bulunan bir dağın tepesindeki küçük bir mağaraydı. Hz. Muhammed (s.a.v.), 
+                        burada günlerce kalır, yaratılışın sırlarını, evrenin düzenini ve insanın yaratılış amacını düşünürdü. 
+                        Bu tefekkür dönemleri, onun ruhsal gelişiminde ve peygamberliğe hazırlanmasında önemli bir rol oynadı.
+                    </p>
+                    <p>
+                        Kendi içine kapanarak evrendeki nizamı ve yaratıcıyı düşünmesi, onu toplumun ahlaki çöküşünden koruyan bir kalkan olmuştur. 
+                        Bu dönemde, Mekke toplumundaki putperestlik, ahlaki çöküntü ve adaletsizlikler onu derinden rahatsız ediyordu. 
+                        Ancak o, bu kötülüklerden uzak durarak, temiz bir hayat sürdürmeye çalışıyordu. Bu durum, onun "el-Emin" 
+                        lakabını kazanmasında ve toplumun güvenini kazanmasında önemli bir etkendi.
+                    </p>
+                    <p>
+                        Bu inziva hali, onun ruhsal hazırlığının bir parçasıydı ve 40 yaşına geldiğinde ilk vahyi alacağı zemini hazırlamıştır.
+                    </p>
+                    <h2>Özetle Peygamberlik Öncesi Portresi</h2>
+                    <p>
+                        <strong>Ekonomik Olarak:</strong> Dürüst, haksız kazançtan kaçınan bir tacir. Ticaret hayatında zeka ve yönetim becerisiyle 
+                        öne çıkmış, farklı coğrafyaları tanıyarak geniş bir vizyon kazanmıştır.
+                    </p>
+                    <p>
+                        <strong>Sosyal Olarak:</strong> Zayıfın yanında duran, barışçıl bir aktivist. Hilfu'l-Fudul gibi oluşumlarda yer alarak 
+                        adaletin hukukun üstünlüğünü savunmuş, Ficar Savaşları'nda kan dökülmesine karşı mesafeli durmuştur.
+                    </p>
+                    <p>
+                        <strong>Ruhsal Olarak:</strong> Derin düşünen (tefekkür eden), putperestliğin sığlığından kaçan bir arayışçı. 
+                        Hira Mağarası'nda yaratılışın sırlarını düşünmüş, Hanif inancına yakın durmuş ve mantıksal olarak Tek Yaratıcı'yı kavramıştır.
+                    </p>
+                    <p>
+                        <strong>Kişisel Olarak:</strong> "El-Emin" (Güvenilir) sıfatını şehre mühürlemiş bir insan. Asla yalan söylememiş, 
+                        ahde vefa göstermiş, kriz yönetiminde diplomatik deha sergilemiş ve toplumun güvenini kazanmıştır.
+                    </p>
+                    <p>
+                        Bu dönem, onun güçlü karakterinin, ahlaki değerlerinin ve toplum içindeki saygınlığının temellerini atmıştır. 
+                        Peygamberlik görevine başlamadan önce bile, tüm bu özellikleriyle örnek bir şahsiyet olmuştur.
+                    </p>
+                    <p>
+                        Bu himaye dönemleri ve gençlik yılları, Hz. Muhammed (s.a.v.)'in hayatında sabır, dayanıklılık, 
+                        merhamet, sorumluluk, dürüstlük, adalet ve hakkaniyet gibi erdemlerin gelişmesine katkı sağladı. 
+                        Bu zorluklar ve tecrübeler, ileride peygamber olarak karşılaşacağı sıkıntılara karşı hazırlıklı olmasını sağladı.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Article 8 Detail -->
+            <article id="article8" class="article-detail" style="margin-top: var(--spacing-xl);">
+                <div class="article-detail-header">
+                    <h2 class="article-detail-title">Fil Suresi ve Fil Vakası</h2>
+                    <div class="article-meta">
+                        <span class="article-category">Değerler</span>
+                        <span>25 Ocak 2024</span>
+                    </div>
+                </div>
+                <img src="images/fil.jpg" alt="Fil Suresi" class="article-detail-cover" loading="lazy" onerror="this.src='https://via.placeholder.com/800x400?text=Fil+Suresi'">
+                <div class="article-detail-content">
+                    <p>
+                        Fil Suresi, Kur'an-ı Kerim'in 105. suresidir ve Mekke döneminde inmiştir. Toplam 5 ayetten oluşur. 
+                        Sure, İslam dünyasında çok bilinen tarihi bir olayı, "Fil Vakası"nı anlattığı için bu adı almıştır.
+                    </p>
+                    
+                    <h2>1. Surede Anlatılan Olay (Fil Vakası)</h2>
+                    <p>
+                        Sure, İslam'ın doğuşundan kısa bir süre önce (Peygamber Efendimiz'in doğum yılı olduğu kabul edilir) gerçekleşen bir mucizeyi anlatır:
+                    </p>
+                    <p>
+                        <strong>Ebrehe'nin Ordusu:</strong> Yemen Valisi Ebrehe, insanların Kabe yerine kendi yaptırdığı kiliseyi (Kuleys) ziyaret etmelerini ister. 
+                        Amacına ulaşamayınca Kabe'yi yıkmak için büyük bir ordu ve fillerle Mekke'ye yürür.
+                    </p>
+                    <p>
+                        <strong>İlahi Müdahale:</strong> Allah, Kabe'yi korumak için Ebabil kuşlarını gönderir. Bu kuşlar, gagalarında ve ayaklarında taşıdıkları 
+                        pişmiş çamurdan taşları ordunun üzerine bırakırlar.
+                    </p>
+                    <p>
+                        <strong>Sonuç:</strong> Ebrehe'nin ordusu perişan olur. Surede bu durum, ordunun "yenilmiş ekin yaprağına" dönüştüğü benzetmesiyle ifade edilir.
+                    </p>
+                    
+                    <h2>2. Surenin Okunuşu ve Anlamı</h2>
+                    <p>
+                        Kısa ve akılda kalıcı olduğu için genellikle namazlarda zamm-ı sure olarak sıkça okunur.
+                    </p>
+                    <p>
+                        <strong>Türkçe Okunuşu:</strong>
+                    </p>
+                    <div style="font-family: var(--font-serif); font-size: 1.1rem; line-height: 2; padding: var(--spacing-md); background-color: var(--bg-light); border-radius: 8px; margin: var(--spacing-md) 0;">
+                        Bismillahirrahmânirrahîm.<br>
+                        1- Elem tera keyfe fe'ale rabbüke biashâbil fîl.<br>
+                        2- Elem yec'al keydehüm fî tadlîl.<br>
+                        3- Ve ersele aleyhim tayran ebâbîl.<br>
+                        4- Termîhim bihicâratin min siccîl.<br>
+                        5- Fece'alehüm ke'asfin me'kûl.
+                    </div>
+                    <p>
+                        <strong>Arapça Metni:</strong>
+                    </p>
+                    <div style="font-family: var(--font-serif); font-size: 1.1rem; line-height: 2; padding: var(--spacing-md); background-color: var(--bg-light); border-radius: 8px; direction: rtl; text-align: right; margin: var(--spacing-md) 0;">
+                        بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ<br>
+                        1- أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَابِ الْفِيلِ<br>
+                        2- أَلَمْ يَجْعَلْ كَيْدَهُمْ فِي تَضْلِيلٍ<br>
+                        3- وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ<br>
+                        4- تَرْمِيهِمْ بِحِجَارَةٍ مِنْ سِجِّيلٍ<br>
+                        5- فَجَعَلَهُمْ كَعَصْفٍ مَأْكُولٍ
+                    </div>
+                    <p>
+                        <strong>Anlamı:</strong>
+                    </p>
+                    <div style="font-family: var(--font-serif); font-size: 1.1rem; line-height: 2; padding: var(--spacing-md); background-color: var(--bg-light); border-radius: 8px; margin: var(--spacing-md) 0;">
+                        Rahman ve Rahim olan Allah'ın adıyla.<br>
+                        1- Rabbinin fil sahiplerine neler yaptığını görmedin mi?<br>
+                        2- Onların planlarını boşa çıkarmadı mı?<br>
+                        3- Onların üzerine sürü sürü kuşlar gönderdi.<br>
+                        4- O kuşlar onlara pişmiş çamurdan taşlar atıyorlardı.<br>
+                        5- Sonunda onları yenilmiş ekin yaprağı gibi yaptı.
+                    </div>
+                    
+                    <h2>3. Surenin Önemi ve Mesajı</h2>
+                    <p>
+                        <strong>Kabe'nin Kutsallığı:</strong> Allah'ın kendi evi olan Kabe'yi her türlü saldırıya karşı koruyacağını gösterir.
+                    </p>
+                    <p>
+                        <strong>İbret:</strong> Ne kadar güçlü olunursa olunsun (filler o dönemin en büyük askeri gücüydü), Allah'ın iradesine karşı gelinemeyeceğini hatırlatır.
+                    </p>
+                    <p>
+                        <strong>Peygamberimiz'e Destek:</strong> Bu olay Peygamber Efendimiz doğmadan hemen önce yaşandığı için, onun geleceğine dair ilahi bir işaret ve Mekkeliler için bir uyarı niteliğindedir.
+                    </p>
+                    <p>
+                        Fil Suresi'nden sonra gelen Kureyş Suresi, bu olayın devamı niteliğindedir; çünkü Kabe'nin korunması sayesinde Kureyş kabilesi güvenlik ve refaha kavuşmuştur.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Article Modal (Fullscreen) -->
+    <div id="articleModal" class="article-modal">
+        <button class="article-modal-close" id="modalClose" aria-label="Kapat">×</button>
+        <div class="article-modal-content">
+            <div class="article-modal-header">
+                <h2 class="article-modal-title" id="modalTitle"></h2>
+                <div class="article-modal-meta" id="modalMeta"></div>
+            </div>
+            <img id="modalCover" src="" alt="" class="article-modal-cover" loading="lazy">
+            <div class="article-modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Eğitici Platform</h3>
+                    <p>Bilgi ve hikmet dolu içerikler, interaktif öğrenme deneyimleri</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hızlı Bağlantılar</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="articles.html">Yazılar</a></li>
+                        <li><a href="gallery.html">Galeri</a></li>
+                        <li><a href="quiz.html">Quiz & Oyunlar</a></li>
+                        <li><a href="about.html">Hakkında</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Eğitici Platform. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // ============================================
+        // Article Modal System
+        // ============================================
+        
+        const articleModal = document.getElementById('articleModal');
+        const modalClose = document.getElementById('modalClose');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalMeta = document.getElementById('modalMeta');
+        const modalCover = document.getElementById('modalCover');
+        const modalBody = document.getElementById('modalBody');
+        
+        // Open modal function
+        function openArticleModal(articleId) {
+            const articleDetail = document.querySelector(articleId);
+            if (!articleDetail) return;
+            
+            // Get article data
+            const title = articleDetail.querySelector('.article-detail-title')?.textContent || '';
+            const meta = articleDetail.querySelector('.article-meta')?.cloneNode(true) || null;
+            const cover = articleDetail.querySelector('.article-detail-cover')?.src || '';
+            const coverAlt = articleDetail.querySelector('.article-detail-cover')?.alt || '';
+            const content = articleDetail.querySelector('.article-detail-content')?.cloneNode(true) || null;
+            
+            // Populate modal
+            modalTitle.textContent = title;
+            modalMeta.innerHTML = '';
+            if (meta) {
+                modalMeta.appendChild(meta);
+            }
+            modalCover.src = cover;
+            modalCover.alt = coverAlt;
+            modalBody.innerHTML = '';
+            if (content) {
+                modalBody.appendChild(content);
+            }
+            
+            // Show modal
+            articleModal.classList.add('active');
+            document.body.classList.add('modal-open');
+            
+            // Scroll to top of modal
+            articleModal.scrollTop = 0;
+        }
+        
+        // Close modal function
+        function closeArticleModal() {
+            articleModal.classList.remove('active');
+            document.body.classList.remove('modal-open');
+        }
+        
+        // Event listeners
+        if (modalClose) {
+            modalClose.addEventListener('click', closeArticleModal);
+        }
+        
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && articleModal.classList.contains('active')) {
+                closeArticleModal();
+            }
+        });
+        
+        // Close on backdrop click
+        articleModal.addEventListener('click', (e) => {
+            if (e.target === articleModal) {
+                closeArticleModal();
+            }
+        });
+        
+        // Update article card links to open modal
+        document.querySelectorAll('.article-card').forEach(card => {
+            card.addEventListener('click', (e) => {
+                e.preventDefault();
+                const href = card.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    openArticleModal(href);
+                }
+            });
+        });
+        
+        // ============================================
+        // Category Filter
+        // ============================================
+        
+        function filterCategory(category) {
+            const articles = document.querySelectorAll('.article-card');
+            const buttons = document.querySelectorAll('.btn');
+            
+            // Update button styles
+            buttons.forEach(btn => {
+                if (btn.textContent.toLowerCase().includes(category) || (category === 'all' && btn.textContent === 'Tümü')) {
+                    btn.className = 'btn btn-primary';
+                } else {
+                    btn.className = 'btn btn-secondary';
+                }
+            });
+            
+            // Filter articles
+            articles.forEach(article => {
+                if (category === 'all' || article.dataset.category === category) {
+                    article.style.display = 'block';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+

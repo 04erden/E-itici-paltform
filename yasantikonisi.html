@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yaşantı Konisi (Dale's Cone of Experience) - Öğrenme Deneyimi Modeli">
+    <meta name="keywords" content="yaşantı konisi, dale cone, öğrenme, eğitim modeli">
+    <meta name="author" content="Serkan Site">
+    <title>Yaşantı Konisi - Eğitici Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .cone-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing-lg);
+        }
+        .cone-level {
+            background-color: var(--bg-color);
+            padding: var(--spacing-md);
+            margin-bottom: var(--spacing-md);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary-color);
+            transition: var(--transition);
+        }
+        .cone-level:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateX(5px);
+        }
+        .cone-level h3 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+            font-family: var(--font-serif);
+        }
+        .cone-level p {
+            color: var(--text-color);
+            line-height: 1.8;
+            margin-bottom: var(--spacing-sm);
+        }
+        .cone-examples {
+            background-color: var(--bg-light);
+            padding: var(--spacing-sm);
+            border-radius: 4px;
+            margin-top: var(--spacing-sm);
+        }
+        .cone-examples ul {
+            margin-left: var(--spacing-md);
+        }
+        .cone-examples li {
+            margin-bottom: var(--spacing-xs);
+        }
+        .cone-diagram {
+            text-align: center;
+            margin: var(--spacing-xl) 0;
+            padding: var(--spacing-lg);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            color: white;
+        }
+        .cone-diagram h3 {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-md);
+        }
+        .cone-structure {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--spacing-xs);
+        }
+        .cone-item {
+            background: rgba(255, 255, 255, 0.2);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: 4px;
+            width: 100%;
+            max-width: 600px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menüyü aç/kapat">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="logo">
+                    <h1><a href="index.html" style="text-decoration: none; color: inherit;">Eğitici Platform</a></h1>
+                </div>
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop" id="navDesktop">
+                    <ul class="nav-list-desktop">
+                        <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                        <li><a href="articles.html" class="nav-link">Yazılar</a></li>
+                        <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+                        <li><a href="quiz.html" class="nav-link">Quiz & Oyunlar</a></li>
+                        <li><a href="kazanimlar.html" class="nav-link">Kazanımlar</a></li>
+                        <li><a href="videolar.html" class="nav-link">Videolar</a></li>
+                        <li><a href="yasantikonisi.html" class="nav-link active">Yaşantı Konisi</a></li>
+                        <li><a href="about.html" class="nav-link">Hakkında</a></li>
+                        <li><a href="contact.html" class="nav-link">İletişim</a></li>
+                    </ul>
+                </nav>
+                <!-- Mobile Navigation -->
+                <nav class="nav-mobile" id="nav">
+                    <button class="nav-close" id="navClose" aria-label="Menüyü kapat">×</button>
+                    <div class="nav-content">
+                        <h3 class="nav-title">Hızlı Bağlantılar</h3>
+                        <ul class="nav-list-mobile">
+                            <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                            <li><a href="articles.html" class="nav-link">Yazılar</a></li>
+                            <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+                            <li><a href="quiz.html" class="nav-link">Quiz & Oyunlar</a></li>
+                            <li><a href="kazanimlar.html" class="nav-link">Kazanımlar</a></li>
+                            <li><a href="videolar.html" class="nav-link">Videolar</a></li>
+                            <li><a href="yasantikonisi.html" class="nav-link active">Yaşantı Konisi</a></li>
+                            <li><a href="about.html" class="nav-link">Hakkında</a></li>
+                            <li><a href="contact.html" class="nav-link">İletişim</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 40vh;">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Yaşantı Konisi</h2>
+                <p class="hero-subtitle">Dale's Cone of Experience - Öğrenme Deneyimi Modeli</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cone Explanation -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Yaşantı Konisi Nedir?</h2>
+                <p class="section-subtitle">Edgar Dale'in Öğrenme Deneyimi Modeli</p>
+            </div>
+            
+            <div class="about-content" style="max-width: 900px; margin: 0 auto;">
+                <div class="about-text">
+                    <p style="font-size: 1.1rem; line-height: 1.9; margin-bottom: var(--spacing-md);">
+                        Yaşantı Konisi (Cone of Experience), eğitimci Edgar Dale tarafından geliştirilmiş bir öğrenme modelidir. 
+                        Bu model, öğrenme deneyimlerini soyuttan somuta doğru sıralar ve farklı öğrenme yöntemlerinin 
+                        etkililiğini gösterir.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.9; margin-bottom: var(--spacing-md);">
+                        Platformumuz, Yaşantı Konisi prensiplerine uygun olarak tasarlanmıştır. Her kazanım için 
+                        farklı öğrenme seviyelerinde içerikler sunulmaktadır.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cone Structure -->
+    <section class="content-section" style="background-color: var(--bg-light);">
+        <div class="container">
+            <div class="cone-container">
+                <div class="cone-diagram">
+                    <h3>Yaşantı Konisi Yapısı</h3>
+                    <div class="cone-structure">
+                        <div class="cone-item"><strong>1. Sembolik (Soyut):</strong> Sözel semboller, yazılı materyaller</div>
+                        <div class="cone-item"><strong>2. Görsel:</strong> Görsel semboller, grafikler, haritalar</div>
+                        <div class="cone-item"><strong>3. Dinleme:</strong> Radyo, ses kayıtları, anlatım</div>
+                        <div class="cone-item"><strong>4. Görsel-İşitsel:</strong> Filmler, videolar, animasyonlar</div>
+                        <div class="cone-item"><strong>5. Sergileme:</strong> Müzeler, sergiler, gösteriler</div>
+                        <div class="cone-item"><strong>6. Eğitim Gezileri:</strong> Alan gezileri, gözlemler</div>
+                        <div class="cone-item"><strong>7. Dramatizasyon:</strong> Rol oynama, simülasyonlar</div>
+                        <div class="cone-item"><strong>8. Yapılandırılmış Deneyim:</strong> Kontrollü deneyler</div>
+                        <div class="cone-item"><strong>9. Doğrudan Deneyim (Somut):</strong> Gerçek yaşam deneyimleri</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cone Levels in Our Platform -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Platformumuzda Yaşantı Konisi Uygulaması</h2>
+                <p class="section-subtitle">Her seviyede içerik sunuyoruz</p>
+            </div>
+            
+            <div class="cone-container">
+                <div class="cone-level">
+                    <h3>1. Sembolik Seviye (Yazılar)</h3>
+                    <p>
+                        Sözel ve yazılı içeriklerle başlıyoruz. Yazılar sayfamızda kapsamlı metin içerikleri bulunmaktadır.
+                    </p>
+                    <div class="cone-examples">
+                        <strong>Örnekler:</strong>
+                        <ul>
+                            <li>Makaleler ve yazılar (articles.html)</li>
+                            <li>Kazanım açıklamaları</li>
+                            <li>Metin tabanlı içerikler</li>
+                        </ul>
+                    </div>
+                    <a href="articles.html" class="article-link">Yazıları Gör →</a>
+                </div>
+
+                <div class="cone-level">
+                    <h3>2. Görsel Seviye (Galeri)</h3>
+                    <p>
+                        Görsel içeriklerle öğrenmeyi destekliyoruz. Galeri sayfamızda anlamlı görseller bulunmaktadır.
+                    </p>
+                    <div class="cone-examples">
+                        <strong>Örnekler:</strong>
+                        <ul>
+                            <li>Görsel galeri (gallery.html)</li>
+                            <li>Fotoğraflar ve görseller</li>
+                            <li>Görsel içerikler</li>
+                        </ul>
+                    </div>
+                    <a href="gallery.html" class="article-link">Galeriyi Gör →</a>
+                </div>
+
+                <div class="cone-level">
+                    <h3>3. Görsel-İşitsel Seviye (Videolar)</h3>
+                    <p>
+                        Video içerikleriyle öğrenmeyi pekiştiriyoruz. Her kazanım için eğitici videolar sunuyoruz.
+                    </p>
+                    <div class="cone-examples">
+                        <strong>Örnekler:</strong>
+                        <ul>
+                            <li>Eğitici videolar (videolar.html)</li>
+                            <li>Kazanımlara ait video içerikleri</li>
+                            <li>Görsel-işitsel öğrenme</li>
+                        </ul>
+                    </div>
+                    <a href="videolar.html" class="article-link">Videoları İzle →</a>
+                </div>
+
+                <div class="cone-level">
+                    <h3>4. Dramatizasyon Seviye (Oyunlar)</h3>
+                    <p>
+                        İnteraktif oyunlar ve quizlerle aktif öğrenmeyi sağlıyoruz. Bu seviyede kullanıcılar aktif katılım gösterir.
+                    </p>
+                    <div class="cone-examples">
+                        <strong>Örnekler:</strong>
+                        <ul>
+                            <li>İnteraktif quizler (quiz.html)</li>
+                            <li>Doğru/Yanlış oyunu</li>
+                            <li>Eşleştirme oyunu</li>
+                            <li>Simülasyon ve interaktif içerikler</li>
+                        </ul>
+                    </div>
+                    <a href="quiz.html" class="article-link">Oyunlara Başla →</a>
+                </div>
+
+                <div class="cone-level">
+                    <h3>5. Doğrudan Deneyim (Uygulama)</h3>
+                    <p>
+                        Öğrenilen bilgilerin günlük hayatta uygulanması en etkili öğrenme yöntemidir. 
+                        Platformumuz bu uygulamaya hazırlık sağlar.
+                    </p>
+                    <div class="cone-examples">
+                        <strong>Örnekler:</strong>
+                        <ul>
+                            <li>Kazanımların günlük hayatta uygulanması</li>
+                            <li>Pratik deneyimler</li>
+                            <li>Gerçek yaşam uygulamaları</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Eğitici Platform</h3>
+                    <p>Bilgi ve hikmet dolu içerikler, interaktif öğrenme deneyimleri</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hızlı Bağlantılar</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="articles.html">Yazılar</a></li>
+                        <li><a href="gallery.html">Galeri</a></li>
+                        <li><a href="quiz.html">Quiz & Oyunlar</a></li>
+                        <li><a href="kazanimlar.html">Kazanımlar</a></li>
+                        <li><a href="videolar.html">Videolar</a></li>
+                        <li><a href="yasantikonisi.html">Yaşantı Konisi</a></li>
+                        <li><a href="about.html">Hakkında</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Eğitici Platform. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
