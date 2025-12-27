@@ -80,25 +80,44 @@
                 <p class="section-subtitle">Sorularınız, önerileriniz veya görüşleriniz için mesaj gönderin</p>
             </div>
             <div class="contact-content">
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Adınız Soyadınız</label>
-                        <input type="text" id="name" name="name" required placeholder="Adınızı ve soyadınızı girin">
+                <div class="contact-wrapper">
+                    <div class="contact-info-box">
+                        <h3 style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: var(--spacing-md); font-family: var(--font-serif);">İletişim Bilgileri</h3>
+                        <div style="margin-bottom: var(--spacing-md);">
+                            <p style="font-size: 1.1rem; line-height: 1.9; margin-bottom: var(--spacing-xs);">
+                                <strong>📧 E-posta:</strong><br>
+                                <a href="mailto:nrsnpolat1104@gmail.com" style="color: var(--primary-color); text-decoration: none;">nrsnpolat1104@gmail.com</a>
+                            </p>
+                        </div>
+                        <div>
+                            <p style="font-size: 1.1rem; line-height: 1.9; margin-bottom: var(--spacing-xs);">
+                                <strong>📱 Telefon:</strong><br>
+                                <a href="tel:+905538797301" style="color: var(--primary-color); text-decoration: none;">0553 879 73 01</a>
+                            </p>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="phone">Telefon Numaranız</label>
-                        <input type="tel" id="phone" name="phone" required placeholder="Telefon numaranızı girin (örn: 0553 879 73 01)">
+                    <div>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Adınız Soyadınız</label>
+                                <input type="text" id="name" name="name" required placeholder="Adınızı ve soyadınızı girin">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon Numaranız</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="Telefon numaranızı girin (örn: 0553 879 73 01)">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Konu</label>
+                                <input type="text" id="subject" name="subject" placeholder="Mesajınızın konusunu belirtin (isteğe bağlı)">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mesajınız</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Mesajınızı buraya yazın..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">Gönder</button>
+                        </form>
                     </div>
-                    <div class="form-group">
-                        <label for="subject">Konu</label>
-                        <input type="text" id="subject" name="subject" placeholder="Mesajınızın konusunu belirtin (isteğe bağlı)">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mesajınız</label>
-                        <textarea id="message" name="message" rows="6" required placeholder="Mesajınızı buraya yazın..."></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">Gönder</button>
-                </form>
+                </div>
             </div>
             
         </div>

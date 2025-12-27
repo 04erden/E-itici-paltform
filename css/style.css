@@ -2281,8 +2281,21 @@ body {
 }
 
 .contact-content {
-    max-width: 600px;
+    max-width: 1000px;
     margin: 0 auto;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.contact-info-box {
+    background-color: var(--bg-light);
+    padding: var(--spacing-lg);
+    border-radius: 8px;
 }
 
 .contact-form {
@@ -2352,6 +2365,17 @@ body {
 
 .btn-submit:active {
     transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .contact-content {
+        max-width: 100%;
+    }
 }
 
 /* ============================================
