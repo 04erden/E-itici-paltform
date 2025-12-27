@@ -564,11 +564,19 @@ body {
 
 @media (max-width: 768px) {
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
     }
     
     .content-section {
-        padding: var(--spacing-lg) 0;
+        padding: var(--spacing-md) 0;
+    }
+    
+    .section-header {
+        margin-bottom: var(--spacing-md);
     }
 }
 
@@ -2218,6 +2226,10 @@ body {
 
 .fillblank-actions {
     text-align: center;
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* ============================================
@@ -2254,21 +2266,430 @@ body {
     }
 }
 
+/* ============================================
+   Mobile Responsive Styles for Quiz & Games
+   ============================================ */
+
 @media (max-width: 768px) {
+    /* Quiz Categories */
     .quiz-categories {
         grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .quiz-category-card {
+        padding: var(--spacing-md);
+    }
+    
+    .category-icon {
+        font-size: 2.5rem;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .category-title {
+        font-size: 1.3rem;
+    }
+    
+    .category-description {
+        font-size: 0.9rem;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    /* Quiz Container */
+    .quiz-container {
+        padding: var(--spacing-md);
+        border-radius: 12px;
+    }
+    
+    .quiz-title {
+        font-size: 1.8rem;
+    }
+    
+    .quiz-header {
+        margin-bottom: var(--spacing-md);
+        padding-bottom: var(--spacing-md);
+    }
+    
+    /* Question Card */
+    .question-card {
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+        border-radius: 12px;
+    }
+    
+    .question-text {
+        font-size: 1.2rem;
+        margin-bottom: var(--spacing-md);
+        padding-left: var(--spacing-sm);
+        line-height: 1.5;
+    }
+    
+    .question-text::before {
+        left: -5px;
+        font-size: 1rem;
+    }
+    
+    /* Answer Options */
+    .answer-options {
+        gap: var(--spacing-xs);
+    }
+    
+    .answer-option {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 0.95rem;
+        border-radius: 10px;
+    }
+    
+    .answer-option:hover,
+    .answer-option.selected {
+        transform: translateX(3px);
+    }
+    
+    /* Quiz Actions */
+    .quiz-actions {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        margin-top: var(--spacing-md);
+    }
+    
+    .quiz-actions .btn-primary,
+    .quiz-actions .btn-secondary {
+        width: 100%;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        min-width: auto;
+        border-radius: 12px;
+    }
+    
+    .quiz-actions .btn-primary::after {
+        font-size: 1.1rem;
+    }
+    
+    /* Quiz Results */
+    .quiz-results {
+        padding: var(--spacing-md);
+    }
+    
+    .result-score {
+        font-size: 3rem;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .result-message {
+        font-size: 1.3rem;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .result-details {
+        font-size: 1rem;
+    }
+    
+    /* Game Container */
+    .game-container {
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+        border-radius: 12px;
+    }
+    
+    .game-title {
+        font-size: 1.5rem;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .game-description {
+        font-size: 0.9rem;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    /* True/False Game */
+    .tf-question {
+        font-size: 1.1rem;
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+        border-radius: 12px;
+        line-height: 1.5;
+    }
+    
+    .tf-question::before {
+        left: -10px;
+        font-size: 1.5rem;
+    }
+    
+    .tf-buttons {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .btn-tf {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 12px;
+    }
+    
+    .tf-feedback {
+        font-size: 1rem;
+        padding: var(--spacing-sm) var(--spacing-md);
+        margin-top: var(--spacing-md);
+    }
+    
+    .tf-score {
+        font-size: 1.1rem;
+        padding: var(--spacing-sm);
+        margin-top: var(--spacing-md);
+    }
+    
+    /* Matching Game */
+    .matching-game {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .matching-column {
+        gap: var(--spacing-sm);
+    }
+    
+    .matching-item {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 0.95rem;
+        border-radius: 10px;
+    }
+    
+    .matching-feedback {
+        font-size: 1rem;
+        margin-top: var(--spacing-md);
+        padding: var(--spacing-sm);
+    }
+    
+    /* Memory Game */
+    .memory-difficulty {
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .memory-difficulty h4 {
+        font-size: 1.1rem;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .difficulty-buttons {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .difficulty-btn {
+        width: 100%;
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 0.9rem;
+        min-width: auto;
+    }
+    
+    .memory-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+        padding: var(--spacing-sm);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .memory-stat {
+        padding: var(--spacing-xs);
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
+    }
+    
+    .stat-value {
+        font-size: 1.1rem;
     }
     
     .memory-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: var(--spacing-xs);
+        max-width: 100%;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .memory-card-front,
+    .memory-card-back {
+        font-size: 1.2rem;
+        border-radius: 8px;
+    }
+    
+    .memory-card-front .card-icon {
+        font-size: 2rem;
+    }
+    
+    .memory-card-back .card-emoji {
+        font-size: 2rem;
+        margin-bottom: var(--spacing-xs);
+    }
+    
+    .memory-card-back .card-word {
+        font-size: 0.85rem;
+    }
+    
+    .memory-actions {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .memory-actions .btn {
+        width: 100%;
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 0.9rem;
+    }
+    
+    /* Word Search Game */
+    .wordsearch-difficulty {
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .wordsearch-difficulty h4 {
+        font-size: 1.1rem;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .wordsearch-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+        padding: var(--spacing-sm);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .wordsearch-stat .stat-label {
+        font-size: 0.8rem;
+    }
+    
+    .wordsearch-stat .stat-value {
+        font-size: 1rem;
+    }
+    
+    .wordsearch-words h4 {
+        font-size: 1.1rem;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .words-list {
+        gap: var(--spacing-xs);
+    }
+    
+    .word-item {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: 0.85rem;
+        border-radius: 6px;
+    }
+    
+    .wordsearch-grid-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: var(--spacing-md);
     }
     
     .wordsearch-grid {
         max-width: 100%;
+        gap: 2px;
+        padding: var(--spacing-xs);
+    }
+    
+    .wordsearch-cell {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+        min-width: 35px;
+        min-height: 35px;
+    }
+    
+    .wordsearch-actions {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .wordsearch-actions .btn {
+        width: 100%;
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 0.9rem;
+    }
+    
+    /* Fill Blank Game */
+    .fillblank-difficulty {
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .fillblank-difficulty h4 {
+        font-size: 1.1rem;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .fillblank-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+        padding: var(--spacing-sm);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .fillblank-stat .stat-label {
+        font-size: 0.8rem;
+    }
+    
+    .fillblank-stat .stat-value {
+        font-size: 1rem;
+    }
+    
+    .fillblank-question {
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+        border-radius: 12px;
+    }
+    
+    .fillblank-sentence {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+    
+    .fillblank-blank {
+        font-size: 1.1rem;
     }
     
     .fillblank-options {
         grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+    
+    .fillblank-option {
+        width: 100%;
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 0.95rem;
+    }
+    
+    .fillblank-feedback {
+        font-size: 1rem;
+        padding: var(--spacing-sm);
+        margin-top: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .fillblank-actions {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .fillblank-actions .btn {
+        width: 100%;
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 0.9rem;
+    }
+    
+    /* Progress Bar */
+    .progress-bar {
+        height: 10px;
+    }
+    
+    .progress-text {
+        font-size: 0.85rem;
     }
 }
 
